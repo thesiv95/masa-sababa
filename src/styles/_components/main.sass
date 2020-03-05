@@ -1,0 +1,148 @@
+@import "../_constants/_mixins.sass"
+@import "../_constants/_vars.sass"
+.main
+    line-height: 20px
+    &_header, &_subheader, &_description, &_buttons, &_useful-title
+        text-align: center
+    &_header, &_subheader, &_useful
+        color: $main-title
+    &_header, &_useful-title
+        font-size: $title-font-size
+    &_signup
+        margin-top: -40px
+        text-align: right
+    &_subheader
+        font-size: $title-font-size
+    &_description
+        text-align: center
+        margin: 0 auto
+        color: $main-description
+        width: 50%
+        line-height: 120%
+        word-break: break-word
+    &_pic
+        
+        position: relative
+        &-image
+            z-index: 2
+        &-gradient
+            width: 100%
+            margin-top: -150px
+            z-index: 1
+    &_buttons
+        margin-top: 20px
+    &_showmore
+        text-align: center
+        &-link
+            @include link()
+        &-image
+            border: 2px solid $main-accent-color
+            border-radius: 50%
+            background-color: transparent
+    &_step
+        &-number, &-title
+            font-size: $about-title-font-size
+            margin-top: 10px
+        &-number
+            font-weight: normal
+        &-title
+            font-weight: bold
+        &-description
+            font-size: 15px
+            color: $main-description
+    &_articles
+        &-article
+            width: 350px
+            height: 440px
+            margin-right: 30px
+            text-align: center
+            box-shadow: 0px 10px 30px #99999933
+            border-radius: 8px
+            cursor: pointer
+            transition: .3s linear
+            &:hover
+                background-color: lighten($main-description, 50%)
+            &-userpic
+                margin-top: 44px
+            &-title
+                font-size: $base-font-size
+                font-weight: normal
+                color: $main-title
+            &-description
+                font-size: 15px
+                line-height: 27px
+                color: $main-description
+    &_articlesubheader
+        margin-left: $blog-margin-left
+        font-size: 14px
+        color: $main-description
+    &_articlecontent
+        img
+
+        blockquote
+            width: 814px
+            height: auto
+            text-align: justify
+            word-wrap: break-word
+            margin: 0 auto
+            line-height: 32px
+            padding: 20px 15px
+            font-size: 24px
+            font-style: italic
+            color: $blog-blockqoute
+            border-left: 1px solid $main-accent-color
+    &_breadcrumbs
+        text-align: center
+        margin: 40px 0
+        &-nav
+            color: $main-title
+            text-decoration: none
+            width: 37px
+            height: 37px
+            padding: 10px
+            &:hover, &:focus, &:active
+                color: $main-title
+                text-decoration: none
+    &_useful
+        &-navigation
+            margin: 20px 0
+            text-align: center
+
+    .article-header
+        margin-left: $blog-margin-left
+        text-align: justify
+
+    .direction-page
+        width: 68px
+        height: 23px
+        margin-right: 10px
+
+    .active-page
+        border: 1px solid $main-accent-color
+        border-radius: 4px
+                      
+    
+        
+
+.button
+    width: 131px
+    height: 42px
+    border: 1px solid $main-accent-color
+    border-radius: 5px
+    padding: 5px
+    font-size: 80%
+    color: $main-accent-color
+    &-accent
+        background-color: $main-accent-color
+        color: #ffffff
+    &-margin
+        margin-right: 15px
+    &-nav
+        width: 40px
+        height: 40px
+        border-radius: 50%
+        background-color: $main-accent-color
+        color: white
+    &-header
+        margin-bottom: -20px
+        margin-left: 70px
