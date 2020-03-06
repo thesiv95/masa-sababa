@@ -3,7 +3,7 @@ import React from "react";
 class NavLang extends React.Component {
     render() {
         return(
-            <select>
+            <select className='header_select'>
                 <option>en</option>
                 <option>ru</option>
                 <option>he</option>

@@ -37,6 +37,11 @@ body {
 .header_signup {
   float: right;
 }
+.header_select {
+  border-color: #906FDA;
+  border-radius: 5px;
+  padding: 0 5px;
+}
 .header_link {
   color: #555555;
 }
