@@ -9,7 +9,7 @@ class Main extends React.Component {
         // TODO
         if (3 > 99){
             return (
-                <About/>
+                <Home/>
             )
         }
 
@@ -21,7 +21,7 @@ class Main extends React.Component {
         }
 
         return (
-            <Home/>
+            <About/>
         )
     }
 }
