@@ -7,14 +7,14 @@ class Header extends React.Component {
 
     render(){
         return (
-            <div>
                 <header className="header container">
-                    <Logo/>
-                    <Nav/>
-                    <Search/>
-                    <SignUp/>
+                    <div className="row">
+                        <Logo/>
+                        <Nav/>
+                        <Search/>
+                        <SignUp/>
+                    </div>
                 </header>
-            </div>
         )
     }
 }
