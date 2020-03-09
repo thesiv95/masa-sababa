@@ -1,0 +1,50 @@
+{
+  "html_dir": "ltr",
+
+  "header_menu_home": "Home",
+  "header_menu_about": "About",
+  "header_menu_blog": "Blog",
+  "header_menu_profile": "Profile",
+  "header_menu_logout": "Logout",
+  "header_search_placeholder": "Search here",
+  "header_btn_signup": "Sign Up",
+
+  "main_header": "Welcome to Israel",
+  "main_subheader": "First steps of the new repatriate",
+  "main_description": "The Israeli government offers many services and special benefits to Olim, new immigrants to Israel. Find out what government benefits you are eligible for!",
+  "main_404_header": "Sorry! Page not found",
+  "main_btn_signup": "Sign Up",
+  "main_btn_knowmore": "Know more",
+  "main_btn_gohome": "To home page",
+
+  "about_header_part-left": "About",
+  "about_header_part-right": "Repatriation",
+  "about_description": "All Jews, no matter where they were born, are Israeli citizens by right. If you've ever considered making the move to Israel, let us light the way.",
+  "about_showmore": "Show more",
+  "about_usefularticles_title": "Useful articles for you",
+
+  "blog_header": "Blog",
+  "blog_teudatzeut_title": "How to get Teudat zeut?",
+  "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card. Or read the detailed step-by-step guide below.",
+
+  "profile_header": "Profile",
+  "profile_firstname": "First Name",
+  "profile_lastname": "Last Name",
+  "profile_email": "Your Email Address",
+  "profile_password": "Your Password",
+  "profile_confirm_password": "Confirm Password",
+  "profile_btn_save": "Save Details",
+  "profile_yoursavedarticles_title": "Your Saved Articles",
+
+  "breadcrumbs_previous": "Previous",
+  "breadcrumbs_next": "Next",
+
+  "footer_contactus_title": "Contact Us",
+  "footer_contactus_geo": "Tel Aviv, Israel",
+  "footer_ourcompany_title": "Our Company",
+  "footer_ourcompany_about": "About",
+  "footer_socialcontacts_title": "Social Contacts",
+  "footer_address_title": "Address",
+  "footer_address_street": "Tel Aviv Dizengof Street",
+  "footer_followus_title": "Follow Us"
+}
