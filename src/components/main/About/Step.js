@@ -1,5 +1,5 @@
 import React from 'react';
-const baseUrl = 'https://olimshelper.herokuapp.com/';
+//const baseUrl = 'https://olimshelper.herokuapp.com/';
 
 class Step extends React.Component {
 

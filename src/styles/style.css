@@ -45,7 +45,7 @@ body {
 .header_link {
   color: #555555;
 }
-.header_link:hover {
+.header_link:hover, .header_link:active, .header_link:focus {
   text-decoration: none;
 }
 .header_nav-list {

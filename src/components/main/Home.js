@@ -3,7 +3,7 @@ import React from "react";
 class Home extends React.Component {
     render() {
         return(
-            <main className="main">
+            <div>
                 <h2 className="main_header">Welcome to Israel</h2>
                 <p className="main_subheader">First steps of the new repatriate</p>
                 <p className="main_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
@@ -16,7 +16,7 @@ class Home extends React.Component {
                     <img src="img/clip-2.png" alt="main pic" className="main_pic-image img-fluid"/>
                     <img src="img/Rectangle 365.svg" alt="gradient" className="main_pic-gradient img-fluid"/>
                 </div>
-            </main>
+            </div>
         )
     }
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import Address from "./followme/Address";
-import Follow from "./followme/Follow";
+import Address from "./FollowMe/Address";
+import Follow from "./FollowMe/Follow";
 
 class FollowMe extends React.Component{
     render() {

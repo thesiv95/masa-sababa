@@ -1,17 +1,19 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
+
 
 class NavList extends React.Component {
     render() {
         return(
                 <ul className="header_nav-list">
                     <li className="header_nav-item">
-                        <a className="header_link nav-active" href="/">Home</a>
+                        <NavLink to='/home' className='header_link' activeClassName='nav-active'>Home</NavLink>
                     </li>
                     <li className="header_nav-item">
-                        <a className="header_link" href="/about">About</a>
+                        <NavLink to='/about' className='header_link' activeClassName='nav-active'>About</NavLink>
                     </li>
                     <li className="header_nav-item">
-                        <a className="header_link" href="/blog">Blog</a>
+                        <NavLink to='/blog' className='header_link' activeClassName='nav-active'>Blog</NavLink>
                     </li>
                 </ul>
         )

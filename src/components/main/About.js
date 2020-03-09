@@ -1,6 +1,6 @@
 import React from "react";
-import Step from "./about/step"
-import Useful from "./about/useful";
+import Step from "./About/Step"
+import Useful from "./About/Useful";
 
 // TODO: вывод шагов через фетч
 // через стейт переключать язык, и чтобы фетч проходил заново
@@ -10,7 +10,7 @@ import Useful from "./about/useful";
 class About extends React.Component {
     render() {
         return (
-            <main className="main">
+            <div>
                 <h2 className="main_header">About Repatriation</h2>
                 <p className="main_description main_description-about">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to.</p>
                 <div className="main_steps container">
@@ -45,7 +45,7 @@ class About extends React.Component {
                         <button className="button button-nav">&#8594;</button>
                     </div>
                 </div>
-            </main>
+            </div>
         )
     }
 }
