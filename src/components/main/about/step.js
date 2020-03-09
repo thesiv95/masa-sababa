@@ -6,25 +6,10 @@ class Step extends React.Component {
     constructor(props) {
         super(props);
         this.setState({
-            lang: 'en',
-            number: undefined,
-            title: undefined,
-            description: undefined
-            // picture: undefined
+
         })
     }
 
-
-    getSteps = (lang) => {
-        fetch(baseUrl + lang)
-            .then(res => res.json())
-            .then(json => this.setState({
-                lang: lang,
-                number: json.steps.numberOfStep,
-                title: json.steps.title,
-                description: json.steps.description
-            }))
-    }
 
     render() {
         return (
@@ -35,7 +20,7 @@ class Step extends React.Component {
                     <p className="main_step-description">{this.props.description}</p>
                 </div>
                 <div className="main_step step-pic-right col-sm-6">
-                    <img src="img/steps/clip-bad-gateaway.png" alt="stepX" className="main_step-pic"/>
+                    <img src={this.props.img} alt="stepX" className="main_step-pic"/>
                 </div>
             </div>
         )
