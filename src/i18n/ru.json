@@ -1,0 +1,50 @@
+{
+  "html_dir": "ltr",
+  
+  "header_menu_home": "Главная",
+  "header_menu_about": "Инфа",
+  "header_menu_blog": "Блог",
+  "header_menu_profile": "Профиль",
+  "header_menu_logout": "Выйти",
+  "header_search_placeholder": "Поиск",
+  "header_btn_signup": "Войти",
+
+  "main_header": "Добро пожаловать в Израиль",
+  "main_subheader": "Первые шаги нового репатрианта",
+  "main_description": "Правительство Израиля предлагает множество услуг и всяких плюшек для Олим - новых израильских иммигрантов. Узнай, что ты можешь получить от государства по праву!",
+  "main_404_header": "Извини! Такая страница не найдена",
+  "main_btn_signup": "Войти",
+  "main_btn_knowmore": "Узнай больше",
+  "main_btn_gohome": "На главную",
+
+  "about_header_part-left": "Про",
+  "about_header_part-right": "репатриацию",
+  "about_description": "Все евреи - по праву граждане Израиля, независимо от их места рождения. Если ты когда-то планировал или планировала стать на шаг ближе к Израилю, то мы покажем тебе правильный путь.",
+  "about_showmore": "Показать еще",
+  "about_usefularticles_title": "Полезные статьи для тебя",
+
+  "blog_header": "Блог",
+  "blog_teudatzeut_title": "Как получить Теудат зеут?",
+  "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту. Или же прочитай пошаговую инструкцию ниже.",
+
+  "profile_header": "Профиль",
+  "profile_firstname": "Имя",
+  "profile_lastname": "Фамилия",
+  "profile_email": "Твой адрес эл. почты",
+  "profile_password": "Твой пароль",
+  "profile_confirm_password": "Подтверждение пароля",
+  "profile_btn_save": "Сохранить данные",
+  "profile_yoursavedarticles_title": "Твои сохранённые статьи",
+
+  "breadcrumbs_previous": "Раньше",
+  "breadcrumbs_next": "Позже",
+
+  "footer_contactus_title": "Свяжись с нами",
+  "footer_contactus_geo": "Тель Авив, Израиль",
+  "footer_ourcompany_title": "Наша компания",
+  "footer_ourcompany_about": "Инфа",
+  "footer_socialcontacts_title": "Социальные сети",
+  "footer_address_title": "Адрес",
+  "footer_address_street": "ул. Дизенгоф, Тель-Авив",
+  "footer_followus_title": "Следуй за нами"
+}
