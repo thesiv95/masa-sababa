@@ -12,18 +12,16 @@ class FullArticle extends React.Component {
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowFullScreen/>
                     </div>
-                        <p>Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card. Or read the detailed step-by-step guide below.</p>
-                        <a href="#">Link sample</a>
+                        <p>Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card. You can also always ask ministries for help.</p>
+                        <a href="#maps">Link sample</a>
                         <blockquote>
                             Blockquote sample
                         </blockquote>
-                        <h3>Header sample</h3>
-                        <ul>
-                            <li>sample</li>
-                            <li>sample</li>
-                            <li>sample</li>
-                            <li>sample</li>
-                        </ul>
+
+                    {/* ministries */}
+
+                    {/* /ministries */}
+
                 </div>
                 <div className="main_comments">
                     <div className="main_comments-comment">
