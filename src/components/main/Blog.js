@@ -1,6 +1,27 @@
 import React from "react";
 import Article from "./Blog/Article";
 import Breadcrumbs from "./Blog/Breadcrumbs";
+import {baseUrl} from "../Constants";
+
+let targetLanguage = 'ru';
+const categoriesLength = 8;
+
+let categories = [];
+
+
+function getCategories(displayLanguage) {
+    fetch(`${baseUrl}${displayLanguage}/category`)
+        .then(res => res.json())
+        .then(json => {
+
+            for (let i = 0; i < categoriesLength; i++){
+                categories.push(json[i])
+            }
+
+        })
+}
+
+getCategories(targetLanguage);
 
 class Blog extends React.Component{
     render() {
@@ -9,14 +30,14 @@ class Blog extends React.Component{
                 <h2 className="main_header">Blog</h2>
                 <div className="main_blogcontainer container">
                     <div className="main_articles row">
-                        <Article img='img/Ellipse 344.png' title='2' description='2' />
-                        <Article img='img/Ellipse 345.png' title='3' description='3'/>
-                        <Article img='img/Ellipse 346.png' title='4' description='4'/>
+                        <Article img='img/Ellipse 344.png' title={categories[0]} description={categories[0]} />
+                        <Article img='img/Ellipse 345.png' title={categories[1]} description={categories[1]}/>
+                        <Article img='img/Ellipse 347.png' title={categories[2]} description={categories[2]}/>
                     </div>
                     <div className="main_articles row">
-                        <Article img='img/Ellipse 345.png' title='6' description='6'/>
-                        <Article img='img/Ellipse 346.png' title='7' description='7'/>
-                        <Article img='img/Ellipse 345.png' title='8' description='8'/>
+                        <Article img='img/Ellipse 344.png' title={categories[3]} description={categories[3]}/>
+                        <Article img='img/Ellipse 345.png' title={categories[4]} description={categories[4]}/>
+                        <Article img='img/Ellipse 347.png' title={categories[5]} description={categories[5]}/>
                     </div>
                 </div>
 

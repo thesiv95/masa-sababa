@@ -4,6 +4,7 @@ import Useful from "./About/Useful";
 import {baseUrl} from "../Constants";
 
 // TODO: через стейт переключать язык, и чтобы фетч проходил заново
+// TODO: ??? как подключить json-файлы
 
 let targetLanguage = 'ru';
 
@@ -13,14 +14,6 @@ const stepsNumbers = 9;
 let stepsTitles = [];
 let stepsDesc = [];
 
-// const getDisplayConstants = (displayLanguage) => {
-//     fetch(`../../i18n/${displayLanguage}.json`)
-//         .then(res => res.json())
-//         .catch(e => console.error(e))
-//         .then(json => {
-//             console.log(json)
-//         })
-// }
 
 const getSteps = (displayLanguage) => {
     fetch(`${baseUrl}${displayLanguage}`)
