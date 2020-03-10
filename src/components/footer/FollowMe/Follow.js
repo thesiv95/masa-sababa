@@ -7,22 +7,22 @@ class Follow extends React.Component {
                 <h4 className="footer_title">Follow Us</h4>
                 <div className="footer_block-socialbuttons">
                     <div className="footer_block-socialbutton">
-                        <a href="#">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
                             <img src="img/facebook.svg" alt="fb" className="footer_block-socialimage"/>
                         </a>
                     </div>
                     <div className="footer_block-socialbutton">
-                        <a href="#">
+                        <a href="https://www.skype.com" target="_blank" rel="noopener noreferrer">
                             <img src="img/skype.svg" alt="skype" className="footer_block-socialimage"/>
                         </a>
                     </div>
                     <div className="footer_block-socialbutton">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
                             <img src="img/linkedin.svg" alt="linkedin" className="footer_block-socialimage"/>
                         </a>
                     </div>
                     <div className="footer_block-socialbutton">
-                        <a href="#">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                             <img src="img/instagram.svg" alt="insta" className="footer_block-socialimage"/>
                         </a>
                     </div>

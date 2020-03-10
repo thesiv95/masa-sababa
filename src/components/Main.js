@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Redirect, Route} from 'react-router-dom';
+import {Redirect, Route} from 'react-router-dom';
 import Home from "./main/Home";
 import About from "./main/About";
 import Blog from "./main/Blog";

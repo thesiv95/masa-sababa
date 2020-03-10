@@ -1,17 +1,10 @@
 import React from 'react';
-//const baseUrl = 'https://olimshelper.herokuapp.com/';
+
+
 
 class Step extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.setState({
-
-        })
-    }
-
-
-    render() {
+     render() {
         return (
             <div className="row">
                 <div className="main_step step-pic-left col-sm-6">

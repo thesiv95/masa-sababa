@@ -11,7 +11,7 @@ class ContactUs extends React.Component {
                 </p>
                 <p className="footer_text">
                     <img src="/img/bootstrap-icons/geo.svg" alt="location" width="32" height="32" title="geo"/>
-                        <a href="https://goo.gl/maps/4Ns4315AuiHwy1Px5" className="footer_link" target="_blank">Tel
+                        <a href="https://goo.gl/maps/4Ns4315AuiHwy1Px5" className="footer_link" target="_blank" rel="noopener noreferrer">Tel
                             Aviv, Israel</a>
                 </p>
                 <p className="footer_text">
