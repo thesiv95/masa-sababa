@@ -213,6 +213,14 @@ body {
   border: 1px solid #906FDA;
   border-radius: 4px;
 }
+.main_video {
+  width: 600px;
+  height: 400px;
+}
+.main_videocontainer {
+  text-align: center;
+  padding: 20px 0;
+}
 
 .button {
   width: 131px;
