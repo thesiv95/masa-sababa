@@ -15,13 +15,14 @@ class NavLang extends React.Component {
         localStorage.setItem('lang', event.target.value);
 
 
-
     }
 
 
     render() {
+        let currentValue = this.state.value;
         return(
-            <select className='header_select' value={this.state.value} onChange={this.handleChange}>
+            <select className='header_select' defaultValue={currentValue} onChange={this.handleChange}>
+
                 <option value='en'>en</option>
                 <option value='ru'>ru</option>
                 <option value='he'>he</option>

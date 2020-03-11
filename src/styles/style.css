@@ -54,6 +54,7 @@ body {
 }
 .header_nav-item {
   margin-left: 20px;
+  width: 90px;
 }
 .header .nav-active {
   color: #906FDA;
