@@ -83,8 +83,8 @@
         font-size: 14px
         color: $main-description
     &_articlecontent
-        img
-
+        p, a
+            padding-left: $blog-margin-left
         blockquote
             width: 814px
             height: auto
@@ -113,21 +113,36 @@
         &-navigation
             margin: 20px 0
             text-align: center
-
     .article-header
         margin-left: $blog-margin-left
         text-align: justify
-
     .direction-page
         width: 68px
         height: 23px
         margin-right: 10px
-
     .active-page
         border: 1px solid $main-accent-color
         border-radius: 4px
+
+    &_video, &_map
+
+        width: 600px
+        height: 400px
+        &container
+            text-align: center
+            padding: 20px 0
                       
-    
+    &_comments
+        width: 600px !important
+        height: 300px
+        border-left-color: $main-accent-color
+        border-right-color: $main-accent-color
+        margin: 0 auto
+
+    &_leavereply
+        margin-top: 60px
+        width: 400px
+        height: 300px
         
 
 .button

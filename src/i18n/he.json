@@ -18,9 +18,10 @@
   "main_btn_knowmore": "יודע יותר",
   "main_btn_gohome": "לעמוד הבית",
 
-  "about_header_part-left": "על ",
-  "about_header_part-right": "השיבה",
+  "about_header_partleft": "על ",
+  "about_header_partright": "השיבה",
   "about_description": "כל היהודים, לא משנה היכן הם נולדו, הם אזרחי ישראל בזכותם. אם שקלתם אי פעם את המעבר לישראל, תנו לנו להאיר את הדרך.",
+  "about_step": "שלב",
   "about_showmore": "להראות יותר",
   "about_usefularticles_title": "מאמרים שימושיים עבורך",
 
@@ -40,10 +41,19 @@
   "breadcrumbs_previous": "קודם",
   "breadcrumbs_next": "הבא",
 
+  "comments_title": "הערות",
+  "comments_reply": "תשובה",
+  "reply_placeholder_yourtext": "תגובתך",
+  "reply_placeholder_yourname": "השם שלך",
+  "reply_placeholder_youremail": "האימייל שלך",
+  "reply_checkbox": "שמור את שמי, דוא\"ל ואתרי בדפדפן זה בפעם הבאה שאגיב.",
+  "reply_btn": "פרסם תגובה",
+
   "footer_contactus_title": "צור קשר",
   "footer_contactus_geo": "תל אביב, ישראל",
   "footer_ourcompany_title": "החברה שלנו",
   "footer_ourcompany_about": "על אודות",
+  "footer_ourcompany_blog": "בלוג",
   "footer_socialcontacts_title": "קשרים חברתיים",
   "footer_address_title": "כתובת",
   "footer_address_street": "דיזנגוף תל אביב",

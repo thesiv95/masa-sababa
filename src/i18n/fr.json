@@ -17,9 +17,10 @@
   "main_btn_knowmore": "Savoir plus",
   "main_btn_gohome": "Vers la page d'accueil",
 
-  "about_header_part-left": "À propos",
-  "about_header_part-right": "du rapatriement",
+  "about_header_partleft": "À propos",
+  "about_header_partright": "du rapatriement",
   "about_description": "Tous les Juifs, quel que soit leur lieu de naissance, sont de droit des citoyens israéliens. Si vous avez déjà envisagé de déménager en Israël, laissez-nous vous éclairer.",
+  "about_step": "Étape",
   "about_showmore": "Montre plus",
   "about_usefularticles_title": "Articles utiles pour vous",
 
@@ -39,10 +40,19 @@
   "breadcrumbs_previous": "Précédente",
   "breadcrumbs_next": "Prochain",
 
+  "comments_title": "Commentaires",
+  "comments_reply": "Répondre",
+  "reply_placeholder_yourtext": "Votre réponse",
+  "reply_placeholder_yourname": "Votre nom",
+  "reply_placeholder_youremail": "Votre email",
+  "reply_checkbox": "Enregistrez mon nom, mon e-mail et mon site Web dans ce navigateur pour la prochaine fois que je commenterai.",
+  "reply_btn": "Poster",
+
   "footer_contactus_title": "Nous contacter",
   "footer_contactus_geo": "Tel Aviv, Israël",
   "footer_ourcompany_title": "Notre compagnie",
   "footer_ourcompany_about": "Sur",
+  "footer_ourcompany_blog": "Blog",
   "footer_socialcontacts_title": "Contacts sociaux",
   "footer_address_title": "Adresse",
   "footer_address_street": "Tel Aviv rue Dizengof",
