@@ -21,7 +21,7 @@ class NavLang extends React.Component {
     render() {
         let currentValue = this.state.value;
         return(
-            <select className='header_select' defaultValue={currentValue} onChange={this.handleChange}>
+            <select className='header_select' defaultValue={this.state.value === currentValue ? currentValue : 'en'} onChange={this.handleChange}>
 
                 <option value='en'>en</option>
                 <option value='ru'>ru</option>
