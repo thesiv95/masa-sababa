@@ -13,8 +13,6 @@ import Lang from "./../../i18n/ru"
 
 class About extends React.Component {
 
-
-
     constructor(props) {
         super(props);
         this.state = {

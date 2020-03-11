@@ -2,15 +2,24 @@ import React from "react";
 
 class NavLang extends React.Component {
 
-    changeLanguage = (event) => {
-        let lang = event.target.value;
-        console.log(lang);
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange = (event) => {
+        // Get selected lang value & put into storage
+        this.setState({value: event.target.value});
+        localStorage.setItem('lang', event.target.value);
+
     }
 
 
     render() {
         return(
-            <select className='header_select' id='languageSelector' onChange={this.changeLanguage}>
+            <select className='header_select' value={this.state.value} onChange={this.handleChange}>
                 <option value='en'>en</option>
                 <option value='ru'>ru</option>
                 <option value='he'>he</option>
