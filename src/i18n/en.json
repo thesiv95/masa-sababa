@@ -17,8 +17,8 @@
   "main_btn_knowmore": "Know more",
   "main_btn_gohome": "To home page",
 
-  "about_header_part-left": "About",
-  "about_header_part-right": "Repatriation",
+  "about_header_partleft": "About",
+  "about_header_partright": "Repatriation",
   "about_description": "All Jews, no matter where they were born, are Israeli citizens by right. If you've ever considered making the move to Israel, let us light the way.",
   "about_step": "Step",
   "about_showmore": "Show more",
@@ -26,7 +26,8 @@
 
   "blog_header": "Blog",
   "blog_teudatzeut_title": "How to get Teudat zeut?",
-  "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card. Or read the detailed step-by-step guide below.",
+  "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card.",
+  "blog_teudatzeut_blockquote": "You can also write down your question in a comment below.",
 
   "profile_header": "Profile",
   "profile_firstname": "First Name",
@@ -40,10 +41,19 @@
   "breadcrumbs_previous": "Previous",
   "breadcrumbs_next": "Next",
 
+  "comments_title": "Comments",
+  "comments_reply": "Reply",
+  "reply_placeholder_yourtext": "Your Reply",
+  "reply_placeholder_yourname": "Your Name",
+  "reply_placeholder_youremail": "Your Email",
+  "reply_checkbox": "Save my name, email, and website in this browser for the next time I comment.",
+  "reply_btn": "Post comment",
+
   "footer_contactus_title": "Contact Us",
   "footer_contactus_geo": "Tel Aviv, Israel",
   "footer_ourcompany_title": "Our Company",
   "footer_ourcompany_about": "About",
+  "footer_ourcompany_blog": "Blog",
   "footer_socialcontacts_title": "Social Contacts",
   "footer_address_title": "Address",
   "footer_address_street": "Tel Aviv Dizengof Street",

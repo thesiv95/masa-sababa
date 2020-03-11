@@ -2,10 +2,9 @@ import React from "react";
 import Article from "./Blog/Article";
 import Breadcrumbs from "./Blog/Breadcrumbs";
 import {baseUrl} from "../Constants";
+import Lang from "./../../i18n/ru";
 
-let targetLanguage = 'ru';
 const categoriesLength = 8;
-
 let categories = [];
 
 
@@ -21,13 +20,13 @@ function getCategories(displayLanguage) {
         })
 }
 
-getCategories(targetLanguage);
+getCategories('ru');
 
 class Blog extends React.Component{
     render() {
         return (
             <div>
-                <h2 className="main_header">Blog</h2>
+                <h2 className="main_header">{Lang.blog_header}</h2>
                 <div className="main_blogcontainer container">
                     <div className="main_articles row">
                         <Article img='img/Ellipse 344.png' title={categories[0]} description={categories[0]} />

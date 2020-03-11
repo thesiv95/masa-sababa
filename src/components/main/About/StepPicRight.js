@@ -12,6 +12,7 @@ class StepPicRight extends React.Component {
                 </div>
                 <div className="main_step col-sm-6">
                     <img src={this.props.img} alt={`step-${this.props.number}`} className="main_step-pic"/>
+                    {this.props.need !== "" ? `<p>${this.props.need}</p>` : ''}
                 </div>
             </div>
         )

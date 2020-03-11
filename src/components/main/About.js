@@ -1,73 +1,80 @@
 import React from "react";
-import StepPicLeft from "./About/StepPicLeft";
-import StepPicRight from "./About/StepPicRight";
+
+// import StepPicLeft from "./About/StepPicLeft";
+// import StepPicRight from "./About/StepPicRight";
+
 import Useful from "./About/Useful";
 import {baseUrl} from "../Constants";
+import Lang from "./../../i18n/ru"
+
 
 
 // TODO: через стейт переключать язык, и чтобы фетч проходил заново
-// TODO: ??? как подключить json-файлы
-
-let targetLanguage = 'ru';
-
-// let displayConstants = [];
-
-const stepsNumbers = 9;
-let stepsTitles = [];
-let stepsDesc = [];
-
-
-const getSteps = (displayLanguage) => {
-    fetch(`${baseUrl}${displayLanguage}`)
-        .then(res => res.json())
-        .then(json => {
-
-            for (let i = 0; i < stepsNumbers; i++){
-                stepsTitles.push(json.steps[i].title);
-                stepsDesc.push(json.steps[i].description)
-            }
-        })
-};
-getSteps(targetLanguage);
-
 
 class About extends React.Component {
 
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         stepInfo: {
-    //             number: 1,
-    //             title: undefined,
-    //             description: undefined
-    //         }
-    //     }
-    // }
+    stepsNumbers = 9;
+    tempTitles = [];
+    tempDesc = [];
+    tempNeed = [];
 
-    // getSteps = (displayLanguage) => {
-    //     fetch(`${baseUrl}${displayLanguage}`)
-    //         .then(res => res.json())
-    //         .then(json => console.log(json))
-    //
-    //     };
+    constructor(props) {
+        super(props);
+        this.state = {
+            lang: 'fr',
+            stepsTitles: [],
+            stepsDesc: [],
+            stepsNeed: []
+        }
+    }
+
+
+
+    getSteps = (displayLanguage) => {
+
+
+        fetch(`${baseUrl}${displayLanguage}`)
+            .then(res => res.json())
+            .then(json => {
+                console.log(json)
+
+                for (let i = 0; i < this.stepsNumbers; i++) {
+                    this.tempTitles.push(json.steps[i].title);
+                    this.tempDesc.push(json.steps[i].description)
+                    this.tempNeed.push(json.steps[i].need)
+                }
+            })
+
+        // this.setState({
+        //     stepsTitles: this.tempTitles,
+        //     stepsDesc: this.tempDesc,
+        //     stepsNeed: this.tempNeed
+        // });
+
+    };
 
 
 
     render() {
+        this.getSteps(this.state.lang)
         return (
             <div>
-                <h2 className="main_header">About Repatriation</h2>
-                <p className="main_description main_description-about">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to.</p>
+                <h2 className="main_header">{Lang.about_header_partleft}
+                    &nbsp;<span>{Lang.about_header_partright}</span>
+                </h2>
+                <p className="main_description main_description-about">
+                    {Lang.about_description}
+                </p>
                 <div className="main_steps container">
-                    <StepPicLeft number='1' title={stepsTitles[0]} description={stepsDesc[0]} img='img/steps/clip-bad-gateaway.png'/>
-                    <StepPicRight number='2' title={stepsTitles[1]} description={stepsDesc[1]} img='img/steps/clip-payment.png'/>
-                    <StepPicLeft number='3' title={stepsTitles[2]} description={stepsDesc[2]} img='img/steps/clip-welcome.png'/>
-                    <StepPicRight number='4' title={stepsTitles[3]} description={stepsDesc[3]} img='img/steps/clip.png'/>
-                    <StepPicLeft number='5' title={stepsTitles[4]} description={stepsDesc[4]} img='img/steps/clip-sign-up.png'/>
-                    <StepPicRight number='6' title={stepsTitles[5]} description={stepsDesc[5]} img='img/steps/clip-travel.png'/>
-                    <StepPicLeft number='7' title={stepsTitles[6]} description={stepsDesc[6]} img='img/steps/clip-no-messages.png'/>
-                    <StepPicRight number='8' title={stepsTitles[7]} description={stepsDesc[7]} img='img/steps/clip-list-is-empty.png'/>
-                    <StepPicLeft number='9' title={stepsTitles[8]} description={stepsDesc[8]} img='img/steps/clip-waiting.png'/>
+                   {/* <StepPicLeft number='1' title={this.state.stepsTitles[0]} description={this.state.stepsDesc[0]} need={this.state.stepsDesc[0]} img='img/steps/clip-bad-gateaway.png'/>*/}
+                    {/*<StepPicRight number='2' title={this.stepsTitles[1]} description={this.stepsDesc[1]} need={this.stepsDesc[1]} img='img/steps/clip-payment.png'/>*/}
+                    {/*<StepPicLeft number='3' title={this.stepsTitles[2]} description={this.stepsDesc[2]} need={this.stepsDesc[2]} img='img/steps/clip-welcome.png'/>*/}
+                    {/*<StepPicRight number='4' title={this.stepsTitles[3]} description={this.stepsDesc[3]} need={this.stepsDesc[3]} img='img/steps/clip.png'/>*/}
+                    {/*<StepPicLeft number='5' title={this.stepsTitles[4]} description={this.stepsDesc[4]} need={this.stepsDesc[4]} img='img/steps/clip-sign-up.png'/>*/}
+                    {/*<StepPicRight number='6' title={this.stepsTitles[5]} description={this.stepsDesc[5]} need={this.stepsDesc[5]} img='img/steps/clip-travel.png'/>*/}
+                    {/*<StepPicLeft number='7' title={this.stepsTitles[6]} description={this.stepsDesc[6]} need={this.stepsDesc[6]} img='img/steps/clip-no-messages.png'/>*/}
+                    {/*<StepPicRight number='8' title={this.stepsTitles[7]} description={this.stepsDesc[7]} need={this.stepsDesc[7]} img='img/steps/clip-list-is-empty.png'/>*/}
+                    {/*<StepPicLeft number='9' title={this.stepsTitles[8]} description={this.stepsDesc[8]} need={this.stepsDesc[8]} img='img/steps/clip-waiting.png'/>*/}
                 </div>
                 {/* 3 */}
                 <div className="main_showmore">
@@ -79,7 +86,7 @@ class About extends React.Component {
                 </div>
                 {/* 3 */}
                 <div className="main_useful">
-                    <h4 className="main_useful-title">Useful articles for you</h4>
+                    <h4 className="main_useful-title">{Lang.about_usefularticles_title}</h4>
                     <div className="main_articles container">
                         <div className="row">
                             <Useful/>
