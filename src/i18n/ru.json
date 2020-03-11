@@ -17,8 +17,8 @@
   "main_btn_knowmore": "Узнай больше",
   "main_btn_gohome": "На главную",
 
-  "about_header_part-left": "Про",
-  "about_header_part-right": "репатриацию",
+  "about_header_partleft": "Про",
+  "about_header_partright": "репатриацию",
   "about_description": "Все евреи - по праву граждане Израиля, независимо от их места рождения. Если ты когда-то планировал или планировала стать на шаг ближе к Израилю, то мы покажем тебе правильный путь.",
   "about_step": "Шаг",
   "about_showmore": "Показать еще",
@@ -26,7 +26,8 @@
 
   "blog_header": "Блог",
   "blog_teudatzeut_title": "Как получить Теудат зеут?",
-  "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту. Или же прочитай пошаговую инструкцию ниже.",
+  "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту",
+  "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
 
   "profile_header": "Профиль",
   "profile_firstname": "Имя",
@@ -40,10 +41,19 @@
   "breadcrumbs_previous": "Раньше",
   "breadcrumbs_next": "Позже",
 
+  "comments_title": "Комментарии",
+  "comments_reply": "Ответить",
+  "reply_placeholder_yourtext": "Твой ответ",
+  "reply_placeholder_yourname": "Твоё имя",
+  "reply_placeholder_youremail": "Твой email",
+  "reply_checkbox": "Сохранить мое имя, email и сайт в этом браузере для моих будущих комментариев.",
+  "reply_btn": "Отправить",
+
   "footer_contactus_title": "Свяжись с нами",
   "footer_contactus_geo": "Тель Авив, Израиль",
   "footer_ourcompany_title": "Наша компания",
   "footer_ourcompany_about": "Инфа",
+  "footer_ourcompany_blog": "Блог",
   "footer_socialcontacts_title": "Социальные сети",
   "footer_address_title": "Адрес",
   "footer_address_street": "ул. Дизенгоф, Тель-Авив",

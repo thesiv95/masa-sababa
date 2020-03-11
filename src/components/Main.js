@@ -6,7 +6,9 @@ import Blog from "./main/Blog";
 import FullArticle from "./main/Blog/FullArticle";
 import Profile from "./Profile";
 
+
 //import NotFound404 from "./main/NotFound404";
+
 
 class Main extends React.Component {
     render() {

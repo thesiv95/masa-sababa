@@ -168,6 +168,9 @@ body {
   font-size: 14px;
   color: #555555;
 }
+.main_articlecontent p, .main_articlecontent a {
+  padding-left: 15px;
+}
 .main_articlecontent blockquote {
   width: 814px;
   height: auto;
@@ -213,13 +216,25 @@ body {
   border: 1px solid #906FDA;
   border-radius: 4px;
 }
-.main_video {
+.main_video, .main_map {
   width: 600px;
   height: 400px;
 }
-.main_videocontainer {
+.main_videocontainer, .main_mapcontainer {
   text-align: center;
   padding: 20px 0;
+}
+.main_comments {
+  width: 600px !important;
+  height: 300px;
+  border-left-color: #906FDA;
+  border-right-color: #906FDA;
+  margin: 0 auto;
+}
+.main_leavereply {
+  margin-top: 60px;
+  width: 400px;
+  height: 300px;
 }
 
 .button {

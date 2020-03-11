@@ -3,6 +3,8 @@ import Logo from "./header/Logo"
 import Nav from "./header/Nav";
 import Search from "./header/Search";
 import SignUp from "./header/SignUp";
+
+
 class Header extends React.Component {
 
     render(){
