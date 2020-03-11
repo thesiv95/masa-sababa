@@ -16,7 +16,7 @@ class About extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            lang: 'ru',
+            lang: languageSet(),
             stepsTitles: [],
             stepsDesc: [],
             stepsNeed: []

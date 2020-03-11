@@ -1,13 +1,15 @@
 import React from 'react';
 import Lang from './../../../i18n/lang';
+import languageSet from "../../../languageSet";
 
 class StepPicRight extends React.Component {
 
     render() {
+        let displayLanguage = languageSet();
         return (
             <div className="row">
                 <div className="main_step col-sm-6">
-                    <h3 className="main_step-number">{Lang.ru.about_step} {this.props.number}</h3>
+                    <h3 className="main_step-number">{Lang[displayLanguage].about_step} {this.props.number}</h3>
                     <h4 className="main_step-title">{this.props.title}</h4>
                     <p className="main_step-description">{this.props.description}</p>
                 </div>
