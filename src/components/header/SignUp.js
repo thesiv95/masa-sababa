@@ -6,9 +6,13 @@ class SignUp extends React.Component {
     render() {
         return (
             <div className="header_signup col-md-1">
-                <button className="button button-header">
-                    <NavLink to='/profile'>{Lang.header_btn_signup}</NavLink>
-                </button>
+
+                    <NavLink to='/profile'>
+                        <button className="button button-header">
+                            {Lang.header_btn_signup}
+                        </button>
+                    </NavLink>
+
             </div>
         )
     }

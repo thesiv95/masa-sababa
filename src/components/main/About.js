@@ -33,7 +33,7 @@ class About extends React.Component {
         fetch(`${baseUrl}${this.state.lang}`)
             .then(res => res.json())
             .then(json => {
-                console.log(json);
+
 
                 for (let i = 0; i < stepsNumbers; i++) {
                     tempTitles.push(json.steps[i].title);
