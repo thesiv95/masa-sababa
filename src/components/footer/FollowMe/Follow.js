@@ -1,11 +1,11 @@
 import React from "react";
-import Lang from "./../../../i18n/ru";
+import Lang from "./../../../i18n/lang";
 
 class Follow extends React.Component {
     render() {
         return (
             <div>
-                <h4 className="footer_title">{Lang.footer_followus_title}</h4>
+                <h4 className="footer_title">{Lang.ru.footer_followus_title}</h4>
                 <div className="footer_block-socialbuttons">
                     <div className="footer_block-socialbutton">
                         <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">

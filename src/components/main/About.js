@@ -5,9 +5,9 @@ import StepPicRight from "./About/StepPicRight";
 
 import Useful from "./About/Useful";
 import {baseUrl} from "../Constants";
-import Lang from "./../../i18n/ru"
+import Lang from "./../../i18n/lang"
 
-
+import languageSet from "../../languageSet";
 
 // TODO: привязать выпадашку
 
@@ -51,14 +51,15 @@ class About extends React.Component {
 
 
     render() {
-      //  console.log(this.state.stepsTitles);
+        // Language pick
+        let displayLang = languageSet();
         return (
             <div>
-                <h2 className="main_header">{Lang.about_header_partleft}
-                    &nbsp;<span>{Lang.about_header_partright}</span>
+                <h2 className="main_header">{Lang[displayLang].about_header_partleft}
+                    &nbsp;<span className="main_header-about-subheader">{Lang[displayLang].about_header_partright}</span>
                 </h2>
                 <p className="main_description main_description-about">
-                    {Lang.about_description}
+                    {Lang[displayLang].about_description}
                 </p>
                 <div className="main_steps container">
                     <StepPicLeft number='1' title={this.state.stepsTitles[0]} description={this.state.stepsDesc[0]} need={this.state.stepsNeed[0]} img='img/steps/clip-bad-gateaway.png' />
@@ -81,7 +82,7 @@ class About extends React.Component {
                 </div>
                 {/* 3 */}
                 <div className="main_useful">
-                    <h4 className="main_useful-title">{Lang.about_usefularticles_title}</h4>
+                    <h4 className="main_useful-title">{Lang[displayLang].about_usefularticles_title}</h4>
                     <div className="main_articles container">
                         <div className="row">
                             <Useful/>

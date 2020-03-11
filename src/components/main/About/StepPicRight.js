@@ -1,5 +1,5 @@
 import React from 'react';
-import Lang from './../../../i18n/ru';
+import Lang from './../../../i18n/lang';
 
 class StepPicRight extends React.Component {
 
@@ -7,7 +7,7 @@ class StepPicRight extends React.Component {
         return (
             <div className="row">
                 <div className="main_step col-sm-6">
-                    <h3 className="main_step-number">{Lang.about_step} {this.props.number}</h3>
+                    <h3 className="main_step-number">{Lang.ru.about_step} {this.props.number}</h3>
                     <h4 className="main_step-title">{this.props.title}</h4>
                     <p className="main_step-description">{this.props.description}</p>
                 </div>

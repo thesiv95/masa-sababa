@@ -71,6 +71,9 @@ body {
 .main_header, .main_useful-title {
   font-size: 46px;
 }
+.main_header-about-subheader {
+  font-weight: normal;
+}
 .main_signup {
   margin-top: -40px;
   text-align: right;
