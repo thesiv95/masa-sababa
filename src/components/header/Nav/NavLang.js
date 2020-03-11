@@ -14,6 +14,8 @@ class NavLang extends React.Component {
         this.setState({value: event.target.value});
         localStorage.setItem('lang', event.target.value);
 
+
+
     }
 
 
