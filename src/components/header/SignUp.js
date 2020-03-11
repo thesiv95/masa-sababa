@@ -1,5 +1,5 @@
 import React from "react";
-import {NavLink, Route} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import Lang from "./../../i18n/ru";
 
 class SignUp extends React.Component {
@@ -13,5 +13,9 @@ class SignUp extends React.Component {
         )
     }
 }
+
+/* if Profile page
+
+*/
 
 export default SignUp;
