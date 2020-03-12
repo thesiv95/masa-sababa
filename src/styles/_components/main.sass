@@ -8,6 +8,9 @@
         color: $main-title
     &_header, &_useful-title
         font-size: $title-font-size
+    &_header
+        &-about-subheader
+            font-weight: normal
     &_signup
         margin-top: -40px
         text-align: right
@@ -133,16 +136,49 @@
             padding: 20px 0
                       
     &_comments
-        width: 600px !important
-        height: 300px
-        border-left-color: $main-accent-color
-        border-right-color: $main-accent-color
+        width: $blog-reply-width !important
         margin: 0 auto
+        &-comment
+            &-leftpart, &-rightpart
+            border-left: 1px solid $main-accent-color
+            border-right: 1px solid $main-accent-color
+            margin-bottom: 15px
+            &-image
+                margin-top: 50px
 
     &_leavereply
-        margin-top: 60px
-        width: 400px
-        height: 300px
+        display: block
+        margin: 0 auto
+        width: $blog-reply-width
+        height: 400px
+        &-textarea
+            width: $blog-reply-width
+            height: 150px
+            resize: none
+            border: 1px solid $main-accent-color
+            border-radius: 5px
+            font-size: 14px
+            padding: 10px
+        &-inputs
+            width: $blog-reply-width
+            display: inline-flex
+        &-input
+            width: $blog-reply-width / 2
+            border: 1px solid $main-accent-color
+            border-radius: 5px
+            font-size: 14px
+            padding: 5px
+        &-send
+            width: $blog-reply-width
+            display: block
+            margin-top: 15px
+            line-height: 35px
+        &-checkbox input[type="checkbox"]
+            font-size: 80%
+            color: $main-description
+            margin-left: 5px
+
+
         
 
 .button

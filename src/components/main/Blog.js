@@ -2,14 +2,15 @@ import React from "react";
 import Article from "./Blog/Article";
 import Breadcrumbs from "./Blog/Breadcrumbs";
 import {baseUrl} from "../Constants";
-import Lang from "./../../i18n/ru";
+import Lang from "./../../i18n/lang";
+import languageSet from "../../languageSet";
 
 const categoriesLength = 8;
 let categories = [];
 
-
+// TODO: переделать как эбаут
 function getCategories(displayLanguage) {
-    fetch(`${baseUrl}${displayLanguage}/category`)
+    fetch(`${baseUrl}/${displayLanguage}/category`)
         .then(res => res.json())
         .then(json => {
 
@@ -20,13 +21,14 @@ function getCategories(displayLanguage) {
         })
 }
 
-getCategories('ru');
+getCategories(languageSet());
 
 class Blog extends React.Component{
     render() {
+        let displayLanguage = languageSet();
         return (
             <div>
-                <h2 className="main_header">{Lang.blog_header}</h2>
+                <h2 className="main_header">{Lang[displayLanguage].blog_header}</h2>
                 <div className="main_blogcontainer container">
                     <div className="main_articles row">
                         <Article img='img/Ellipse 344.png' title={categories[0]} description={categories[0]} />

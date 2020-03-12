@@ -1,1 +1,1 @@
-export const baseUrl = 'https://olimshelper.herokuapp.com/';
+export const baseUrl = 'https://olimshelper.herokuapp.com';
