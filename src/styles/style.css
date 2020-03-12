@@ -229,16 +229,53 @@ body {
   padding: 20px 0;
 }
 .main_comments {
-  width: 600px !important;
-  height: 300px;
-  border-left-color: #906FDA;
-  border-right-color: #906FDA;
+  width: 700px !important;
   margin: 0 auto;
 }
+.main_comments-comment {
+  border-left: 1px solid #906FDA;
+  border-right: 1px solid #906FDA;
+  margin-bottom: 15px;
+}
+.main_comments-comment-image {
+  margin-top: 50px;
+}
 .main_leavereply {
-  margin-top: 60px;
-  width: 400px;
-  height: 300px;
+  display: block;
+  margin: 0 auto;
+  width: 700px;
+  height: 400px;
+}
+.main_leavereply-textarea {
+  width: 700px;
+  height: 150px;
+  resize: none;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 10px;
+}
+.main_leavereply-inputs {
+  width: 700px;
+  display: inline-flex;
+}
+.main_leavereply-input {
+  width: 350px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 5px;
+}
+.main_leavereply-send {
+  width: 700px;
+  display: block;
+  margin-top: 15px;
+  line-height: 35px;
+}
+.main_leavereply-checkbox input[type=checkbox] {
+  font-size: 80%;
+  color: #555555;
+  margin-left: 5px;
 }
 
 .button {

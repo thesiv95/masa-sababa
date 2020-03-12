@@ -60,6 +60,8 @@
 
     "comments_title": "Комментарии",
     "comments_reply": "Ответить",
+
+    "reply_title": "Оставь комментарий",
     "reply_placeholder_yourtext": "Твой ответ",
     "reply_placeholder_yourname": "Твоё имя",
     "reply_placeholder_youremail": "Твой email",
@@ -137,6 +139,8 @@
 
     "comments_title": "Comments",
     "comments_reply": "Reply",
+    "reply_title": "Leave a reply",
+
     "reply_placeholder_yourtext": "Your Reply",
     "reply_placeholder_yourname": "Your Name",
     "reply_placeholder_youremail": "Your Email",
@@ -213,6 +217,8 @@
 
     "comments_title": "Commentaires",
     "comments_reply": "Répondre",
+
+    "reply_title": "Laisser une réponse",
     "reply_placeholder_yourtext": "Votre réponse",
     "reply_placeholder_yourname": "Votre nom",
     "reply_placeholder_youremail": "Votre email",
@@ -290,6 +296,8 @@
 
     "comments_title": "הערות",
     "comments_reply": "תשובה",
+
+    "reply_title": "השאירו תשובה",
     "reply_placeholder_yourtext": "תגובתך",
     "reply_placeholder_yourname": "השם שלך",
     "reply_placeholder_youremail": "האימייל שלך",

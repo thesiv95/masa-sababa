@@ -6,12 +6,12 @@ class Comment extends React.Component {
     render() {
         let displayLanguage = languageSet();
         return (
-            <div className="main_comments-comment container">
+            <div className="main_comments-comment">
                 <div className="row">
-                    <div className="col-sm-1">
+                    <div className="col-sm-2 main_comments-comment-leftpart">
                         <img src="img/comment.png" alt="comment" className="main_comments-comment-image"/>
                     </div>
-                    <div className="col-sm-8">
+                    <div className="col-sm-7 main_comments-comment-rightpart">
                         <h5>{this.props.name}</h5>
                         <p>{this.props.text}</p>
                         <a href="#reply"> {Lang[displayLanguage].comments_reply}
