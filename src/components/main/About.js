@@ -28,7 +28,7 @@ class About extends React.Component {
         let tempTitles = [];
         let tempDesc = [];
         let tempNeed = [];
-        fetch(`${baseUrl}${this.state.lang}`)
+        fetch(`${baseUrl}/${this.state.lang}`)
             .then(res => res.json())
             .then(json => {
 

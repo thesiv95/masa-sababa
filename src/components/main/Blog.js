@@ -10,7 +10,7 @@ let categories = [];
 
 // TODO: переделать как эбаут
 function getCategories(displayLanguage) {
-    fetch(`${baseUrl}${displayLanguage}/category`)
+    fetch(`${baseUrl}/${displayLanguage}/category`)
         .then(res => res.json())
         .then(json => {
 

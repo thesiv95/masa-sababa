@@ -10,6 +10,11 @@ import languageSet from "../../../languageSet";
 
 
 class FullArticle extends React.Component {
+
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
+
     render() {
         let displayLanguage = languageSet()
         return (
@@ -23,7 +28,7 @@ class FullArticle extends React.Component {
                         {Lang[displayLanguage].blog_teudatzeut_blockquote}
                     </blockquote>
                     <Map/>
-                    <Ministries/>
+                    <Ministries placeIndex={'2'} lat={'32.7895852'} lon={'34.9864697'} radius={'50'} />
                 </div>
                 <Comments/>
                 <LeaveReply/>

@@ -29,6 +29,7 @@
     "blog_teudatzeut_title": "Как получить Теудат зеут?",
     "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту",
     "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
+    "blog_ministry_isclosed": "закрыто",
 
     "profile_header": "Профиль",
     "profile_firstname": "Имя",
@@ -90,6 +91,7 @@
     "blog_teudatzeut_title": "How to get Teudat zeut?",
     "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card.",
     "blog_teudatzeut_blockquote": "You can also write down your question in a comment below.",
+    "blog_ministry_isclosed": "closed",
 
     "profile_header": "Profile",
     "profile_firstname": "First Name",
@@ -150,6 +152,7 @@
     "blog_header": "Blog",
     "blog_teudatzeut_title": "Comment obtenir Teudat zehut?",
     "blog_teudatzeut_description": "Regardez notre tutoriel vidéo. Vous y trouverez de nombreuses informations utiles sur la façon d'obtenir une carte d'identité. Ou lisez le guide détaillé étape par étape ci-dessous.",
+    "blog_ministry_isclosed": "fermée",
 
     "profile_header": "Profil",
     "profile_firstname": "Prénom",
@@ -211,6 +214,7 @@
     "blog_header": "בלוג",
     "blog_teudatzeut_title": "כיצד להשיג את תאוד זהות?",
     "blog_teudatzeut_description": "צפו במדריך הווידיאו שלנו. בתוכו תוכלו למצוא מידע רב שימושי כיצד להשיג תעודת זהות. או קרא את המדריך המפורט שלב אחר שלב להלן.",
+    "blog_ministry_isclosed": "סגור",
 
     "profile_header": "פרופיל",
     "profile_firstname": "שם פרטי",
