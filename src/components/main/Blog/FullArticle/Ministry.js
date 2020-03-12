@@ -39,7 +39,7 @@ class Ministry extends React.Component {
 
                         </p>
                         <p className="main_ministry-phone">
-                            <i>Phones: {this.props.phone[0]}</i>
+                            <em>{Lang[displayLanguage].blog_ministry_phones} {this.props.phone}</em>
                         </p>
                         <p className="main_ministry-website">
                             <a href={`http://${this.props.website}`} target='_blank' rel='noopener noreferrer'>{this.props.website}</a>

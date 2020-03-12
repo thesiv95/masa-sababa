@@ -70,8 +70,8 @@ class Ministries extends React.Component{
         return (
             <div className="container">
                 <div className="row">
-                    <Ministry title={this.state.names[0]} street={`https://www.google.com/maps/@${this.state.lats[0]},${this.state.longs[0]}z`} workingHours={this.state.schedules} phone={this.state.phones} website={this.state.websites[0]} />
-                    <Ministry title={this.state.names[1]} street={`https://www.google.com/maps/@${this.state.lats[1]},${this.state.longs[1]}z`} workingHours={this.state.schedules} phone={this.state.phones} website={this.state.websites[1]} />
+                    <Ministry title={this.state.names[0]} street={`https://www.google.com/maps/@${this.state.lats[0]},${this.state.longs[0]}z`} workingHours={this.state.schedules} phone={this.state.phones[0]} website={this.state.websites[0]} />
+                    <Ministry title={this.state.names[1]} street={`https://www.google.com/maps/@${this.state.lats[1]},${this.state.longs[1]}z`} workingHours={this.state.schedules} phone={this.state.phones[1]} website={this.state.websites[1]} />
                 </div>
             </div>
         )
