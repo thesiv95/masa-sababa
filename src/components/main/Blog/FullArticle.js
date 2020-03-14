@@ -24,9 +24,9 @@ class FullArticle extends React.Component {
         console.log(this.state)
     }
 
-    componentWillUnmount() {
-        this._isMounted = false;
-    }
+    // componentWillUnmount() {
+    //     this._isMounted = false;
+    // }
 
 
 
@@ -61,6 +61,21 @@ class FullArticle extends React.Component {
         }
     }
 
+     doSmt = () =>{
+         console.log("dosmt")
+         if(this.state.placeIndex > 0){
+            console.log(this.state.placeIndex, "index")
+            return <Ministries
+            placeIndex={this.state.placeIndex}
+            latitude={this.state.latitude}
+            longitude={this.state.longitude}
+            radius={this.state.radius} />
+         } else {
+             return "Loading"
+         }
+       
+    }
+
     render() {
         let displayLanguage = this.displayLanguage;
 
@@ -81,8 +96,13 @@ class FullArticle extends React.Component {
                     <div className="main_ministrieschange">
                         Выберите министерство и задайте координаты
                         <select className="main_ministrieschange-select" onChange={ event => {
-                                let newState = {placeIndex: event.target.value};
-                                this.setState({newState});
+                                let newState = event.target.value;
+                                this.setState({
+                                    placeIndex: newState,
+                                    ...this.state.latitude,
+                                    ...this.state.longitude,
+                                    ...this.state.radius   
+                                });
                             }
                         }>
                             <option value="1">Для получения теудат зеута</option>
@@ -102,22 +122,42 @@ class FullArticle extends React.Component {
                         <div className="main_ministrieschange-inputs">
                             <input className="main_ministrieschange-input" placeholder={'Latitude'}
                                    onChange={ event => {
-                                let newState = {placeIndex: event.target.value};
-                                this.setState({newState})
-                                   }
-                               } />
-                            <input className="main_ministrieschange-input" placeholder={'Longitude'} onChange={this.longitudeChange} />
-                            <input type="number" min="0" max="100" className="main_ministrieschange-input-radius" placeholder={'Radius'} onChange={this.radiusChange} />
+                                    let newState = event.target.value;
+                                    this.setState({
+                                         ...this.state.placeIndex,
+                                         latitude: newState,
+                                        ...this.state.longitude,
+                                        ...this.state.radius   
+                                    });
+                                }
+                            } />
+                            <input className="main_ministrieschange-input" placeholder={'Longitude'} onChange={ event => {
+                                    let newState = event.target.value;
+                                    this.setState({
+                                         ...this.state.placeIndex,
+                                         ...this.state.latitude,
+                                        longitude: newState,
+                                        ...this.state.radius   
+                                    });
+                                }
+                            } />
+                            <input type="number" min="0" max="100" className="main_ministrieschange-input-radius" placeholder={'Radius'} onChange={ event => {
+                                    let newState = event.target.value;
+                                    this.setState({
+                                         ...this.state.placeIndex,
+                                         ...this.state.latitude,
+                                         ...this.state.longitude,
+                                        radius: newState   
+                                    });
+                                }
+                            } />
                         </div>
 
 
                     </div>
-
-                    <Ministries
-                        placeIndex={this.state.placeIndex}
-                        latitude={this.state.latitude}
-                        longitude={this.state.longitude}
-                        radius={this.state.radius} />
+                    
+                    <React.Fragment>{this.doSmt()}</React.Fragment>
+                   
                 </div>
                 <Comments/>
                 <LeaveReply/>
