@@ -3,13 +3,6 @@ import Ministry from "./Ministry";
 import languageSet from "../../../../languageSet";
 import {baseUrl} from "../../../Constants";
 
-/*
-TODO: прописать ссылки для всех министерств, и цифра будет передаваться в фетч
-routeExact - ?
-
- */
-
-
 
 class Ministries extends React.Component{
 
@@ -66,7 +59,7 @@ class Ministries extends React.Component{
     }
 
     render() {
-        console.log(this.state)
+
         return (
             <div className="container">
                 <div className="row">

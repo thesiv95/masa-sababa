@@ -9,8 +9,6 @@ import Lang from "./../../i18n/lang"
 
 import languageSet from "../../languageSet";
 
-// TODO: привязать выпадашку
-
 class About extends React.Component {
 
     constructor(props) {
