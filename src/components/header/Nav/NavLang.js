@@ -1,10 +1,13 @@
 import React from "react";
+import languageSet from "../../../languageSet";
 
 class NavLang extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {value: ''};
+        this.state = {
+            value: languageSet()
+        };
 
         this.handleChange = this.handleChange.bind(this);
     }
@@ -13,15 +16,15 @@ class NavLang extends React.Component {
         // Get selected lang value & put into storage
         this.setState({value: event.target.value});
         localStorage.setItem('lang', event.target.value);
-
+        // todo: без перезагрузки
 
     }
 
 
     render() {
-        let currentValue = this.state.value;
+        console.log(this.state.value)
         return(
-            <select className='header_select' defaultValue={this.state.value === currentValue ? currentValue : 'en'} onChange={this.handleChange}>
+            <select className='header_select' onChange={this.handleChange} defaultValue={languageSet()}>
 
                 <option value='en'>en</option>
                 <option value='ru'>ru</option>
