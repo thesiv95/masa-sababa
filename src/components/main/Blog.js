@@ -23,6 +23,7 @@ function getCategories(displayLanguage) {
 
 getCategories(languageSet());
 
+
 class Blog extends React.Component{
     render() {
         let displayLanguage = languageSet();
