@@ -13,9 +13,36 @@ class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            placeIndex: 1,
+            latitude: 32.7895852,
+            longitude: 34.9864697,
+            radius: 50
+        }
+        console.log(this.state)
+    }
+
     componentWillUnmount() {
         this._isMounted = false;
     }
+
+
+
+    latitudeChange(event){
+        this.setState({latitude: event.target.value});
+    }
+
+    longitudeChange(event){
+        this.setState({longitude: event.target.value});
+    }
+
+    radiusChange(event){
+        console.log(event.target.value)
+        this.setState({radius: event.target.value});
+    }
+
 
     dateFormatted(){
         let month = this.props.month;
@@ -26,7 +53,7 @@ class FullArticle extends React.Component {
             case 'ru':
                 return `Автор: ${this.props.author} Дата: ${this.props.day} ${monthString} ${this.props.year}`;
             case 'he':
-                return `${this.props.author} ${monthString} ${this.props.day}, ${this.props.year}על ידי `;
+                return `${this.props.author} ${monthString} ${this.props.day}, ${this.props.year} על ידי  `;
             case 'fr':
                 return `Par ${this.props.author} ${monthString} ${this.props.day}, ${this.props.year}`;
             default:
@@ -36,6 +63,7 @@ class FullArticle extends React.Component {
 
     render() {
         let displayLanguage = this.displayLanguage;
+
         return (
             <div>
                 <h2 className="main_header article-header">{Lang[displayLanguage].blog_teudatzeut_title}</h2>
@@ -50,18 +78,46 @@ class FullArticle extends React.Component {
                     </blockquote>
                     <Map/>
                     {/*todo: выпадашка которая переключает индекс*/}
-                    <select className="main_ministriespicker">
-                        <option value="1">Для получения теу</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                    </select>
-                    <Ministries placeIndex={'2'} lat={'32.7895852'} lon={'34.9864697'} radius={'50'} />
+                    <div className="main_ministrieschange">
+                        Выберите министерство и задайте координаты
+                        <select className="main_ministrieschange-select" onChange={ event => {
+                                let newState = {placeIndex: event.target.value};
+                                this.setState({newState});
+                            }
+                        }>
+                            <option value="1">Для получения теудат зеута</option>
+                            <option value="2">Для открытия счета в банке</option>
+                            <option value="3">Для записи в больничную кассу</option>
+                            <option value="4">Для оформления корзины абсорбции и записи в ульпан
+                            </option>
+                            <option value="5">Для записи детей в детский сад/школу</option>
+                            <option value="6">Для поиска жилья</option>
+                            <option value="7">Для получения арноны
+                            </option>
+                            <option value="8">Для подтверждения образования
+                            </option>
+                            <option value="9">Для подтверждения водительских прав</option>
+                        </select>
+
+                        <div className="main_ministrieschange-inputs">
+                            <input className="main_ministrieschange-input" placeholder={'Latitude'}
+                                   onChange={ event => {
+                                let newState = {placeIndex: event.target.value};
+                                this.setState({newState})
+                                   }
+                               } />
+                            <input className="main_ministrieschange-input" placeholder={'Longitude'} onChange={this.longitudeChange} />
+                            <input type="number" min="0" max="100" className="main_ministrieschange-input-radius" placeholder={'Radius'} onChange={this.radiusChange} />
+                        </div>
+
+
+                    </div>
+
+                    <Ministries
+                        placeIndex={this.state.placeIndex}
+                        latitude={this.state.latitude}
+                        longitude={this.state.longitude}
+                        radius={this.state.radius} />
                 </div>
                 <Comments/>
                 <LeaveReply/>

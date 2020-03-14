@@ -1,10 +1,13 @@
 import React from "react";
-import Ministry from "./Ministry";
+import Ministry from "./Ministries/Ministry";
 import languageSet from "../../../../languageSet";
 import {baseUrl} from "../../../Constants";
 
 
 class Ministries extends React.Component{
+
+    // Can’t perform a React state update on an unmounted component.... error fix
+    abortController = new AbortController();
 
     constructor(props) {
         super(props);
@@ -19,9 +22,6 @@ class Ministries extends React.Component{
         }
     }
 
-    componentWillUnmount() {
-        this._isMounted = false;
-    }
 
     componentDidMount() {
         let ministriesCount = 2;
@@ -31,8 +31,8 @@ class Ministries extends React.Component{
         let tempSchedules = [];
         let tempPhones = [];
         let tempWebsites = [];
-        let fetchURL = `${baseUrl}/step/${this.state.lang}/${this.props.placeIndex}/area/${this.props.lat}/${this.props.lon}/${this.props.radius}`;
-        fetch(fetchURL)
+        let fetchURL = `${baseUrl}/step/${this.state.lang}/${this.props.placeIndex}/area/${this.props.latitude}/${this.props.longitude}/${this.props.radius}`;
+        fetch(fetchURL, {signal: this.abortController.signal})
             .then(response => response.json())
             .then(json => {
                 // console.log(json)
@@ -57,6 +57,11 @@ class Ministries extends React.Component{
                 })
             });
     }
+
+    componentWillUnmount() {
+        this.abortController.abort()
+    }
+
 
     render() {
 
