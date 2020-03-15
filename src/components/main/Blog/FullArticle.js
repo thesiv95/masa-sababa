@@ -6,7 +6,7 @@ import LeaveReply from "./FullArticle/LeaveReply";
 import Ministries from "./FullArticle/Ministries";
 import Video from "./FullArticle/Video";
 import Lang from "./../../../i18n/lang";
-import languageSet from "../../../languageSet";
+import languageSet from "../../../utilites/languageSet";
 
 
 class FullArticle extends React.Component {

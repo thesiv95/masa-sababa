@@ -3,7 +3,7 @@ import Article from "./Blog/Article";
 import Breadcrumbs from "./Blog/Breadcrumbs";
 import {baseUrl} from "../Constants";
 import Lang from "./../../i18n/lang";
-import languageSet from "../../languageSet";
+import languageSet from "../../utilites/languageSet";
 
 const categoriesLength = 8;
 let categories = [];

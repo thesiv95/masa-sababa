@@ -47,7 +47,7 @@
 
 import React from "react";
 import Ministry from "./Ministries/Ministry";
-import languageSet from "../../../../languageSet";
+import languageSet from "../../../../utilites/languageSet";
 import {baseUrl} from "../../../Constants";
 
 

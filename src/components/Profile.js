@@ -1,7 +1,7 @@
 import React from "react";
 import Lang from "./../i18n/lang";
-import generateToken from "../generateToken";
-import languageSet from "../languageSet";
+import generateToken from "../utilites/generateToken";
+import languageSet from "../utilites/languageSet";
 
 class Profile extends React.Component {
 

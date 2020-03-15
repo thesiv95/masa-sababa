@@ -1,5 +1,5 @@
 import React from "react";
-import languageSet from "../../../languageSet";
+import languageSet from "../../../utilites/languageSet";
 
 class NavLang extends React.Component {
 

@@ -1,7 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
 import Lang from "./../../../i18n/lang"
-import languageSet from "../../../languageSet";
+import languageSet from "../../../utilites/languageSet";
 
 
 class NavList extends React.Component {
