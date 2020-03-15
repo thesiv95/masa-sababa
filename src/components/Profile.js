@@ -1,10 +1,24 @@
 import React from "react";
 import Lang from "./../i18n/lang";
+import generateToken from "../generateToken";
 
 class Profile extends React.Component {
+
+    saveUser = (event) => {
+
+        
+
+        let login = 'dsasxzs',
+            pass = '4323qe';
+        
+        let a = generateToken(login, pass)
+        console.log(a)
+    }
+
     render() {
         return (
-            <div>
+            <form onSubmit={this.saveUser()}>
+                <div>
                 <h2 className="main_header">{Lang.ru.profile_header}</h2>
                 <div className="main_profile">
                     <div className="main_profileitem profileitem-short">
@@ -30,9 +44,10 @@ class Profile extends React.Component {
                         <input type="password" required id="pPasswordConfirmation" className="main_profileitem-input"
                                placeholder="*****************"/>
                     </div>
-                    <button className="button button-accent">{Lang.ru.profile_btn_save}</button>
+                    <button type={'submit'} className="button button-accent">{Lang.ru.profile_btn_save}</button>
                 </div>
             </div>
+            </form>
         )
     }
 }

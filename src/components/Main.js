@@ -14,13 +14,13 @@ class Main extends React.Component {
         let d = new Date();
         return (
             <main className='main'>
-                <Route path='/'>
+                <Route path='/' exact component={Home}>
                     {/*need redirect to avoid a bug with switching classes (home link ALWAYS had active class if path was '/')*/}
-                    <Redirect to={{
+                    {/* <Redirect to={{
                         pathname: '/home'
-                    }}/>
+                    }}/> */}
                 </Route>
-                <Route path='/home' component={Home}/>
+                {/*<Route path='/ho' component={Home}  />*/}
                 <Route path='/about' component={About}/>
                 <Route path='/blog' component={Blog}/>
                 <Route path='/profile' component={Profile}/>
