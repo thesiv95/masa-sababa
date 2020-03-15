@@ -94,7 +94,7 @@ class FullArticle extends React.Component {
                     <Map/>
                     {/*todo: выпадашка которая переключает индекс*/}
                     <div className="main_ministrieschange">
-                        Выберите министерство и задайте координаты
+                        {Lang[displayLanguage].blog_ministry_prompt}
                         <select className="main_ministrieschange-select" onChange={ event => {
                                 let newState = event.target.value;
                                 this.setState({
@@ -105,18 +105,18 @@ class FullArticle extends React.Component {
                                 });
                             }
                         }>
-                            <option value="1">Для получения теудат зеута</option>
-                            <option value="2">Для открытия счета в банке</option>
-                            <option value="3">Для записи в больничную кассу</option>
-                            <option value="4">Для оформления корзины абсорбции и записи в ульпан
+                            <option value="1">{Lang[displayLanguage].blog_ministry_options["1"]}</option>
+                            <option value="2">{Lang[displayLanguage].blog_ministry_options["2"]}</option>
+                            <option value="3">{Lang[displayLanguage].blog_ministry_options["3"]}</option>
+                            <option value="4">{Lang[displayLanguage].blog_ministry_options["4"]}
                             </option>
-                            <option value="5">Для записи детей в детский сад/школу</option>
-                            <option value="6">Для поиска жилья</option>
-                            <option value="7">Для получения арноны
+                            <option value="5">{Lang[displayLanguage].blog_ministry_options["5"]}</option>
+                            <option value="6">{Lang[displayLanguage].blog_ministry_options["6"]}</option>
+                            <option value="7">{Lang[displayLanguage].blog_ministry_options["7"]}
                             </option>
-                            <option value="8">Для подтверждения образования
+                            <option value="8">{Lang[displayLanguage].blog_ministry_options["8"]}
                             </option>
-                            <option value="9">Для подтверждения водительских прав</option>
+                            <option value="9">{Lang[displayLanguage].blog_ministry_options["9"]}</option>
                         </select>
 
                         <div className="main_ministrieschange-inputs">

@@ -13,7 +13,7 @@ class Signed extends React.Component {
                         <NavLink to='/profile' className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_profile}</NavLink>
                     </li>
                     <li className="header_nav-item">
-                        <NavLink to='/home' className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_logout}</NavLink>
+                        <NavLink to='/' className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_logout}</NavLink>
                     </li>
                 </ul>
             </div>

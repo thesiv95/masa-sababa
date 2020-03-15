@@ -29,6 +29,18 @@
     "blog_teudatzeut_title": "Как получить Теудат зеут?",
     "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту",
     "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
+    "blog_ministry_prompt": "Выберите министерство и задайте координаты",
+    "blog_ministry_options": {
+      "1": "Для получения теудат зеута",
+      "2": "Для открытия счета в банке",
+      "3": "Для записи в больничную кассу",
+      "4": "Для оформления корзины абсорбции и записи в ульпан",
+      "5": "Для записи детей в детский сад/школу",
+      "6": "Для поиска жилья",
+      "7": "Для получения арноны",
+      "8": "Для подтверждения образования",
+      "9": "Для подтверждения водительских прав"
+    },
     "blog_ministry_isclosed": "закрыто",
     "blog_ministry_phones": "Телефоны:",
     "blog_comments_month": {
@@ -108,6 +120,18 @@
     "blog_teudatzeut_title": "How to get Teudat zeut?",
     "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card.",
     "blog_teudatzeut_blockquote": "You can also write down your question in a comment below.",
+    "blog_ministry_prompt": "Choose the ministry and write down the coords",
+    "blog_ministry_options": {
+      "1": "To get teudat zeut",
+      "2": "To open bank account",
+      "3": "To apply to the health insurance fund",
+      "4": "To apply the absorption basket and enroll in the ulpan",
+      "5": "To enroll the children to kindergarden/school",
+      "6": "To find a flat",
+      "7": "To get arnona",
+      "8": "To recognize your education",
+      "9": "To recognize your driver license"
+    },
     "blog_ministry_isclosed": "closed",
     "blog_ministry_phones": "Phones:",
     "blog_comments_month": {
@@ -182,8 +206,20 @@
     "about_step": "Étape",
     "about_showmore": "Montre plus",
     "about_usefularticles_title": "Articles utiles pour vous",
-    "blog_ministry_phones": "Téléphones:",
 
+    "blog_ministry_phones": "Téléphones:",
+    "blog_ministry_prompt": "Choisissez un ministère et définissez les coordonnées",
+    "blog_ministry_options": {
+      "1": "Pour Teudat Zeuta",
+      "2": "Pour ouvrir un compte bancaire",
+      "3": "Faire une demande à la caisse d'assurance maladie",
+      "4": "Pour l'enregistrement du panier d'absorption et l'enregistrement dans l'ulpan",
+      "5": "Pour inscrire les enfants à la maternelle / à l'école",
+      "6": "Rechercher un logement",
+      "7": "Pour arnona",
+      "8": "Pour confirmer l'éducation",
+      "9": "Pour confirmer un permis de conduire"
+    },
     "blog_header": "Blog",
     "blog_teudatzeut_title": "Comment obtenir Teudat zehut?",
     "blog_teudatzeut_description": "Regardez notre tutoriel vidéo. Vous y trouverez de nombreuses informations utiles sur la façon d'obtenir une carte d'identité. Ou lisez le guide détaillé étape par étape ci-dessous.",
@@ -265,6 +301,18 @@
     "blog_header": "בלוג",
     "blog_teudatzeut_title": "כיצד להשיג את תאוד זהות?",
     "blog_teudatzeut_description": "צפו במדריך הווידיאו שלנו. בתוכו תוכלו למצוא מידע רב שימושי כיצד להשיג תעודת זהות. או קרא את המדריך המפורט שלב אחר שלב להלן.",
+    "blog_ministry_prompt": "בחר משרד וקבע את הקואורדינטות",
+    "blog_ministry_options": {
+      "1": "עבור תאוד זוטא",
+      "2": "לפתיחת חשבון בנק",
+      "3": "להגיש בקשה לקופת ביטוח הבריאות",
+      "4": "לרישום סל הקליטה והקלטה באולפן",
+      "5": "לרשום ילדים לגן / בית ספר",
+      "6": "לחיפוש דיור",
+      "7": "עבור ארנונה",
+      "8": "לאשר חינוך",
+      "9": "לאישור רישיון נהיגה"
+    },
     "blog_ministry_isclosed": "סגור",
     "blog_ministry_phones": "טלפונים:",
     "blog_comments_month": {
