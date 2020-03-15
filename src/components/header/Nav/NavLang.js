@@ -20,6 +20,9 @@ class NavLang extends React.Component {
 
     }
 
+    componentDidUpdate(){
+        // reload
+    }
 
     render() {
         console.log(this.state.value)
