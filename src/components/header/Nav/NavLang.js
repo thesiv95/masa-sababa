@@ -1,5 +1,5 @@
 import React from "react";
-import languageSet from "../../../languageSet";
+import languageSet from "../../../utilites/languageSet";
 
 class NavLang extends React.Component {
 
@@ -17,9 +17,13 @@ class NavLang extends React.Component {
         this.setState({value: event.target.value});
         localStorage.setItem('lang', event.target.value);
         // todo: без перезагрузки
+        window.location.reload()
 
     }
 
+    componentDidUpdate(){
+        // reload
+    }
 
     render() {
         console.log(this.state.value)

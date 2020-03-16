@@ -1,6 +1,6 @@
 import React from "react";
 import Lang from "./../../i18n/lang";
-import languageSet from "./../../languageSet";
+import languageSet from "../../utilites/languageSet";
 
 class ContactUs extends React.Component {
     render() {

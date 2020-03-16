@@ -127,17 +127,17 @@ body {
 .main_steps {
   margin-top: 50px;
 }
-.main_step-number, .main_step-title {
+.main_steps_step-number, .main_steps_step-title {
   font-size: 36px;
   margin-top: 10px;
 }
-.main_step-number {
+.main_steps_step-number {
   font-weight: normal;
 }
-.main_step-title {
+.main_steps_step-title {
   font-weight: bold;
 }
-.main_step-description {
+.main_steps_step-description {
   font-size: 15px;
   color: #555555;
 }
@@ -207,16 +207,16 @@ body {
   margin: 20px 0;
   text-align: center;
 }
-.main .article-header {
+.main_useful .article-header {
   margin-left: 15px;
   text-align: justify;
 }
-.main .direction-page {
+.main_useful .direction-page {
   width: 68px;
   height: 23px;
   margin-right: 10px;
 }
-.main .active-page {
+.main_useful .active-page {
   border: 1px solid #906FDA;
   border-radius: 4px;
 }
@@ -228,14 +228,28 @@ body {
   text-align: center;
   padding: 20px 0;
 }
+.main_profilevalidmsg {
+  display: none;
+  color: #e6ffd8;
+  margin: 0 auto;
+  width: 700px;
+  padding: 15px;
+}
+.main_passwordsecure {
+  margin-left: 15px;
+}
 .main_comments {
   width: 700px !important;
   margin: 0 auto;
 }
-.main_comments-comment {
-  border-left: 1px solid #906FDA;
-  border-right: 1px solid #906FDA;
+.main_comments-comment-leftpart, .main_comments-comment-rightpart {
   margin-bottom: 15px;
+}
+.main_comments-comment-leftpart {
+  border-left: 1px solid #906FDA;
+}
+.main_comments-comment-rightpart {
+  border-right: 1px solid #906FDA;
 }
 .main_comments-comment-image {
   margin-top: 50px;
@@ -276,6 +290,15 @@ body {
   font-size: 80%;
   color: #555555;
   margin-left: 5px;
+  padding-left: 5px;
+}
+
+.non-valid {
+  background-color: #c95850;
+}
+
+.valid {
+  background-color: #66c957;
 }
 
 .button {

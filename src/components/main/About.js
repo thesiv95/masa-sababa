@@ -7,7 +7,7 @@ import Useful from "./About/Useful";
 import {baseUrl} from "../Constants";
 import Lang from "./../../i18n/lang"
 
-import languageSet from "../../languageSet";
+import languageSet from "../../utilites/languageSet";
 
 class About extends React.Component {
 
