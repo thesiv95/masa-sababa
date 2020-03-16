@@ -66,6 +66,27 @@
     "profile_confirm_password": "Подтверждение пароля",
     "profile_btn_save": "Сохранить",
     "profile_yoursavedarticles_title": "Твои сохранённые статьи",
+    "profile_validmsg": {
+      "pFirstName": "Имя не может быть пустым",
+      "pFirstName_match": "Имя может содержать только буквы",
+      "pLastName": "Фамилия не может быть пустой",
+      "pLastName_match": "Фамилия может содержать только буквы",
+      "pEmail": "Email не может быть пустым",
+      "pEmail_match": "Email имеет неправильный формат",
+      "pPassword": "Пароль не может быть пустым",
+      "pPasswordConfirmation": "Пожалуйста, подтвердите пароль!",
+      "pPassword_match": "Пароли не совпадают",
+      "pPassword_strength": "Пароль не удовлетворяет требованиям безопасности",
+
+      "success": "Изменения сохранены!"
+    },
+    "profile_passwordsecure": {
+      "title": "Пароль должен удовлетворять следующим условиям:",
+      "minlength": "Минимальная длина - 8 символов",
+      "specialsymbol": "Есть хотя бы один спецсимвол: _@#$%^()",
+      "capitalletter": "Есть хотя бы одна заглавная буква",
+      "digit": "Есть хотя бы одна цифра"
+    },
 
     "breadcrumbs_previous": "Раньше",
     "breadcrumbs_next": "Позже",
@@ -157,6 +178,26 @@
     "profile_confirm_password": "Confirm Password",
     "profile_btn_save": "Save Details",
     "profile_yoursavedarticles_title": "Your Saved Articles",
+    "profile_validmsg": {
+      "pFirstName": "First name cannot be blank",
+      "pFirstName_match": "First name can contain letters only",
+      "pLastName": "Last name cannot be blank",
+      "pLastName_match": "Last name can contain letters only",
+      "pEmail": "Email cannot be blank",
+      "pEmail_match": "Email has wrong format",
+      "pPassword": "Password cannot be blank",
+      "pPasswordConfirmation": "Please confirm your password!",
+      "pPassword_match": "Passwords does not match",
+      "pPassword_strength": "Password does not match security conditions",
+      "success": "Changes are saved!"
+    },
+    "profile_passwordsecure": {
+      "title": "The password must match the following conditions:",
+      "minlength": "Minimal length is 8 symbol",
+      "specialsymbol": "There is at least one special symbol: _@#$%^()",
+      "capitalletter": "There is at least one capital letter",
+      "digit": "There is at least one digit"
+    },
 
     "breadcrumbs_previous": "Previous",
     "breadcrumbs_next": "Next",
@@ -188,7 +229,7 @@
     "header_menu_about": "Sur",
     "header_menu_blog": "Blog",
     "header_menu_profile": "Profil",
-    "header_menu_logout": "Se déconnecter",
+    "header_menu_logout": "Décon.",
     "header_search_placeholder": "Cherche ici",
     "header_btn_signup": "S'inscrire",
 
@@ -247,6 +288,26 @@
     "profile_confirm_password": "Confirmez le mot de passe",
     "profile_btn_save": "Enregistrer les détails",
     "profile_yoursavedarticles_title": "Vos articles enregistrés",
+    "profile_validmsg": {
+      "pFirstName": "Le nom ne peut pas être vide",
+      "pFirstName_match": "Le nom ne peut contenir que des lettres",
+      "pLastName": "Le prénom ne peut pas être vide",
+      "pLastName_match": "Le prénom ne peut contenir que des lettres",
+      "pEmail": "L'email ne peut pas être vide",
+      "pEmail_match": "Le format de l'e-mail est incorrect",
+      "pPassword": "Le mot de passe ne peut pas être vide",
+      "pPasswordConfirmation": "Veuillez confirmer le mot de passe!",
+      "pPassword_match": "Les mots de passe ne correspondent pas",
+      "pPassword_strength": "Le mot de passe ne répond pas aux exigences de sécurité",
+      "success": "Modifications enregistrées!"
+    },
+    "profile_passwordsecure": {
+      "title": "Le mot de passe doit remplir les conditions suivantes:",
+      "minlength": "La longueur minimale est de 8 caractères",
+      "specialsymbol": "Il y a au moins un caractère spécial: _@#$%^()",
+      "capitalletter": "Il y a au moins une lettre majuscule",
+      "digit": "Il y a au moins un chiffre"
+    },
 
     "breadcrumbs_previous": "Précédente",
     "breadcrumbs_next": "Prochain",
@@ -338,6 +399,26 @@
     "profile_confirm_password": "אשר סיסמה",
     "profile_btn_save": "שמור פרטים",
     "profile_yoursavedarticles_title": "המאמרים השמורים שלך",
+    "profile_validmsg": {
+      "pFirstName": "השם לא יכול להיות ריק",
+      "pFirstName_match": "שם יכול להכיל אותיות בלבד",
+      "pLastName": "שם משפחה לא יכול להיות ריק",
+      "pLastName_match": "שם משפחה יכול להכיל אותיות בלבד",
+      "pEmail": "אימייל לא יכול להיות ריק",
+      "pEmail_match": "פורמט הדוא\"ל אינו נכון",
+      "pPassword": "הסיסמה לא יכולה להיות ריקה",
+      "pPasswordConfirmation": "אנא אשר סיסמא!",
+      "pPassword_match": "סיסמאות אינן תואמות",
+      "pPassword_strength": "הסיסמה אינה עומדת בדרישות האבטחה",
+      "success": "שינויים נשמרו!"
+    },
+    "profile_passwordsecure": {
+      "title": "על הסיסמא לעמוד בתנאים הבאים:",
+      "minlength": "אורך מינימום הוא 8 תווים",
+      "specialsymbol": "יש לפחות דמות מיוחדת אחת: _@#$%^()",
+      "capitalletter": "יש לפחות אותיות גדולות",
+      "digit": "יש לפחות ספרה אחת"
+    },
 
     "breadcrumbs_previous": "קודם",
     "breadcrumbs_next": "הבא",

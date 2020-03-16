@@ -5,6 +5,8 @@ import languageSet from "../utilites/languageSet";
 
 class Profile extends React.Component {
 
+    displayLanguage = languageSet();
+
     showAlert = (message, isError = true) => {
         let div = document.querySelector('.main_profilevalidmsg');
         div.style.display = 'block';
@@ -25,7 +27,8 @@ class Profile extends React.Component {
 
         if (password.length < 8) passwordIsValid = false;
         if (!password.match(/^([A-Za-z]+)$/)) passwordIsValid = false;
-        if (!password.match(/^([A-Za-z]+)$/)) passwordIsValid = false;
+        if (!password.match(/^(_@#\$%\^\(\)+)$/)) passwordIsValid = false;
+        if (!password.match(/^([0-9]+)$/)) passwordIsValid = false;
 
         return passwordIsValid;
     };
@@ -41,20 +44,20 @@ class Profile extends React.Component {
             pPassword = doc.querySelector('#pPassword').value,
             pPasswordConfirmation = doc.querySelector('#pPasswordConfirmation').value;
 
-        if (pFirstName === '') {this.showAlert('Имя не может быть пустым'); return;}
-        if (!pFirstName.match(/^([A-Za-z]+)$/)) { this.showAlert('Имя может содержать только буквы'); return;}
-        if (pLastName === '') {alert('Фамилия не может быть пустой'); return;}
-        if (!pLastName.match(/^([A-Za-z]+)$/)) {this.showAlert('Фамилия может содержать только буквы'); return;}
-        if (pEmail === '') {this.showAlert('email не может быть пустым'); return;}
-        if (!pEmail.match(/^.+@.+\..+$/)) {this.showAlert('email имеет неправильный формат'); return;}
-        if (pPassword === '') {this.showAlert('пароль не может быть пустым'); return;}
-        if (pPasswordConfirmation === '') {this.showAlert('пожалуйста, подтвердите пароль!'); return;}
-        if (pPassword !== pPasswordConfirmation) {this.showAlert('Пароли не совпадают'); return;}
-        if (!this.checkPasswordStrength(pPassword)) {this.showAlert('Пароль не удовлетворяет требованиям безопасности'); return;}
+        if (pFirstName === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName); return;}
+        if (!pFirstName.match(/^([A-Za-z]+)$/)) { this.showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName_match); return;}
+        if (pLastName === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName); return;}
+        if (!pLastName.match(/^([A-Za-z]+)$/)) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName_match); return;}
+        if (pEmail === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail); return;}
+        if (!pEmail.match(/^.+@.+\..+$/)) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail); return;}
+        if (pPassword === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword); return;}
+        if (pPasswordConfirmation === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPasswordConfirmation); return;}
+        if (pPassword !== pPasswordConfirmation) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_match); return;}
+        if (!this.checkPasswordStrength(pPassword)) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_strength); return;}
 
 
         // if it is all ok
-        this.showAlert("Изменения сохранены!", false);
+        this.showAlert(Lang[this.displayLanguage].profile_validmsg.success, false);
         token = generateToken(pEmail, pPassword);
         localStorage.setItem('token', token);
         currentUser = `${pFirstName},${pLastName},${pEmail}`;
@@ -63,7 +66,7 @@ class Profile extends React.Component {
     };
 
     render() {
-        let displayLanguage = languageSet();
+        let displayLanguage = this.displayLanguage;
         return (
             <form onSubmit={this.saveUser}>
                 <div>
@@ -71,12 +74,12 @@ class Profile extends React.Component {
                     <div className="main_profilevalidmsg">
                     </div>
                     <div className="main_passwordsecure">
-                        <p><strong>Пароль должен удовлетворять следующим условиям:</strong></p>
+                        <p><strong>{Lang[displayLanguage].profile_passwordsecure.title}</strong></p>
                         <ul>
-                            <li>Минимальная длина - 8 символов</li>
-                            <li>Есть хотя бы один спецсимвол: _@#$%^()</li>
-                            <li>Есть хотя бы одна заглавная буква</li>
-                            <li>Есть хотя бы одна цифра</li>
+                            <li>{Lang[displayLanguage].profile_passwordsecure.minlength}</li>
+                            <li>{Lang[displayLanguage].profile_passwordsecure.specialsymbol}</li>
+                            <li>{Lang[displayLanguage].profile_passwordsecure.capitalletter}</li>
+                            <li>{Lang[displayLanguage].profile_passwordsecure.digit}</li>
                         </ul>
                     </div>
                     <div className="main_profile">
