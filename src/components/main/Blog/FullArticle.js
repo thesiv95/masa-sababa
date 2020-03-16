@@ -92,7 +92,7 @@ class FullArticle extends React.Component {
                         {Lang[displayLanguage].blog_teudatzeut_blockquote}
                     </blockquote>
                     <Map/>
-                    {/*todo: выпадашка которая переключает индекс*/}
+
                     <div className="main_ministrieschange">
                         {Lang[displayLanguage].blog_ministry_prompt}
                         <select className="main_ministrieschange-select" onChange={ event => {
@@ -172,5 +172,4 @@ export default FullArticle;
 
 
 // TODO: кнопки профиль и логаут
-// TODO: ссылка для категории(!)
 // TODO: завершить стилизацию
