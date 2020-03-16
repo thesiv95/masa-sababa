@@ -1,5 +1,5 @@
 import React from "react";
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import Home from "./main/Home";
 import About from "./main/About";
 import Blog from "./main/Blog";
@@ -13,14 +13,16 @@ class Main extends React.Component {
         let d = new Date();
         return (
             <main className='main'>
-                <Route path='/' exact component={Home}/>
-                <Route path='/about' component={About}/>
-                <Route path='/blog' component={Blog}/>
-                <Route path='/profile' component={Profile}/>
-                <Route path='/fullarticle' render={() =>
-                    <FullArticle author={'Moshe Dayan'} day={d.getDate()} month={d.getMonth()} year={d.getFullYear()} />
-                }/>
-                <Route path='*' component={NotFound404}/>
+                <Switch>
+                    <Route path='/' exact component={Home}/>
+                    <Route path='/about' component={About}/>
+                    <Route path='/blog' component={Blog}/>
+                    <Route path='/profile' component={Profile}/>
+                    <Route path='/fullarticle' render={() =>
+                        <FullArticle author={'Moshe Dayan'} day={d.getDate()} month={d.getMonth()} year={d.getFullYear()} />
+                    }/>
+                    <Route component={NotFound404}/>
+                </Switch>
             </main>
         )
     }
