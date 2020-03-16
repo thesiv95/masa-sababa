@@ -1,0 +1,44 @@
+@import "../../_constants/_vars.sass"
+
+&_articles
+  &-article
+    width: 350px
+    height: 440px
+    margin-right: 30px
+    text-align: center
+    box-shadow: 0px 10px 30px #99999933
+    border-radius: 8px
+    cursor: pointer
+    transition: .3s linear
+    &:hover
+      background-color: lighten($main-description, 50%)
+    &-userpic
+      margin-top: 44px
+    &-title
+      font-size: $base-font-size
+      font-weight: normal
+      color: $main-title
+    &-description
+      font-size: 15px
+      line-height: 27px
+      color: $main-description
+
+&_articlesubheader
+  margin-left: $blog-margin-left
+  font-size: 14px
+  color: $main-description
+&_articlecontent
+    p, a
+      padding-left: $blog-margin-left
+    blockquote
+      width: 814px
+      height: auto
+      text-align: justify
+      word-wrap: break-word
+      margin: 0 auto
+      line-height: 32px
+      padding: 20px 15px
+      font-size: 24px
+      font-style: italic
+      color: $blog-blockquote
+      border-left: 1px solid $main-accent-color

@@ -11,7 +11,7 @@ class Comment extends React.Component {
                     <div className="col-sm-2 main_comments-comment-leftpart">
                         <img src="img/comment.png" alt="comment" className="main_comments-comment-image"/>
                     </div>
-                    <div className="col-sm-7 main_comments-comment-rightpart">
+                    <div className="col-sm-10 main_comments-comment-rightpart">
                         <h5>{this.props.name}</h5>
                         <p>{this.props.text}</p>
                         <a href="#reply"> {Lang[displayLanguage].comments_reply}

@@ -5,8 +5,7 @@ import About from "./main/About";
 import Blog from "./main/Blog";
 import FullArticle from "./main/Blog/FullArticle";
 import Profile from "./Profile";
-
-//import NotFound404 from "./main/NotFound404";
+import NotFound404 from "./main/NotFound404";
 
 
 class Main extends React.Component {
@@ -21,6 +20,7 @@ class Main extends React.Component {
                 <Route path='/fullarticle' render={() =>
                     <FullArticle author={'Moshe Dayan'} day={d.getDate()} month={d.getMonth()} year={d.getFullYear()} />
                 }/>
+                <Route path='*' component={NotFound404}/>
             </main>
         )
     }
