@@ -26,9 +26,7 @@ class Profile extends React.Component {
         let passwordIsValid = true;
 
         if (password.length < 8) passwordIsValid = false;
-        if (!password.match(/^([A-Za-z]+)$/)) passwordIsValid = false;
-        if (!password.match(/^(_@#\$%\^\(\)+)$/)) passwordIsValid = false;
-        if (!password.match(/^([0-9]+)$/)) passwordIsValid = false;
+        if (!password.match(/([0-9A-Za-z_@#$%^()])/g)) passwordIsValid = false;
 
         return passwordIsValid;
     };
@@ -59,10 +57,25 @@ class Profile extends React.Component {
         // if it is all ok
         this.showAlert(Lang[this.displayLanguage].profile_validmsg.success, false);
         token = generateToken(pEmail, pPassword);
-        localStorage.setItem('token', token);
+        sessionStorage.setItem('token', token);
         currentUser = `${pFirstName},${pLastName},${pEmail}`;
-        localStorage.setItem('currentUser', currentUser);
+        sessionStorage.setItem('currentUser', currentUser);
 
+    };
+
+    componentDidMount() {
+        if (sessionStorage.getItem('currentUser') !== null){
+            let currentUser = sessionStorage.getItem('currentUser');
+            currentUser = currentUser.split(',');
+
+            let pFirstName = document.querySelector('#pFirstName'),
+                pLastName = document.querySelector('#pLastName'),
+                pEmail = document.querySelector('#pEmail');
+
+            pFirstName.value = currentUser[0];
+            pLastName.value = currentUser[1];
+            pEmail.value = currentUser[2];
+        }
     };
 
     render() {
@@ -93,7 +106,7 @@ class Profile extends React.Component {
                         </div>
                         <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_email}</h5>
-                            <input type="email" id="pEmail" className="main_profileitem-input"
+                            <input type="text" id="pEmail" className="main_profileitem-input"
                                    placeholder="e.johnes@gmail.com"/>
                         </div>
                         <div className="main_profileitem">

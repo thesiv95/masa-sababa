@@ -6,8 +6,7 @@ import languageSet from "../../utilites/languageSet";
 class Signed extends React.Component {
 
     clearToken(){
-        localStorage.setItem('token', '');
-        localStorage.setItem('currentUser', '');
+        sessionStorage.clear();
     }
 
     render() {
