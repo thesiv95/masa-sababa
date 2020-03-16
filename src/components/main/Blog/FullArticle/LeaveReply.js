@@ -36,7 +36,6 @@ class LeaveReply extends React.Component {
                 let allComments
 
 
-
             }
         } else {
 
