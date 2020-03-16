@@ -5,10 +5,6 @@ import languageSet from "../../../../../utilites/languageSet";
 
 class Ministry extends React.Component {
 
-    componentWillUnmount() {
-        this._isMounted = false; // thanks stackoverflow.com :)
-    }
-
     getCurrentDay = () => {
         // 0 - sun, 1 - mon, ... 6 - sat
         return new Date().getDay();
@@ -28,14 +24,17 @@ class Ministry extends React.Component {
                             <a href={this.props.street} target="_blank" rel="noopener noreferrer">Google Maps</a>
                         </p>
                         <p className="main_ministry-work">
+                            { currentDay }
 
-                            {currentDay === 0 ? (this.props.workingHours[0] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[0]) : ''}
-                            {currentDay === 1 ? (this.props.workingHours[1] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[1]) : ''}
-                            {currentDay === 2 ? (this.props.workingHours[2] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[2]) : ''}
-                            {currentDay === 3 ? (this.props.workingHours[3] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[3]) : ''}
-                            {currentDay === 4 ? (this.props.workingHours[4] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[4]) : ''}
-                            {currentDay === 5 ? (this.props.workingHours[5] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[5]) : ''}
-                            {currentDay === 6 ? (this.props.workingHours[6] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[6]) : ''}
+                            { /* todo: currentday */ }
+
+                            {/*{currentDay === 0 ? (this.props.workingHours[0] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[0]) : ''}*/}
+                            {/*{currentDay === 1 ? (this.props.workingHours[1] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[1]) : ''}*/}
+                            {/*{currentDay === 2 ? (this.props.workingHours[2] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[2]) : ''}*/}
+                            {/*{currentDay === 3 ? (this.props.workingHours[3] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[3]) : ''}*/}
+                            {/*{currentDay === 4 ? (this.props.workingHours[4] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[4]) : ''}*/}
+                            {/*{currentDay === 5 ? (this.props.workingHours[5] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[5]) : ''}*/}
+                            {/*{currentDay === 6 ? (this.props.workingHours[6] === 'close' ? Lang[displayLanguage].blog_ministry_isclosed : this.props.workingHours[6]) : ''}*/}
 
                         </p>
                         <p className="main_ministry-phone">
