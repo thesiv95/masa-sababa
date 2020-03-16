@@ -27,7 +27,7 @@
 
     "blog_header": "Блог",
     "blog_teudatzeut_title": "Как получить Теудат зеут?",
-    "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту",
+    "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту.",
     "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
     "blog_ministry_prompt": "Выберите министерство и задайте координаты",
     "blog_ministry_options": {
@@ -100,6 +100,13 @@
     "reply_placeholder_youremail": "Твой email",
     "reply_checkbox": "Сохранить мое имя, email и сайт в этом браузере для моих будущих комментариев.",
     "reply_btn": "Отправить",
+    "reply_validmsg": {
+      "text": "Текст не может быть пустым",
+      "name": "Имя не может быть пустым",
+      "email": "Email не может быть пустым",
+      "email_match": "Email имеет неправильный формат",
+      "success": "Твой ответ успешно добавлен!"
+    },
 
     "footer_contactus_title": "Свяжись с нами",
     "footer_contactus_geo": "Тель Авив, Израиль",
@@ -211,6 +218,13 @@
     "reply_placeholder_youremail": "Your Email",
     "reply_checkbox": "Save my name, email, and website in this browser for the next time I comment.",
     "reply_btn": "Post comment",
+    "reply_validmsg": {
+      "text": "Text cannot be blank",
+      "name": "Name cannot be blank",
+      "email": "Email cannot be blank",
+      "email_match": "Email has wrong format",
+      "success": "Your reply added successfully!"
+    },
 
     "footer_contactus_title": "Contact Us",
     "footer_contactus_geo": "Tel Aviv, Israel",
@@ -321,6 +335,13 @@
     "reply_placeholder_youremail": "Votre email",
     "reply_checkbox": "Enregistrez mon nom, mon e-mail et mon site Web dans ce navigateur pour la prochaine fois que je commenterai.",
     "reply_btn": "Poster",
+    "reply_validmsg": {
+      "text": "Le texte ne peut pas être vide",
+      "name": "Le nom ne peut pas être vide",
+      "email": "L'email ne peut pas être vide",
+      "email_match": "Le format de l'e-mail est incorrect",
+      "success": "Votre réponse a bien été ajoutée!"
+    },
 
     "footer_contactus_title": "Nous contacter",
     "footer_contactus_geo": "Tel Aviv, Israël",
@@ -432,6 +453,13 @@
     "reply_placeholder_youremail": "האימייל שלך",
     "reply_checkbox": "שמור את שמי, דוא\"ל ואתרי בדפדפן זה בפעם הבאה שאגיב.",
     "reply_btn": "פרסם תגובה",
+    "reply_validmsg": {
+      "text": "הטקסט לא יכול להיות ריק",
+      "name": "השם לא יכול להיות ריק",
+      "email": "פורמט הדוא\"ל אינו נכון",
+      "email_match": "פורמט הדוא\"ל אינו נכון",
+      "success": "התשובה שלך נוספה בהצלחה!"
+    },
 
     "footer_contactus_title": "צור קשר",
     "footer_contactus_geo": "תל אביב, ישראל",

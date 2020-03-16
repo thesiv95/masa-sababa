@@ -2,21 +2,11 @@ import React from "react";
 import Lang from "./../i18n/lang";
 import generateToken from "../utilites/generateToken";
 import languageSet from "../utilites/languageSet";
+import showAlert from "../utilites/showAlert";
 
 class Profile extends React.Component {
 
     displayLanguage = languageSet();
-
-    showAlert = (message, isError = true) => {
-        let div = document.querySelector('.main_profilevalidmsg');
-        div.style.display = 'block';
-        div.className = `main_profilevalidmsg ${(isError) ? 'non-valid' : 'valid'}`;
-        div.innerHTML = message;
-
-        setTimeout(() => {
-            div.style.display = 'none';
-        }, 3000);
-    }
 
     checkPasswordStrength = (password) => {
         // not less than 8 symbols
@@ -42,20 +32,22 @@ class Profile extends React.Component {
             pPassword = doc.querySelector('#pPassword').value,
             pPasswordConfirmation = doc.querySelector('#pPasswordConfirmation').value;
 
-        if (pFirstName === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName); return;}
-        if (!pFirstName.match(/^([A-Za-z]+)$/)) { this.showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName_match); return;}
-        if (pLastName === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName); return;}
-        if (!pLastName.match(/^([A-Za-z]+)$/)) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName_match); return;}
-        if (pEmail === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail); return;}
-        if (!pEmail.match(/^.+@.+\..+$/)) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail); return;}
-        if (pPassword === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword); return;}
-        if (pPasswordConfirmation === '') {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPasswordConfirmation); return;}
-        if (pPassword !== pPasswordConfirmation) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_match); return;}
-        if (!this.checkPasswordStrength(pPassword)) {this.showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_strength); return;}
+        let targetClass = 'main_profilevalidmsg'; // div with this class
+
+        if (pFirstName === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName, targetClass); return;}
+        if (!pFirstName.match(/^([A-Za-z]+)$/)) { showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName_match, targetClass); return;}
+        if (pLastName === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName, targetClass); return;}
+        if (!pLastName.match(/^([A-Za-z]+)$/)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName_match, targetClass); return;}
+        if (pEmail === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail, targetClass); return;}
+        if (!pEmail.match(/^.+@.+\..+$/)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail, targetClass); return;}
+        if (pPassword === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword, targetClass); return;}
+        if (pPasswordConfirmation === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pPasswordConfirmation, targetClass); return;}
+        if (pPassword !== pPasswordConfirmation) {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_match, targetClass); return;}
+        if (!this.checkPasswordStrength(pPassword)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_strength, targetClass); return;}
 
 
         // if it is all ok
-        this.showAlert(Lang[this.displayLanguage].profile_validmsg.success, false);
+        showAlert(Lang[this.displayLanguage].profile_validmsg.success, targetClass, false);
         token = generateToken(pEmail, pPassword);
         sessionStorage.setItem('token', token);
         currentUser = `${pFirstName},${pLastName},${pEmail}`;

@@ -7,6 +7,7 @@ import Ministries from "./FullArticle/Ministries";
 import Video from "./FullArticle/Video";
 import Lang from "./../../../i18n/lang";
 import languageSet from "../../../utilites/languageSet";
+import dateAndAuthorFormatted from "../../../utilites/dateAndAuthorFormatted";
 
 
 class FullArticle extends React.Component {
@@ -24,57 +25,34 @@ class FullArticle extends React.Component {
         console.log(this.state)
     }
 
-    // componentWillUnmount() {
-    //     this._isMounted = false;
+    // latitudeChange(event){
+    //     this.setState({latitude: event.target.value});
+    // }
+    //
+    // longitudeChange(event){
+    //     this.setState({longitude: event.target.value});
+    // }
+    //
+    // radiusChange(event){
+    //     console.log(event.target.value)
+    //     this.setState({radius: event.target.value});
     // }
 
 
-
-    latitudeChange(event){
-        this.setState({latitude: event.target.value});
-    }
-
-    longitudeChange(event){
-        this.setState({longitude: event.target.value});
-    }
-
-    radiusChange(event){
-        console.log(event.target.value)
-        this.setState({radius: event.target.value});
-    }
+    dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
 
 
-    dateFormatted(){
-        let month = this.props.month;
-        let monthString = Lang[this.displayLanguage].blog_comments_month[month];
-        switch (this.displayLanguage) {
-            case 'en':
-                return `By ${this.props.author} ${monthString} ${this.props.day}, ${this.props.year}`;
-            case 'ru':
-                return `Автор: ${this.props.author} Дата: ${this.props.day} ${monthString} ${this.props.year}`;
-            case 'he':
-                return `${this.props.author} ${monthString} ${this.props.day}, ${this.props.year} על ידי  `;
-            case 'fr':
-                return `Par ${this.props.author} ${monthString} ${this.props.day}, ${this.props.year}`;
-            default:
-                return `[Language file not set, contact the website administrator]`;
-        }
-    }
-
-     doSmt = () =>{
-         console.log("dosmt")
-         if(this.state.placeIndex > 0){
-            console.log(this.state.placeIndex, "index")
+    loadMinistriesComponent = () =>{
+        if(this.state.placeIndex > 0){
             return <Ministries
             placeIndex={this.state.placeIndex}
             latitude={this.state.latitude}
             longitude={this.state.longitude}
             radius={this.state.radius} />
-         } else {
-             return "Loading"
-         }
-       
-    }
+        } else {
+            return "Loading...";
+        }
+    };
 
     render() {
         let displayLanguage = this.displayLanguage;
@@ -83,7 +61,7 @@ class FullArticle extends React.Component {
             <div>
                 <h2 className="main_header article-header">{Lang[displayLanguage].blog_teudatzeut_title}</h2>
                 <p className="main_articlesubheader">
-                    {this.dateFormatted()}
+                    {this.dateFormattedString}
                 </p>
                 <div className="main_articlecontent">
                     <Video youtubeCode="wPwZnpqZIk0" />
@@ -156,7 +134,7 @@ class FullArticle extends React.Component {
 
                     </div>
                     
-                    <React.Fragment>{this.doSmt()}</React.Fragment>
+                    <React.Fragment>{this.loadMinistriesComponent()}</React.Fragment>
                    
                 </div>
                 <Comments/>

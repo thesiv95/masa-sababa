@@ -32,7 +32,7 @@ class Comment extends React.Component {
             <div className="main_comments-comment">
                 <div className="row">
                     <div className="col-sm-2 main_comments-comment-leftpart">
-                        <img src="img/comment.png" alt="comment" className="main_comments-comment-image"/>
+                        <img src="https://www.gravatar.com/avatar/mp?s=100" alt="comment" className="main_comments-comment-image"/>
                     </div>
                     <div className="col-sm-10 main_comments-comment-rightpart">
                         <h5>{this.props.name}</h5>
