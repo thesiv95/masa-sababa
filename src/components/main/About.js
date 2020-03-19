@@ -104,7 +104,7 @@ class About extends React.Component {
                 <div className="main_showmore">
                     <a href="/#more" onClick={this.toggleShowMore} className="main_showmore-link">
                         <img className="main_showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
-                             alt="&#8595;" width="32" height="32" title="Bootstrap"/>
+                             alt="&#8595;" width="32" height="32" />
                         {Lang[displayLanguage].about_showmore}
                     </a>
                 </div>

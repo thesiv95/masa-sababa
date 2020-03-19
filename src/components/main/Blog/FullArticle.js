@@ -21,23 +21,8 @@ class FullArticle extends React.Component {
             latitude: 32.7895852,
             longitude: 34.9864697,
             radius: 50
-        }
-        console.log(this.state)
+        };
     }
-
-    // latitudeChange(event){
-    //     this.setState({latitude: event.target.value});
-    // }
-    //
-    // longitudeChange(event){
-    //     this.setState({longitude: event.target.value});
-    // }
-    //
-    // radiusChange(event){
-    //     console.log(event.target.value)
-    //     this.setState({radius: event.target.value});
-    // }
-
 
     dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
 
