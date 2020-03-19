@@ -18,6 +18,7 @@ class FullArticle extends React.Component {
         super(props);
         this.state = {
             placeIndex: 1,
+            // city: 'Tel Aviv'
             latitude: 32.7895852,
             longitude: 34.9864697,
             radius: 50
@@ -33,7 +34,7 @@ class FullArticle extends React.Component {
             placeIndex={this.state.placeIndex}
             latitude={this.state.latitude}
             longitude={this.state.longitude}
-            radius={this.state.radius} />
+            radius={this.state.radius}/>
         } else {
             return "Loading...";
         }
@@ -62,9 +63,10 @@ class FullArticle extends React.Component {
                                 let newState = event.target.value;
                                 this.setState({
                                     placeIndex: newState,
+                                    // ...this.state.city,
                                     ...this.state.latitude,
                                     ...this.state.longitude,
-                                    ...this.state.radius   
+                                    ...this.state.radius
                                 });
                             }
                         }>
@@ -81,6 +83,17 @@ class FullArticle extends React.Component {
                             </option>
                             <option value="9">{Lang[displayLanguage].blog_ministry_options["9"]}</option>
                         </select>
+                        {/*<div className="main_ministrieschange-inputs">
+                            <input className="main_ministrieschange-input" placeholder={'vvedite city'} onChange={ event => {
+                                let newState = event.target.value;
+                                this.setState({
+                                    ...this.state.placeIndex,
+                                    city: newState
+                                });
+                            }} />
+                        </div>*/}
+
+
 
                         <div className="main_ministrieschange-inputs">
                             <input className="main_ministrieschange-input" placeholder={'Latitude'}

@@ -276,6 +276,29 @@ body {
 .main_comments-comment-image {
   margin-top: 50px;
 }
+.main_ministrieschange {
+  text-align: center;
+  line-height: 45px;
+}
+.main_ministrieschange-select {
+  width: 500px;
+  margin-left: 15px;
+  padding: 10px;
+  padding-border: 1px solid #906FDA;
+  padding-border-radius: 5px;
+}
+.main_ministrieschange-input {
+  width: 300px;
+  padding: 10px;
+  padding-border: 1px solid #906FDA;
+  padding-border-radius: 5px;
+}
+.main_ministrieschange-input-radius {
+  width: 70px;
+  padding: 10px;
+  padding-border: 1px solid #906FDA;
+  padding-border-radius: 5px;
+}
 .main_leavereply {
   display: block;
   margin: 0 auto;
