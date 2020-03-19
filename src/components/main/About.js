@@ -12,6 +12,10 @@ import fetchErrorMessage from "../../utilites/fetchErrorMessage";
 
 class About extends React.Component {
 
+    showMoreImg;
+    showMoreOpened;
+    articles;
+
     constructor(props) {
         super(props);
         this.state = {
@@ -22,7 +26,31 @@ class About extends React.Component {
         }
     }
 
+    toggleShowMore = (event) => {
+        event.preventDefault();
+        if (!this.showMoreOpened){
+            this.showMoreOpened = true;
+            this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-up.svg";
+            for (let i = 3; i <= 8; i++){
+                this.articles[i].style.display = 'block';
+            }
+        } else {
+            this.showMoreOpened = false;
+            this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
+            for (let i = 3; i <= 8; i++){
+                this.articles[i].style.display = 'none';
+            }
+        }
+    };
+
     componentDidMount() {
+        this.showMoreImg = document.querySelector('#showMoreImg');
+        this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
+        this.showMoreOpened = false;
+        this.articles = document.querySelectorAll('.main_steps .row');
+        for (let i = 3; i <= 8; i++){
+            this.articles[i].style.display = 'none';
+        }
         let stepsNumbers = 9;
         let tempTitles = [];
         let tempDesc = [];
@@ -50,16 +78,16 @@ class About extends React.Component {
 
     render() {
         // Language pick
-        let displayLang = languageSet();
+        let displayLanguage = languageSet();
         return (
             <div>
                 <div className="main_fetcherror">
                 </div>
-                <h2 className="main_header">{Lang[displayLang].about_header_partleft}
-                    &nbsp;<span className="main_header-about-subheader">{Lang[displayLang].about_header_partright}</span>
+                <h2 className="main_header">{Lang[displayLanguage].about_header_partleft}
+                    &nbsp;<span className="main_header-about-subheader">{Lang[displayLanguage].about_header_partright}</span>
                 </h2>
                 <p className="main_description main_description-about">
-                    {Lang[displayLang].about_description}
+                    {Lang[displayLanguage].about_description}
                 </p>
                 <div className="main_steps container">
                     <StepPicLeft number='1' title={this.state.stepsTitles[0]} description={this.state.stepsDesc[0]} need={this.state.stepsNeed[0]} img='img/steps/clip-bad-gateaway.png' />
@@ -74,15 +102,15 @@ class About extends React.Component {
                 </div>
                 {/* 3 */}
                 <div className="main_showmore">
-                    <a href="/more" className="main_showmore-link">
-                        <img className="main_showmore-image" src="img/bootstrap-icons/chevron-compact-down.svg"
+                    <a href="/#more" onClick={this.toggleShowMore} className="main_showmore-link">
+                        <img className="main_showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
                              alt="&#8595;" width="32" height="32" title="Bootstrap"/>
-                        Show more
+                        {Lang[displayLanguage].about_showmore}
                     </a>
                 </div>
                 {/* 3 */}
                 <div className="main_useful">
-                    <h4 className="main_useful-title">{Lang[displayLang].about_usefularticles_title}</h4>
+                    <h4 className="main_useful-title">{Lang[displayLanguage].about_usefularticles_title}</h4>
                     <div className="main_articles container">
                         <div className="row">
                             <Useful/>

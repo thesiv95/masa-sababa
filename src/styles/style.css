@@ -136,19 +136,31 @@ body {
 .main_steps {
   margin-top: 50px;
 }
-.main_steps_step-number, .main_steps_step-title {
+.main_steps .row {
+  margin-top: 20px;
+}
+.main_step-number, .main_step-title {
   font-size: 36px;
   margin-top: 10px;
 }
-.main_steps_step-number {
+.main_step-number {
   font-weight: normal;
 }
-.main_steps_step-title {
+.main_step-title {
   font-weight: bold;
+  font-size: 28px;
 }
-.main_steps_step-description {
-  font-size: 15px;
+.main_step-description {
+  font-size: 14px;
   color: #555555;
+  height: 200px;
+  overflow-y: auto;
+}
+.main_step-pic {
+  width: 500px;
+}
+.main .need-description {
+  font-style: italic;
 }
 .main_articles-article {
   width: 350px;
