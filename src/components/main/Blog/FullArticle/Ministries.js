@@ -49,6 +49,7 @@ import React from "react";
 import Ministry from "./Ministries/Ministry";
 import languageSet from "../../../../utilites/languageSet";
 import {baseUrl} from "../../../Constants";
+import fetchErrorMessage from "../../../../utilites/fetchErrorMessage";
 
 
 class Ministries extends React.Component{
@@ -69,8 +70,7 @@ class Ministries extends React.Component{
         console.log(this.state, "state")
     }
 
-    componentWillReceiveProps(){
-        console.log("Ministry start")
+    componentWillReceiveProps(nextProps, nextContent){
         let ministriesCount = 2;
         let tempNames = [];
         let tempLats = [];
@@ -102,7 +102,8 @@ class Ministries extends React.Component{
                     phones: tempPhones,
                     websites: tempWebsites
                 })
-            });
+            })
+            .catch(e => fetchErrorMessage(e));
     }
 
      
@@ -141,21 +142,23 @@ class Ministries extends React.Component{
                     phones: tempPhones,
                     websites: tempWebsites
                 })
-            });
+            })
+            .catch(e => fetchErrorMessage(e));
     }
 
-   
-    doVol = () => {
 
-    }
 
     render() {
-        console.log('Render')
+        console.log(this.state.schedules[0], 'schedules0');
         return (
             <div className="container">
                 <div className="row">
+                    <div className="main_fetcherror">
+                    </div>
+                </div>
+                <div className="row">
                     <Ministry title={this.state.names[0]} street={`https://www.google.com/maps/@${this.state.lats[0]},${this.state.longs[0]}z`} workingHours={this.state.schedules} phone={this.state.phones[0]} website={this.state.websites[0]} />
-                    <Ministry title={this.state.names[1]} street={`https://www.google.com/maps/@${this.state.lats[1]},${this.state.longs[1]}z`} workingHours={this.state.schedules} phone={this.state.phones[1]} website={this.state.websites[1]} />
+                    <Ministry title={this.state.names[1]} street={`https://www.google.com/maps/@${this.state.lats[1]},${this.state.longs[1]}z`} workingHours={this.state.schedules[0]} phone={this.state.phones[1]} website={this.state.websites[1]} />
                 
                 </div>
             </div>

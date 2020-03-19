@@ -5,26 +5,37 @@ import languageSet from "../../../../../utilites/languageSet";
 
 class Ministry extends React.Component {
 
+    workingHours = this.props.workingHours;
+
     getCurrentDay = () => {
         // 0 - sun, 1 - mon, ... 6 - sat
         return new Date().getDay();
-    }
+    };
 
     render() {
-
+        console.log(this.props.workingHours, 'PROPS')
         let currentDay = this.getCurrentDay();
         let displayLanguage = languageSet();
+        let workingHours = this.workingHours;
 
         return (
 
-                <div className='col-sm-6'>
+            <div className='col-sm-6'>
                     <div className="main_ministry">
                         <h5 className="main_ministry-title">{this.props.title}</h5>
                         <p className="main_ministry-street">
                             <a href={this.props.street} target="_blank" rel="noopener noreferrer">Google Maps</a>
                         </p>
                         <p className="main_ministry-work">
-                            { currentDay }
+
+                            { (currentDay === 0) ? 'open' : 'close' }<br/>
+                            { (currentDay === 1) ? 'open' : 'close' }<br/>
+                            { (currentDay === 2) ? workingHours : 'close' }<br/>
+                            { (currentDay === 3) ? 'open' : 'close' }<br/>
+                            { (currentDay === 4) ? 'open' : 'close' }<br/>
+                            { (currentDay === 5) ? 'open' : 'close' }<br/>
+                            { (currentDay === 6) ? 'open' : 'close' }<br/>
+
 
                             { /* todo: currentday */ }
 

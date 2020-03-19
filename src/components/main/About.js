@@ -8,6 +8,7 @@ import {baseUrl} from "../Constants";
 import Lang from "./../../i18n/lang"
 
 import languageSet from "../../utilites/languageSet";
+import fetchErrorMessage from "../../utilites/fetchErrorMessage";
 
 class About extends React.Component {
 
@@ -41,7 +42,8 @@ class About extends React.Component {
                     stepsDesc: tempDesc,
                     stepsNeed: tempNeed
                 });
-            });
+            })
+            .catch(e => fetchErrorMessage(e));
 
 
     }
@@ -53,6 +55,8 @@ class About extends React.Component {
         let displayLang = languageSet();
         return (
             <div>
+                <div className="main_fetcherror">
+                </div>
                 <h2 className="main_header">{Lang[displayLang].about_header_partleft}
                     &nbsp;<span className="main_header-about-subheader">{Lang[displayLang].about_header_partright}</span>
                 </h2>

@@ -4,6 +4,7 @@ import Breadcrumbs from "./Blog/Breadcrumbs";
 import {baseUrl} from "../Constants";
 import Lang from "./../../i18n/lang";
 import languageSet from "../../utilites/languageSet";
+import fetchErrorMessage from "../../utilites/fetchErrorMessage";
 
 const categoriesLength = 8;
 let categories = [];
@@ -19,6 +20,7 @@ function getCategories(displayLanguage) {
             }
 
         })
+        .catch(e => fetchErrorMessage(e));
 }
 
 getCategories(languageSet());
@@ -29,6 +31,8 @@ class Blog extends React.Component{
         let displayLanguage = languageSet();
         return (
             <div>
+                <div className="main_fetcherror">
+                </div>
                 <h2 className="main_header">{Lang[displayLanguage].blog_header}</h2>
                 <div className="main_blogcontainer container">
                     <div className="main_articles row">

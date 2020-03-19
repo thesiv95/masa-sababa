@@ -72,7 +72,7 @@ class Comments extends React.Component {
 
     render() {
         let displayLanguage = languageSet();
-        let allComments = this.getAllComments();
+        //let allComments = this.getAllComments();
         return (
             <div className="main_comments">
                 <h3>{Lang[displayLanguage].comments_title}</h3>

@@ -63,6 +63,14 @@ body {
 .main {
   line-height: 20px;
 }
+.main_fetcherror {
+  display: none;
+  color: #e6ffd8;
+  margin: 0 auto;
+  width: 700px;
+  padding: 15px;
+  border-radius: 5px;
+}
 .main_header, .main_subheader, .main_description, .main_buttons, .main_useful-title {
   text-align: center;
 }

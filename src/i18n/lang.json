@@ -18,6 +18,9 @@
     "main_btn_knowmore": "Узнай больше",
     "main_btn_gohome": "На главную",
 
+    "fetch_error_msg": "Ошибка подключения к серверу. Проверьте подключение к Интернету",
+    "fetch_othererror_msg": "Неизвестная ошибка сервера. Мы уже над этим работаем :)",
+
     "about_header_partleft": "Про",
     "about_header_partright": "репатриацию",
     "about_description": "Все евреи - по праву граждане Израиля, независимо от их места рождения. Если ты когда-то планировал или планировала стать на шаг ближе к Израилю, то мы покажем тебе правильный путь.",
@@ -137,6 +140,9 @@
     "main_btn_knowmore": "Know more",
     "main_btn_gohome": "To home page",
 
+    "fetch_error_msg": "Connection server error. Please check your internet connection",
+    "fetch_othererror_msg": "Unknown server error. We are working on it :)",
+
     "about_header_partleft": "About",
     "about_header_partright": "Repatriation",
     "about_description": "All Jews, no matter where they were born, are Israeli citizens by right. If you've ever considered making the move to Israel, let us light the way.",
@@ -255,6 +261,9 @@
     "main_btn_knowmore": "Savoir plus",
     "main_btn_gohome": "D'accueil",
 
+    "fetch_error_msg": "Erreur du serveur de connexion. Veuillez vérifier votre connexion Internet",
+    "fetch_othererror_msg": "Erreur de serveur inconnue. Nous y travaillons :)",
+
     "about_header_partleft": "À propos",
     "about_header_partright": "du rapatriement",
     "about_description": "Tous les Juifs, quel que soit leur lieu de naissance, sont de droit des citoyens israéliens. Si vous avez déjà envisagé de déménager en Israël, laissez-nous vous éclairer.",
@@ -372,6 +381,9 @@
     "main_btn_signup": "הירשם",
     "main_btn_knowmore": "יודע יותר",
     "main_btn_gohome": "לעמוד הבית",
+
+    "fetch_error_msg": "שגיאת שרת חיבור. אנא בדוק את חיבור האינטרנט שלך",
+    "fetch_othererror_msg": "שגיאת שרת לא ידועה. אנחנו עובדים על זה :)",
 
     "about_header_partleft": "על ",
     "about_header_partright": "השיבה",
