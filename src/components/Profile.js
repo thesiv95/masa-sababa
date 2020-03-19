@@ -49,15 +49,16 @@ class Profile extends React.Component {
         // if it is all ok
         showAlert(Lang[this.displayLanguage].profile_validmsg.success, targetClass, false);
         token = generateToken(pEmail, pPassword);
-        sessionStorage.setItem('token', token);
+        localStorage.setItem('token', token);
         currentUser = `${pFirstName},${pLastName},${pEmail}`;
-        sessionStorage.setItem('currentUser', currentUser);
+        localStorage.setItem('currentUser', currentUser);
 
     };
 
     componentDidMount() {
-        if (sessionStorage.getItem('currentUser') !== null){
-            let currentUser = sessionStorage.getItem('currentUser');
+        // Put data to input boxes if person had already logged in
+        if (localStorage.getItem('currentUser') !== null){
+            let currentUser = localStorage.getItem('currentUser');
             currentUser = currentUser.split(',');
 
             let pFirstName = document.querySelector('#pFirstName'),
@@ -69,6 +70,10 @@ class Profile extends React.Component {
             pEmail.value = currentUser[2];
         }
     };
+
+    // componentWillUnmount() {
+    //
+    // }
 
     render() {
         let displayLanguage = this.displayLanguage;

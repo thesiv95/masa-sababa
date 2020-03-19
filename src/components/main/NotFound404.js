@@ -1,7 +1,7 @@
 import React from "react";
 import Lang from "../../i18n/lang";
 import languageSet from "../../utilites/languageSet";
-import {NavLink} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 class NotFound404 extends React.Component {
     render() {
@@ -12,7 +12,9 @@ class NotFound404 extends React.Component {
                 <div className="main_steps container">
                     <div className="row">
                         <div className="col-sm-offset-5">
-                            <NavLink to={'/'} className={'button button-accent'}>Go Home</NavLink>
+                            <button className="button button-accent">
+                                <Link to={'/'}>{Lang[displayLanguage].main_btn_gohome}</Link>
+                            </button>
                         </div>
                     </div>
 

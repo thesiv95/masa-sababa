@@ -1,21 +1,19 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 import Lang from "./../../i18n/lang";
 import languageSet from "../../utilites/languageSet";
+import {Link} from "react-router-dom";
 
 class SignUp extends React.Component {
+
+
     render() {
         let displayLanguage = languageSet();
         return (
 
             <div className="header_signup col-md-1">
-
-                    <NavLink to='/profile'>
-                        <button className="button button-header">
-                            {Lang[displayLanguage].header_btn_signup}
-                        </button>
-                    </NavLink>
-
+                <button className="button button-header">
+                    <Link to={'/profile'}>{Lang[displayLanguage].header_btn_signup}</Link>
+                </button>
             </div>
         )
     }

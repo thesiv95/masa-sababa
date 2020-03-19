@@ -328,6 +328,12 @@ body {
   font-size: 80%;
   color: #906FDA;
 }
+.button a, .button a:hover {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
 .button-accent {
   background-color: #906FDA;
   color: #ffffff;
