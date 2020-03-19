@@ -44,8 +44,6 @@ class About extends React.Component {
                 });
             })
             .catch(e => fetchErrorMessage(e));
-
-
     }
 
 
