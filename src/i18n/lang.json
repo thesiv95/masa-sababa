@@ -28,6 +28,7 @@
     "about_description": "Все евреи - по праву граждане Израиля, независимо от их места рождения. Если ты когда-то планировал или планировала стать на шаг ближе к Израилю, то мы покажем тебе правильный путь.",
     "about_step": "Шаг",
     "about_showmore": "Показать еще",
+    "about_showless": "Показать меньше",
     "about_usefularticles_title": "Полезные статьи для тебя",
 
     "blog_header": "Блог",
@@ -161,6 +162,7 @@
     "about_description": "All Jews, no matter where they were born, are Israeli citizens by right. If you've ever considered making the move to Israel, let us light the way.",
     "about_step": "Step",
     "about_showmore": "Show more",
+    "about_showless": "Show less",
     "about_usefularticles_title": "Useful articles for you",
 
     "blog_header": "Blog",
@@ -293,6 +295,7 @@
     "about_description": "Tous les Juifs, quel que soit leur lieu de naissance, sont de droit des citoyens israéliens. Si vous avez déjà envisagé de déménager en Israël, laissez-nous vous éclairer.",
     "about_step": "Étape",
     "about_showmore": "Montre plus",
+    "about_showless": "Montrer moins",
     "about_usefularticles_title": "Articles utiles pour vous",
 
     "blog_ministry_phones": "Téléphones:",
@@ -426,6 +429,7 @@
     "about_description": "כל היהודים, לא משנה היכן הם נולדו, הם אזרחי ישראל בזכותם. אם שקלתם אי פעם את המעבר לישראל, תנו לנו להאיר את הדרך.",
     "about_step": "שלב",
     "about_showmore": "להראות יותר",
+    "about_showless": "הראי פחות",
     "about_usefularticles_title": "מאמרים שימושיים עבורך",
 
     "blog_header": "בלוג",

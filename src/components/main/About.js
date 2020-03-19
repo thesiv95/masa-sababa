@@ -14,7 +14,10 @@ class About extends React.Component {
 
     showMoreImg;
     showMoreOpened;
+    showMoreText;
     articles;
+    displayLanguage = languageSet();
+
 
     constructor(props) {
         super(props);
@@ -34,12 +37,14 @@ class About extends React.Component {
             for (let i = 3; i <= 8; i++){
                 this.articles[i].style.display = 'block';
             }
+            this.showMoreText.innerHTML = Lang[this.displayLanguage].about_showless;
         } else {
             this.showMoreOpened = false;
             this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
             for (let i = 3; i <= 8; i++){
                 this.articles[i].style.display = 'none';
             }
+            this.showMoreText.innerHTML = Lang[this.displayLanguage].about_showmore;
         }
     };
 
@@ -47,6 +52,7 @@ class About extends React.Component {
         this.showMoreImg = document.querySelector('#showMoreImg');
         this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
         this.showMoreOpened = false;
+        this.showMoreText = document.querySelector('#showMoreText');
         this.articles = document.querySelectorAll('.main_steps .row');
         for (let i = 3; i <= 8; i++){
             this.articles[i].style.display = 'none';
@@ -78,7 +84,7 @@ class About extends React.Component {
 
     render() {
         // Language pick
-        let displayLanguage = languageSet();
+        let displayLanguage = this.displayLanguage;
         return (
             <div>
                 <div className="main_fetcherror">
@@ -105,7 +111,7 @@ class About extends React.Component {
                     <a href="/#more" onClick={this.toggleShowMore} className="main_showmore-link">
                         <img className="main_showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
                              alt="&#8595;" width="32" height="32" />
-                        {Lang[displayLanguage].about_showmore}
+                        <span id="showMoreText">{Lang[displayLanguage].about_showmore}</span>
                     </a>
                 </div>
                 {/* 3 */}
