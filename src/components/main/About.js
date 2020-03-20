@@ -5,7 +5,9 @@ import StepPicRight from "./About/StepPicRight";
 
 import Useful from "./About/Useful";
 import {baseUrl} from "../Constants";
-import Lang from "./../../i18n/lang"
+import Lang from "./../../i18n/lang";
+
+import usefulArticles from "./About/usefulArticles";
 
 import languageSet from "../../utilites/languageSet";
 import fetchErrorMessage from "../../utilites/fetchErrorMessage";
@@ -106,7 +108,7 @@ class About extends React.Component {
                     <StepPicRight number='8' title={this.state.stepsTitles[7]} description={this.state.stepsDesc[7]} need={this.state.stepsDesc[7]} img='img/steps/clip-list-is-empty.png'/>
                     <StepPicLeft number='9' title={this.state.stepsTitles[8]} description={this.state.stepsDesc[8]} need={this.state.stepsDesc[8]} img='img/steps/clip-waiting.png'/>
                 </div>
-                {/* 3 */}
+
                 <div className="main_showmore">
                     <a href="/#more" onClick={this.toggleShowMore} className="main_showmore-link">
                         <img className="main_showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
@@ -114,14 +116,14 @@ class About extends React.Component {
                         <span id="showMoreText">{Lang[displayLanguage].about_showmore}</span>
                     </a>
                 </div>
-                {/* 3 */}
+
                 <div className="main_useful">
                     <h4 className="main_useful-title">{Lang[displayLanguage].about_usefularticles_title}</h4>
                     <div className="main_articles container">
                         <div className="row">
-                            <Useful/>
-                            <Useful/>
-                            <Useful/>
+                            <Useful imgSrc={usefulArticles["1"].imgSrc} imgAlt={usefulArticles["1"].imgAlt} title={usefulArticles["1"].title} description={usefulArticles["1"].description} />
+                            <Useful imgSrc={usefulArticles["2"].imgSrc} imgAlt={usefulArticles["2"].imgAlt} title={usefulArticles["2"].title} description={usefulArticles["2"].description} />
+                            <Useful imgSrc={usefulArticles["3"].imgSrc} imgAlt={usefulArticles["3"].imgAlt} title={usefulArticles["3"].title} description={usefulArticles["3"].description} />
                         </div>
                     </div>
                     <div className="main_useful-navigation">

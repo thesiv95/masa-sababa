@@ -177,6 +177,9 @@ body {
 }
 .main_articles-article-userpic {
   margin-top: 44px;
+  width: 218px;
+  height: 218px;
+  border-radius: 50%;
 }
 .main_articles-article-title {
   font-size: 20px;
