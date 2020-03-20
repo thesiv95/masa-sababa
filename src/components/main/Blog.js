@@ -44,14 +44,14 @@ class Blog extends React.Component{
                 <h2 className="main_header">{Lang[displayLanguage].blog_header}</h2>
                 <div className="main_blogcontainer container">
                     <div className="main_articles row">
-                        <Article img='img/Ellipse 344.png' title={this.state.categories[0]} description={this.state.categories[0]} />
-                        <Article img='img/Ellipse 345.png' title={this.state.categories[1]} description={this.state.categories[1]}/>
-                        <Article img='img/Ellipse 347.png' title={this.state.categories[2]} description={this.state.categories[2]}/>
+                        <Article img='img/beit-holim.jpg' title={this.state.categories[0]} description={this.state.categories[0]} />
+                        <Article img='img/bank.jpg' title={this.state.categories[1]} description={this.state.categories[1]}/>
+                        <Article img='img/merkaz-klita.jpg' title={this.state.categories[2]} description={this.state.categories[2]}/>
                     </div>
                     <div className="main_articles row">
-                        <Article img='img/Ellipse 344.png' title={this.state.categories[3]} description={this.state.categories[3]}/>
-                        <Article img='img/Ellipse 345.png' title={this.state.categories[4]} description={this.state.categories[4]}/>
-                        <Article img='img/Ellipse 347.png' title={this.state.categories[5]} description={this.state.categories[5]}/>
+                        <Article img='img/ministry_affairs.jpg' title={this.state.categories[3]} description={this.state.categories[3]}/>
+                        <Article img='img/university.png' title={this.state.categories[4]} description={this.state.categories[4]}/>
+                        <Article img='img/misrad-klita.jpg' title={this.state.categories[5]} description={this.state.categories[5]}/>
                     </div>
                 </div>
 

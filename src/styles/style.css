@@ -15,6 +15,10 @@ body {
   display: inline-flex;
   margin-right: 150px;
 }
+.header_nav-item:hover {
+  font-size: 110%;
+  color: #906FDA;
+}
 .header_search {
   display: inline-flex;
   width: 300px;
@@ -162,6 +166,9 @@ body {
 .main .need-description {
   font-style: italic;
 }
+.main_articles {
+  margin-bottom: 30px;
+}
 .main_articles-article {
   width: 350px;
   height: 440px;
@@ -224,8 +231,18 @@ body {
   padding: 10px;
 }
 .main_breadcrumbs-nav:hover, .main_breadcrumbs-nav:focus, .main_breadcrumbs-nav:active {
-  color: #222222;
+  color: #906FDA;
   text-decoration: none;
+}
+.main .active-page {
+  border: 1px solid #906FDA;
+  border-radius: 4px;
+}
+.main .direction-page {
+  color: inherit;
+}
+.main .direction-page:hover {
+  color: #906FDA;
 }
 .main_useful-navigation {
   margin: 20px 0;
@@ -287,20 +304,20 @@ body {
   width: 500px;
   margin-left: 15px;
   padding: 10px;
-  padding-border: 1px solid #906FDA;
-  padding-border-radius: 5px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
 }
 .main_ministrieschange-input {
   width: 300px;
   padding: 10px;
-  padding-border: 1px solid #906FDA;
-  padding-border-radius: 5px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
 }
 .main_ministrieschange-input-radius {
   width: 70px;
   padding: 10px;
-  padding-border: 1px solid #906FDA;
-  padding-border-radius: 5px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
 }
 .main_leavereply {
   display: block;
