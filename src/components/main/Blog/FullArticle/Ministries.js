@@ -33,7 +33,7 @@ class Ministries extends React.Component{
         fetch(fetchURL)
             .then(response => response.json())
             .then(json => {
-                // console.log(json)
+
                 for (let i = 0; i < ministriesCount; i++){
                     tempNames.push(json[i].name);
                     tempPhones.push(json[i].phones);

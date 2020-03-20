@@ -15,6 +15,10 @@ body {
   display: inline-flex;
   margin-right: 150px;
 }
+.header_nav-item:hover {
+  font-size: 110%;
+  color: #906FDA;
+}
 .header_search {
   display: inline-flex;
   width: 300px;
@@ -115,6 +119,20 @@ body {
   margin-top: -150px;
   z-index: 1;
 }
+.main_profile {
+  margin-left: 15px;
+}
+.main_profileitem-title {
+  margin-bottom: 10px;
+}
+.main_profileitem-input {
+  padding: 10px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
+}
+.main .last-profile-item {
+  margin-bottom: 15px;
+}
 .main_buttons {
   margin-top: 20px;
 }
@@ -133,6 +151,9 @@ body {
   border-radius: 50%;
   background-color: transparent;
 }
+.main .showmore-margin {
+  margin-left: 10px;
+}
 .main_steps {
   margin-top: 50px;
 }
@@ -150,17 +171,22 @@ body {
   font-weight: bold;
   font-size: 28px;
 }
+.main_step_accordeon {
+  height: 400px;
+}
 .main_step-description {
   font-size: 14px;
   color: #555555;
-  height: 200px;
-  overflow-y: auto;
+  display: none;
 }
 .main_step-pic {
   width: 500px;
 }
 .main .need-description {
   font-style: italic;
+}
+.main_articles {
+  margin-bottom: 30px;
 }
 .main_articles-article {
   width: 350px;
@@ -191,13 +217,13 @@ body {
   line-height: 27px;
   color: #555555;
 }
+.main .text-center {
+  text-align: center;
+}
 .main_articlesubheader {
   margin-left: 15px;
   font-size: 14px;
   color: #555555;
-}
-.main_articlecontent p, .main_articlecontent a {
-  padding-left: 15px;
 }
 .main_articlecontent blockquote {
   width: 814px;
@@ -212,6 +238,9 @@ body {
   color: #999999;
   border-left: 1px solid #906FDA;
 }
+.main_ministry {
+  padding-left: 30px;
+}
 .main_breadcrumbs {
   text-align: center;
   margin: 40px 0;
@@ -224,8 +253,18 @@ body {
   padding: 10px;
 }
 .main_breadcrumbs-nav:hover, .main_breadcrumbs-nav:focus, .main_breadcrumbs-nav:active {
-  color: #222222;
+  color: #906FDA;
   text-decoration: none;
+}
+.main .active-page {
+  border: 1px solid #906FDA;
+  border-radius: 4px;
+}
+.main .direction-page {
+  color: inherit;
+}
+.main .direction-page:hover {
+  color: #906FDA;
 }
 .main_useful-navigation {
   margin: 20px 0;
@@ -277,7 +316,7 @@ body {
   border-right: 1px solid #906FDA;
 }
 .main_comments-comment-image {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .main_ministrieschange {
   text-align: center;
@@ -287,20 +326,20 @@ body {
   width: 500px;
   margin-left: 15px;
   padding: 10px;
-  padding-border: 1px solid #906FDA;
-  padding-border-radius: 5px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
 }
 .main_ministrieschange-input {
   width: 300px;
   padding: 10px;
-  padding-border: 1px solid #906FDA;
-  padding-border-radius: 5px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
 }
 .main_ministrieschange-input-radius {
   width: 70px;
   padding: 10px;
-  padding-border: 1px solid #906FDA;
-  padding-border-radius: 5px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
 }
 .main_leavereply {
   display: block;

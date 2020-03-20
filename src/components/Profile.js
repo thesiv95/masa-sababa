@@ -93,11 +93,11 @@ class Profile extends React.Component {
                         </ul>
                     </div>
                     <div className="main_profile">
-                        <div className="main_profileitem profileitem-short">
+                        <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_firstname}</h5>
                             <input type="text" id="pFirstName" className="main_profileitem-input" placeholder="Elena"/>
                         </div>
-                        <div className="main_profileitem profileitem-short">
+                        <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_lastname}</h5>
                             <input type="text" id="pLastName" className="main_profileitem-input" placeholder="Johnes"/>
                         </div>
@@ -111,7 +111,7 @@ class Profile extends React.Component {
                             <input type="password" id="pPassword" className="main_profileitem-input"
                                    placeholder="******************"/>
                         </div>
-                        <div className="main_profileitem">
+                        <div className="main_profileitem last-profile-item">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_confirm_password}</h5>
                             <input type="password" id="pPasswordConfirmation"
                                    className="main_profileitem-input"

@@ -16,7 +16,10 @@ class About extends React.Component {
 
     showMoreImg;
     showMoreOpened;
+    descriptionBlocks = [];
+    blocksAreShown;
     showMoreText;
+    toggleText;
     articles;
     displayLanguage = languageSet();
 
@@ -30,6 +33,25 @@ class About extends React.Component {
             stepsNeed: []
         }
     }
+
+    // 18 - desc. length, could only hardcode =/
+    toggleBlock = (event) => {
+        event.preventDefault();
+        if (!this.blocksAreShown){
+            this.blocksAreShown = true;
+            for (let i = 0; i < 18; i++){
+                this.descriptionBlocks[i].style.display = 'block';
+            }
+            this.toggleText.innerHTML = "Скрыть подробности";
+
+        } else {
+            this.blocksAreShown = false;
+            for (let i = 0; i < 18; i++){
+                this.descriptionBlocks[i].style.display = 'none';
+            }
+            this.toggleText.innerHTML = "Показать подробности";
+        }
+    };
 
     toggleShowMore = (event) => {
         event.preventDefault();
@@ -51,10 +73,13 @@ class About extends React.Component {
     };
 
     componentDidMount() {
+        this.descriptionBlocks = document.querySelectorAll('.main_step-description');
+        this.blocksAreShown = false;
         this.showMoreImg = document.querySelector('#showMoreImg');
         this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
         this.showMoreOpened = false;
         this.showMoreText = document.querySelector('#showMoreText');
+        this.toggleText = document.querySelector('#toggleText');
         this.articles = document.querySelectorAll('.main_steps .row');
         for (let i = 3; i <= 8; i++){
             this.articles[i].style.display = 'none';
@@ -115,15 +140,16 @@ class About extends React.Component {
                              alt="&#8595;" width="32" height="32" />
                         <span id="showMoreText">{Lang[displayLanguage].about_showmore}</span>
                     </a>
+                    <a href="/#toggle" className="main_showmore-link showmore-margin" id="toggleText" onClick={this.toggleBlock}>Показать подробности</a>
                 </div>
 
                 <div className="main_useful">
                     <h4 className="main_useful-title">{Lang[displayLanguage].about_usefularticles_title}</h4>
                     <div className="main_articles container">
                         <div className="row">
-                            <Useful imgSrc={usefulArticles["1"].imgSrc} imgAlt={usefulArticles["1"].imgAlt} title={usefulArticles["1"].title} description={usefulArticles["1"].description} />
-                            <Useful imgSrc={usefulArticles["2"].imgSrc} imgAlt={usefulArticles["2"].imgAlt} title={usefulArticles["2"].title} description={usefulArticles["2"].description} />
-                            <Useful imgSrc={usefulArticles["3"].imgSrc} imgAlt={usefulArticles["3"].imgAlt} title={usefulArticles["3"].title} description={usefulArticles["3"].description} />
+                            <Useful imgSrc={usefulArticles["1"].imgSrc} imgAlt={usefulArticles["1"].imgAlt} title={usefulArticles["1"].title} description={usefulArticles["1"].description} url={usefulArticles["1"].url} />
+                            <Useful imgSrc={usefulArticles["2"].imgSrc} imgAlt={usefulArticles["2"].imgAlt} title={usefulArticles["2"].title} description={usefulArticles["2"].description} url={usefulArticles["2"].url} />
+                            <Useful imgSrc={usefulArticles["3"].imgSrc} imgAlt={usefulArticles["3"].imgAlt} title={usefulArticles["3"].title} description={usefulArticles["3"].description} url={usefulArticles["3"].url} />
                         </div>
                     </div>
                     <div className="main_useful-navigation">
