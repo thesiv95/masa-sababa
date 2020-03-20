@@ -13,7 +13,7 @@ Web application called "Sababa Life" gives the necessary information for Israeli
 ## Application features
 * choose from 4 languages (which are most common in Israel) - English, Russian, Hebrew, French;
 * user registration;
-* search Israeli ministries by latitude, longitude & radius.
+* search Israeli ministries in a particular city.
 
 ## Software and system requirements
 1. node.js 10.16.0 or above, npm 6.9.0 or above.
