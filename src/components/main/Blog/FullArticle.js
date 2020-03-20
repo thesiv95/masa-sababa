@@ -8,17 +8,20 @@ import Video from "./FullArticle/Video";
 import Lang from "./../../../i18n/lang";
 import languageSet from "../../../utilites/languageSet";
 import dateAndAuthorFormatted from "../../../utilites/dateAndAuthorFormatted";
+import {baseUrl} from "../../Constants";
+import fetchErrorMessage from "../../../utilites/fetchErrorMessage";
 
 
 class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
+    allCities = [];
 
     constructor(props) {
         super(props);
         this.state = {
             placeIndex: 1,
-            // city: 'Tel Aviv'
+            city: 'Tel Aviv',
             latitude: 32.7895852,
             longitude: 34.9864697,
             radius: 50
@@ -31,6 +34,7 @@ class FullArticle extends React.Component {
     loadMinistriesComponent = () =>{
         if(this.state.placeIndex > 0){
             return <Ministries
+                city={this.state.city}
             placeIndex={this.state.placeIndex}
             latitude={this.state.latitude}
             longitude={this.state.longitude}
@@ -40,11 +44,28 @@ class FullArticle extends React.Component {
         }
     };
 
+    // cities list
+    componentDidMount() {
+        let tempCities = [];
+        fetch(`${baseUrl}/${this.displayLanguage}/city`)
+            .then(response => response.json())
+            .then(json => {
+                // for (let i = 0; json.length; i++){
+                //     tempCities.push(json[i].name)
+                // }
+
+                console.log(json)
+            })
+            //.catch(e => fetchErrorMessage(e))
+    }
+
     render() {
         let displayLanguage = this.displayLanguage;
 
         return (
             <div>
+                <div className="main_fetcherror">
+                </div>
                 <h2 className="main_header article-header">{Lang[displayLanguage].blog_teudatzeut_title}</h2>
                 <p className="main_articlesubheader">
                     {this.dateFormattedString}
@@ -63,7 +84,7 @@ class FullArticle extends React.Component {
                                 let newState = event.target.value;
                                 this.setState({
                                     placeIndex: newState,
-                                    // ...this.state.city,
+                                    ...this.state.city,
                                     ...this.state.latitude,
                                     ...this.state.longitude,
                                     ...this.state.radius
@@ -83,34 +104,43 @@ class FullArticle extends React.Component {
                             </option>
                             <option value="9">{Lang[displayLanguage].blog_ministry_options["9"]}</option>
                         </select>
-                        {/*<div className="main_ministrieschange-inputs">
+                        <div className="main_ministrieschange-inputs">
                             <input className="main_ministrieschange-input" placeholder={'vvedite city'} onChange={ event => {
                                 let newState = event.target.value;
                                 this.setState({
                                     ...this.state.placeIndex,
-                                    city: newState
+                                    city: newState,
+                                    ...this.state.latitude,
+                                    ...this.state.longitude,
+                                    ...this.state.radius
                                 });
                             }} />
-                        </div>*/}
+                        </div>
 
 
 
                         <div className="main_ministrieschange-inputs">
-                            <input className="main_ministrieschange-input" placeholder={'Latitude'}
-                                   onChange={ event => {
+                            <select className="main_ministrieschange-select" onChange={ event => {
                                     let newState = event.target.value;
                                     this.setState({
                                          ...this.state.placeIndex,
+                                        ...this.state.city,
                                          latitude: newState,
+                                        ...this.state.latitude,
                                         ...this.state.longitude,
                                         ...this.state.radius   
                                     });
                                 }
-                            } />
+                            }>
+                                {
+
+                                }
+                            </select>
                             <input className="main_ministrieschange-input" placeholder={'Longitude'} onChange={ event => {
                                     let newState = event.target.value;
                                     this.setState({
                                          ...this.state.placeIndex,
+                                        ...this.state.city,
                                          ...this.state.latitude,
                                         longitude: newState,
                                         ...this.state.radius   
@@ -121,6 +151,7 @@ class FullArticle extends React.Component {
                                     let newState = event.target.value;
                                     this.setState({
                                          ...this.state.placeIndex,
+                                        ...this.state.city,
                                          ...this.state.latitude,
                                          ...this.state.longitude,
                                         radius: newState   
@@ -146,6 +177,3 @@ class FullArticle extends React.Component {
 
 export default FullArticle;
 
-
-// TODO: кнопки профиль и логаут
-// TODO: завершить стилизацию

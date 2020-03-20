@@ -25,7 +25,7 @@ class NavLang extends React.Component {
     }
 
     render() {
-        console.log(this.state.value)
+
         return(
             <select className='header_select' onChange={this.handleChange} defaultValue={languageSet()}>
 

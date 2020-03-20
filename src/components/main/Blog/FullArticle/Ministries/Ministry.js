@@ -9,11 +9,11 @@ class Ministry extends React.Component {
 
         super(props);
         this.workingHours = this.props['workingHours']
-        console.log(this.workingHours, '123')
+
         this.state = {
             isLoading: true,
             data: this.props
-        }
+        };
 
         this.weekdays = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
 
@@ -24,14 +24,14 @@ class Ministry extends React.Component {
                 isLoading: false,
                 data: this.props
             })
-    }
+    };
 
     componentDidMount(){
             this.changeState()
     }
 
     render() {
-        {console.log( this.workingHours.length, "CHANGREE")}
+
         let displayLanguage = languageSet();
         if(this.state.data !== null) {
             return (
