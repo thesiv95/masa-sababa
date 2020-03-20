@@ -119,6 +119,20 @@ body {
   margin-top: -150px;
   z-index: 1;
 }
+.main_profile {
+  margin-left: 15px;
+}
+.main_profileitem-title {
+  margin-bottom: 10px;
+}
+.main_profileitem-input {
+  padding: 10px;
+  border: 1px solid #906FDA;
+  border-radius: 5px;
+}
+.main .last-profile-item {
+  margin-bottom: 15px;
+}
 .main_buttons {
   margin-top: 20px;
 }
