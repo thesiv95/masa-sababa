@@ -1,3 +1,4 @@
+@import "../../_constants/_mixins.sass"
 @import "../../_constants/_vars.sass"
 
 &_leavereply
@@ -5,6 +6,8 @@
   margin: 0 auto
   width: $blog-reply-width
   height: 400px
+  &_message
+    @include alertDiv()
   &-textarea
     width: $blog-reply-width
     height: 150px

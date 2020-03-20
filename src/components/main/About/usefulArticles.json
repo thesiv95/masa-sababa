@@ -1,0 +1,20 @@
+{
+  "1": {
+    "imgSrc": "img/covid.jpg",
+    "imgAlt": "covid",
+    "title": "COVID-19",
+    "description": "Measures to protect"
+  },
+  "2": {
+    "imgSrc": "img/elections.jpg",
+    "imgAlt": "elections",
+    "title": "Elections",
+    "description": "Elections results"
+  },
+  "3": {
+    "imgSrc": "img/purim.jpg",
+    "imgAlt": "purim",
+    "title": "Purim-2020",
+    "description": "This year's best costumes"
+  }
+}

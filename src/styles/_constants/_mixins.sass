@@ -1,5 +1,20 @@
+@import "vars"
+
 @mixin link()
         color: $footer-text
         &:hover, &:focus
             color: $footer-text
             text-decoration: underline
+
+@mixin alertDiv()
+  display: none
+  color: $alert
+  margin: 0 auto
+  width: $blog-reply-width
+  padding: 15px
+  border-radius: 5px
+
+@mixin articleInput()
+  padding: 10px
+    border: 1px solid $main-accent-color
+    border-radius: 5px

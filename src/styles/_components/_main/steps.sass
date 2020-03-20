@@ -2,14 +2,24 @@
 
 &_steps
   margin-top: 50px
-  &_step
-    &-number, &-title
-      font-size: $about-title-font-size
-      margin-top: 10px
-    &-number
-      font-weight: normal
-    &-title
-      font-weight: bold
-    &-description
-      font-size: 15px
-      color: $main-description
+  .row
+    margin-top: 20px
+&_step
+  &-number, &-title
+    font-size: $about-title-font-size
+    margin-top: 10px
+  &-number
+    font-weight: normal
+  &-title
+    font-weight: bold
+    font-size: 28px
+  &-description
+    font-size: 14px
+    color: $main-description
+    height: 200px
+    overflow-y: auto
+  &-pic
+    width: 500px
+
+.need-description
+  font-style: italic

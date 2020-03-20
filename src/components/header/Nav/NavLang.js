@@ -16,7 +16,6 @@ class NavLang extends React.Component {
         // Get selected lang value & put into storage
         this.setState({value: event.target.value});
         localStorage.setItem('lang', event.target.value);
-        // todo: без перезагрузки
         window.location.reload()
 
     }
@@ -26,7 +25,7 @@ class NavLang extends React.Component {
     }
 
     render() {
-        console.log(this.state.value)
+
         return(
             <select className='header_select' onChange={this.handleChange} defaultValue={languageSet()}>
 

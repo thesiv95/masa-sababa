@@ -13,6 +13,8 @@ class Main extends React.Component {
         let d = new Date();
         return (
             <main className='main'>
+                <div className="main_fetcherror">
+                </div>
                 <Switch>
                     <Route path='/' exact component={Home}/>
                     <Route path='/about' component={About}/>

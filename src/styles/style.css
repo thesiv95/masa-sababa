@@ -9,6 +9,7 @@ body {
 
 .header {
   display: inline-flex;
+  margin-bottom: 15px;
 }
 .header_nav {
   display: inline-flex;
@@ -62,6 +63,14 @@ body {
 
 .main {
   line-height: 20px;
+}
+.main_fetcherror {
+  display: none;
+  color: #e6ffd8;
+  margin: 0 auto;
+  width: 700px;
+  padding: 15px;
+  border-radius: 5px;
 }
 .main_header, .main_subheader, .main_description, .main_buttons, .main_useful-title {
   text-align: center;
@@ -127,19 +136,31 @@ body {
 .main_steps {
   margin-top: 50px;
 }
-.main_steps_step-number, .main_steps_step-title {
+.main_steps .row {
+  margin-top: 20px;
+}
+.main_step-number, .main_step-title {
   font-size: 36px;
   margin-top: 10px;
 }
-.main_steps_step-number {
+.main_step-number {
   font-weight: normal;
 }
-.main_steps_step-title {
+.main_step-title {
   font-weight: bold;
+  font-size: 28px;
 }
-.main_steps_step-description {
-  font-size: 15px;
+.main_step-description {
+  font-size: 14px;
   color: #555555;
+  height: 200px;
+  overflow-y: auto;
+}
+.main_step-pic {
+  width: 500px;
+}
+.main .need-description {
+  font-style: italic;
 }
 .main_articles-article {
   width: 350px;
@@ -156,6 +177,9 @@ body {
 }
 .main_articles-article-userpic {
   margin-top: 44px;
+  width: 218px;
+  height: 218px;
+  border-radius: 50%;
 }
 .main_articles-article-title {
   font-size: 20px;
@@ -234,6 +258,7 @@ body {
   margin: 0 auto;
   width: 700px;
   padding: 15px;
+  border-radius: 5px;
 }
 .main_passwordsecure {
   margin-left: 15px;
@@ -254,11 +279,42 @@ body {
 .main_comments-comment-image {
   margin-top: 50px;
 }
+.main_ministrieschange {
+  text-align: center;
+  line-height: 45px;
+}
+.main_ministrieschange-select {
+  width: 500px;
+  margin-left: 15px;
+  padding: 10px;
+  padding-border: 1px solid #906FDA;
+  padding-border-radius: 5px;
+}
+.main_ministrieschange-input {
+  width: 300px;
+  padding: 10px;
+  padding-border: 1px solid #906FDA;
+  padding-border-radius: 5px;
+}
+.main_ministrieschange-input-radius {
+  width: 70px;
+  padding: 10px;
+  padding-border: 1px solid #906FDA;
+  padding-border-radius: 5px;
+}
 .main_leavereply {
   display: block;
   margin: 0 auto;
   width: 700px;
   height: 400px;
+}
+.main_leavereply_message {
+  display: none;
+  color: #e6ffd8;
+  margin: 0 auto;
+  width: 700px;
+  padding: 15px;
+  border-radius: 5px;
 }
 .main_leavereply-textarea {
   width: 700px;
@@ -309,6 +365,12 @@ body {
   padding: 5px;
   font-size: 80%;
   color: #906FDA;
+}
+.button a, .button a:hover {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
 }
 .button-accent {
   background-color: #906FDA;

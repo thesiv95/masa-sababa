@@ -7,73 +7,56 @@ import Ministries from "./FullArticle/Ministries";
 import Video from "./FullArticle/Video";
 import Lang from "./../../../i18n/lang";
 import languageSet from "../../../utilites/languageSet";
+import dateAndAuthorFormatted from "../../../utilites/dateAndAuthorFormatted";
+import {baseUrl} from "../../Constants";
+import fetchErrorMessage from "../../../utilites/fetchErrorMessage";
 
 
 class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
+    allCities = [];
 
     constructor(props) {
         super(props);
         this.state = {
             placeIndex: 1,
+            city: 'Tel Aviv',
             latitude: 32.7895852,
             longitude: 34.9864697,
             radius: 50
-        }
-        console.log(this.state)
+        };
     }
 
-    // componentWillUnmount() {
-    //     this._isMounted = false;
-    // }
+    dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
 
 
-
-    latitudeChange(event){
-        this.setState({latitude: event.target.value});
-    }
-
-    longitudeChange(event){
-        this.setState({longitude: event.target.value});
-    }
-
-    radiusChange(event){
-        console.log(event.target.value)
-        this.setState({radius: event.target.value});
-    }
-
-
-    dateFormatted(){
-        let month = this.props.month;
-        let monthString = Lang[this.displayLanguage].blog_comments_month[month];
-        switch (this.displayLanguage) {
-            case 'en':
-                return `By ${this.props.author} ${monthString} ${this.props.day}, ${this.props.year}`;
-            case 'ru':
-                return `Автор: ${this.props.author} Дата: ${this.props.day} ${monthString} ${this.props.year}`;
-            case 'he':
-                return `${this.props.author} ${monthString} ${this.props.day}, ${this.props.year} על ידי  `;
-            case 'fr':
-                return `Par ${this.props.author} ${monthString} ${this.props.day}, ${this.props.year}`;
-            default:
-                return `[Language file not set, contact the website administrator]`;
-        }
-    }
-
-     doSmt = () =>{
-         console.log("dosmt")
-         if(this.state.placeIndex > 0){
-            console.log(this.state.placeIndex, "index")
+    loadMinistriesComponent = () =>{
+        if(this.state.placeIndex > 0){
             return <Ministries
+                city={this.state.city}
             placeIndex={this.state.placeIndex}
             latitude={this.state.latitude}
             longitude={this.state.longitude}
-            radius={this.state.radius} />
-         } else {
-             return "Loading"
-         }
-       
+            radius={this.state.radius}/>
+        } else {
+            return "Loading...";
+        }
+    };
+
+    // cities list
+    componentDidMount() {
+        let tempCities = [];
+        fetch(`${baseUrl}/${this.displayLanguage}/city`)
+            .then(response => response.json())
+            .then(json => {
+                // for (let i = 0; json.length; i++){
+                //     tempCities.push(json[i].name)
+                // }
+
+                console.log(json)
+            })
+            //.catch(e => fetchErrorMessage(e))
     }
 
     render() {
@@ -81,9 +64,11 @@ class FullArticle extends React.Component {
 
         return (
             <div>
+                <div className="main_fetcherror">
+                </div>
                 <h2 className="main_header article-header">{Lang[displayLanguage].blog_teudatzeut_title}</h2>
                 <p className="main_articlesubheader">
-                    {this.dateFormatted()}
+                    {this.dateFormattedString}
                 </p>
                 <div className="main_articlecontent">
                     <Video youtubeCode="wPwZnpqZIk0" />
@@ -92,16 +77,17 @@ class FullArticle extends React.Component {
                         {Lang[displayLanguage].blog_teudatzeut_blockquote}
                     </blockquote>
                     <Map/>
-                    {/*todo: выпадашка которая переключает индекс*/}
+
                     <div className="main_ministrieschange">
                         {Lang[displayLanguage].blog_ministry_prompt}
                         <select className="main_ministrieschange-select" onChange={ event => {
                                 let newState = event.target.value;
                                 this.setState({
                                     placeIndex: newState,
+                                    ...this.state.city,
                                     ...this.state.latitude,
                                     ...this.state.longitude,
-                                    ...this.state.radius   
+                                    ...this.state.radius
                                 });
                             }
                         }>
@@ -118,23 +104,43 @@ class FullArticle extends React.Component {
                             </option>
                             <option value="9">{Lang[displayLanguage].blog_ministry_options["9"]}</option>
                         </select>
+                        <div className="main_ministrieschange-inputs">
+                            <input className="main_ministrieschange-input" placeholder={'vvedite city'} onChange={ event => {
+                                let newState = event.target.value;
+                                this.setState({
+                                    ...this.state.placeIndex,
+                                    city: newState,
+                                    ...this.state.latitude,
+                                    ...this.state.longitude,
+                                    ...this.state.radius
+                                });
+                            }} />
+                        </div>
+
+
 
                         <div className="main_ministrieschange-inputs">
-                            <input className="main_ministrieschange-input" placeholder={'Latitude'}
-                                   onChange={ event => {
+                            <select className="main_ministrieschange-select" onChange={ event => {
                                     let newState = event.target.value;
                                     this.setState({
                                          ...this.state.placeIndex,
+                                        ...this.state.city,
                                          latitude: newState,
+                                        ...this.state.latitude,
                                         ...this.state.longitude,
                                         ...this.state.radius   
                                     });
                                 }
-                            } />
+                            }>
+                                {
+
+                                }
+                            </select>
                             <input className="main_ministrieschange-input" placeholder={'Longitude'} onChange={ event => {
                                     let newState = event.target.value;
                                     this.setState({
                                          ...this.state.placeIndex,
+                                        ...this.state.city,
                                          ...this.state.latitude,
                                         longitude: newState,
                                         ...this.state.radius   
@@ -145,6 +151,7 @@ class FullArticle extends React.Component {
                                     let newState = event.target.value;
                                     this.setState({
                                          ...this.state.placeIndex,
+                                        ...this.state.city,
                                          ...this.state.latitude,
                                          ...this.state.longitude,
                                         radius: newState   
@@ -156,7 +163,7 @@ class FullArticle extends React.Component {
 
                     </div>
                     
-                    <React.Fragment>{this.doSmt()}</React.Fragment>
+                    <React.Fragment>{this.loadMinistriesComponent()}</React.Fragment>
                    
                 </div>
                 <Comments/>
@@ -170,7 +177,3 @@ class FullArticle extends React.Component {
 
 export default FullArticle;
 
-
-// TODO: кнопки профиль и логаут
-// TODO: ссылка для категории(!)
-// TODO: завершить стилизацию
