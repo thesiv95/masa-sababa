@@ -4,27 +4,11 @@ import languageSet from "../../../../../utilites/languageSet";
 
 class Comment extends React.Component {
 
-    postComment = (event, newComment) => {
-
+    deleteComment = (event) => {
         event.preventDefault();
-
-        if (sessionStorage.getItem('token') !== null){
-
-        }
-
-        // Store all comments in the array
-        let allComments = [];
-
-
-
-        if (localStorage.getItem('comments') == null){
-            allComments.push(newComment);
-        }
-
-        localStorage.setItem('comments', newComment);
-
-        return allComments;
-    }
+        let parent = event.target.parentElement.parentElement;
+        parent.style.display = 'none';
+    };
 
     render() {
         let displayLanguage = languageSet();
@@ -37,9 +21,10 @@ class Comment extends React.Component {
                     <div className="col-sm-10 main_comments-comment-rightpart">
                         <h5>{this.props.name}</h5>
                         <p>{this.props.text}</p>
-                        <a href="#reply" onClick={this.postComment}> {Lang[displayLanguage].comments_reply}
+                        <a href="#reply" className='main_showmore-link'> {Lang[displayLanguage].comments_reply}
                             <img src="img/bootstrap-icons/reply-fill.svg" alt="reply" width="32" height="32"/>
                         </a>
+                        <a href="#delete" className='main_showmore-link showmore-margin' onClick={this.deleteComment}>Delete comment</a>
                         <p>{this.props.date}</p>
                     </div>
                 </div>

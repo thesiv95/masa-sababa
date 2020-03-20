@@ -59,6 +59,7 @@ class LeaveReply extends React.Component {
             <div className='main_leavereply'>
                     <div className='main_leavereply_message'>
                     </div>
+                    <a name='reply'/>
                     <h3>{Lang[displayLanguage].reply_title}</h3>
                     <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main_leavereply-textarea' />
                     <div className="main_leavereply-inputs">
@@ -75,8 +76,7 @@ class LeaveReply extends React.Component {
     }
 }
 
-// todo: parse comments
-// todo: fix bug with time + styles in fullpage
+
 // todo: search
 
 

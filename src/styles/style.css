@@ -217,13 +217,13 @@ body {
   line-height: 27px;
   color: #555555;
 }
+.main .text-center {
+  text-align: center;
+}
 .main_articlesubheader {
   margin-left: 15px;
   font-size: 14px;
   color: #555555;
-}
-.main_articlecontent p, .main_articlecontent a {
-  padding-left: 15px;
 }
 .main_articlecontent blockquote {
   width: 814px;
@@ -237,6 +237,9 @@ body {
   font-style: italic;
   color: #999999;
   border-left: 1px solid #906FDA;
+}
+.main_ministry {
+  padding-left: 30px;
 }
 .main_breadcrumbs {
   text-align: center;
@@ -313,7 +316,7 @@ body {
   border-right: 1px solid #906FDA;
 }
 .main_comments-comment-image {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 .main_ministrieschange {
   text-align: center;

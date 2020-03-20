@@ -75,12 +75,12 @@ class FullArticle extends React.Component {
                 <div className="main_fetcherror">
                 </div>
                 <h2 className="main_header article-header">{Lang[displayLanguage].blog_teudatzeut_title}</h2>
-                <p className="main_articlesubheader">
+                <p className="main_articlesubheader text-center">
                     {this.dateFormattedString}
                 </p>
                 <div className="main_articlecontent">
                     <Video youtubeCode="wPwZnpqZIk0"/>
-                    <p>{Lang[displayLanguage].blog_teudatzeut_description}</p>
+                    <p className="text-center">{Lang[displayLanguage].blog_teudatzeut_description}</p>
                     <blockquote>
                         {Lang[displayLanguage].blog_teudatzeut_blockquote}
                     </blockquote>
