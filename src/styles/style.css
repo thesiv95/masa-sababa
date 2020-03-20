@@ -151,6 +151,9 @@ body {
   border-radius: 50%;
   background-color: transparent;
 }
+.main .showmore-margin {
+  margin-left: 10px;
+}
 .main_steps {
   margin-top: 50px;
 }
@@ -168,11 +171,13 @@ body {
   font-weight: bold;
   font-size: 28px;
 }
+.main_step_accordeon {
+  height: 400px;
+}
 .main_step-description {
   font-size: 14px;
   color: #555555;
-  height: 200px;
-  overflow-y: auto;
+  display: none;
 }
 .main_step-pic {
   width: 500px;
