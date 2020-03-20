@@ -6,15 +6,17 @@ import LeaveReply from "./FullArticle/LeaveReply";
 import Ministries from "./FullArticle/Ministries";
 import Video from "./FullArticle/Video";
 import Lang from "./../../../i18n/lang";
+import Cities from "./allCities.json"; // cities list
 import languageSet from "../../../utilites/languageSet";
 import dateAndAuthorFormatted from "../../../utilites/dateAndAuthorFormatted";
-import {baseUrl} from "../../Constants";
-import fetchErrorMessage from "../../../utilites/fetchErrorMessage";
+
 
 
 class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
+    allCities = [];
+    optionCities = [];
 
     constructor(props) {
         super(props);
@@ -31,6 +33,13 @@ class FullArticle extends React.Component {
 
     dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
 
+    componentDidMount() {
+        this.allCities = Object.values(Cities[this.displayLanguage]);
+        //this.optionCities = this.allCities.map(i => <option value={i}>i</option>);
+        for (let i in this.allCities){
+            this.optionCities.push(`<option>${this.allCities[i]}</option>`);
+        }
+    }
 
     loadMinistriesComponent = () => {
         if (this.state.placeIndex > 0) {
@@ -46,29 +55,10 @@ class FullArticle extends React.Component {
     };
 
 
-    // cities list
-    componentDidMount() {
-        let tempCities = [];
-        let tempIds = [];
-        fetch(`${baseUrl}/${this.displayLanguage}/city`)
-            .then(response => response.json())
-            .then(json => {
-                for (let i in json){
-                    tempCities.push(json[i].name);
-                    tempIds.push(json[i].placeId);
-                }
-
-                this.setState({
-                    cities: tempCities,
-                    placeIds: tempIds
-                })
-
-            })
-            //.catch(e => fetchErrorMessage(e))
-    }
-
     render() {
         let displayLanguage = this.displayLanguage;
+
+
 
         return (
             <div>
@@ -116,7 +106,7 @@ class FullArticle extends React.Component {
                                 </select>
                             </div>
                             <div className="main_ministrieschange_item col-sm-6">
-                                Выберите ваш город:
+                                {Lang[displayLanguage].blog_city_prompt}
 
                                 <select className="main_ministrieschange-select" onChange={event => {
                                     let newState = event.target.value;
@@ -129,8 +119,8 @@ class FullArticle extends React.Component {
                                     });
                                 }}>
 
+                                    {this.optionCities}
 
-                                    {this.state.cities.map(i => <option key={i.toString()} value={this.state.placeIds[i]}>{this.state.cities[i]}</option>)}
 
                                 </select>
                             </div>

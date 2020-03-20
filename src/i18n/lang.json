@@ -35,7 +35,8 @@
     "blog_teudatzeut_title": "Как получить Теудат зеут?",
     "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту.",
     "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
-    "blog_ministry_prompt": "Выберите министерство и задайте координаты",
+    "blog_city_prompt": "Выбери свой город:",
+    "blog_ministry_prompt": "Выбери министерство:",
     "blog_ministry_options": {
       "1": "Для получения теудат зеута",
       "2": "Для открытия счета в банке",
@@ -169,7 +170,8 @@
     "blog_teudatzeut_title": "How to get Teudat zeut?",
     "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card.",
     "blog_teudatzeut_blockquote": "You can also write down your question in a comment below.",
-    "blog_ministry_prompt": "Choose the ministry and write down the coords",
+    "blog_city_prompt": "Choose your city:",
+    "blog_ministry_prompt": "Choose the ministry:",
     "blog_ministry_options": {
       "1": "To get teudat zeut",
       "2": "To open bank account",
@@ -299,7 +301,7 @@
     "about_usefularticles_title": "Articles utiles pour vous",
 
     "blog_ministry_phones": "Téléphones:",
-    "blog_ministry_prompt": "Choisissez un ministère et définissez les coordonnées",
+    "blog_ministry_prompt": "Choisissez un ministère:",
     "blog_ministry_options": {
       "1": "Pour Teudat Zeuta",
       "2": "Pour ouvrir un compte bancaire",
@@ -315,6 +317,7 @@
     "blog_teudatzeut_title": "Comment obtenir Teudat zehut?",
     "blog_teudatzeut_description": "Regardez notre tutoriel vidéo. Vous y trouverez de nombreuses informations utiles sur la façon d'obtenir une carte d'identité. Ou lisez le guide détaillé étape par étape ci-dessous.",
     "blog_teudatzeut_blockquote": "Vous pouvez également laisser votre question ci-dessous dans les commentaires.",
+    "blog_city_prompt": "Choisissez votre ville:",
     "blog_ministry_isclosed": "fermée",
     "blog_ministry_weekday": {
       "0": "Dimanche",
@@ -436,7 +439,8 @@
     "blog_teudatzeut_title": "כיצד להשיג את תאוד זהות?",
     "blog_teudatzeut_description": "צפו במדריך הווידיאו שלנו. בתוכו תוכלו למצוא מידע רב שימושי כיצד להשיג תעודת זהות. או קרא את המדריך המפורט שלב אחר שלב להלן.",
     "blog_teudatzeut_blockquote": "אתה יכול גם להשאיר את שאלתך למטה בתגובות.",
-    "blog_ministry_prompt": "בחר משרד וקבע את הקואורדינטות",
+    "blog_city_prompt": "בחר את העיר שלך:",
+    "blog_ministry_prompt": "בחר משרד:",
     "blog_ministry_options": {
       "1": "עבור תאוד זוטא",
       "2": "לפתיחת חשבון בנק",
