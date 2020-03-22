@@ -31,6 +31,7 @@ class LeaveReply extends React.Component {
         }
     };
 
+
     addComment = () => {
         let replyText = document.querySelector('#replyText'),
             replyName = document.querySelector('#replyName'),
@@ -59,7 +60,8 @@ class LeaveReply extends React.Component {
             <div className='main_leavereply'>
                     <div className='main_leavereply_message'>
                     </div>
-                    <a name='reply'/>
+
+                    <a name='reply' className='main_anchor' />
                     <h3>{Lang[displayLanguage].reply_title}</h3>
                     <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main_leavereply-textarea' />
                     <div className="main_leavereply-inputs">

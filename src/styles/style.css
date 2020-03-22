@@ -68,6 +68,11 @@ body {
 .main {
   line-height: 20px;
 }
+.main_anchor, .main_anchor:hover, .main_anchor:active, .main_anchor:visited {
+  color: inherit;
+  text-decoration: none;
+  cursor: text;
+}
 .main_fetcherror {
   display: none;
   color: #e6ffd8;
