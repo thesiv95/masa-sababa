@@ -27,7 +27,6 @@ class Home extends React.Component {
                 </div>
                 <div className="main_pic">
                     <img src="img/clip-2.png" alt="main pic" className="main_pic-image img-fluid"/>
-                    <img src="img/Rectangle 365.svg" alt="gradient" className="main_pic-gradient img-fluid"/>
                 </div>
             </div>
         )

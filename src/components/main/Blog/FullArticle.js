@@ -16,7 +16,7 @@ class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
     allCities = [];
-    optionCities = [];
+    optionCities = "";
 
     constructor(props) {
         super(props);
@@ -33,12 +33,15 @@ class FullArticle extends React.Component {
 
     dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
 
-    componentDidMount() {
+    componentWillMount() {
+
         this.allCities = Object.values(Cities[this.displayLanguage]);
-        //this.optionCities = this.allCities.map(i => <option value={i}>i</option>);
         for (let i in this.allCities){
-            this.optionCities.push(`<option>${this.allCities[i]}</option>`);
+            this.optionCities += `<option>${this.allCities[i]}</option>`;
         }
+
+        console.log(this.optionCities)
+
     }
 
     loadMinistriesComponent = () => {
@@ -57,9 +60,7 @@ class FullArticle extends React.Component {
 
     render() {
         let displayLanguage = this.displayLanguage;
-
-
-
+        console.log(this.optionCities, 'render')
         return (
             <div>
                 <div className="main_fetcherror">
@@ -118,10 +119,7 @@ class FullArticle extends React.Component {
                                         ...this.state.radius
                                     });
                                 }}>
-
-                                    {this.optionCities}
-
-
+                                    {`${this.optionCities}`}
                                 </select>
                             </div>
                         </div>
