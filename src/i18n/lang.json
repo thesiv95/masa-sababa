@@ -29,9 +29,19 @@
     "about_step": "Шаг",
     "about_showmore": "Показать еще",
     "about_showless": "Показать меньше",
+    "about_moredetails": "Показать подробности",
+    "about_lessdetails": "Скрыть подробности",
     "about_usefularticles_title": "Полезные статьи для тебя",
 
     "blog_header": "Блог",
+    "blog_frontarticles": {
+      "0": "Качественная медицина",
+      "1": "Необходим для льгот",
+      "2": "Временное жилье",
+      "3": "Отвечает за даркон",
+      "4": "Диплом мирового уровня",
+      "5": "Поможет почувствовать себя как дома"
+    },
     "blog_teudatzeut_title": "Как получить Теудат зеут?",
     "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту.",
     "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
@@ -160,6 +170,8 @@
 
     "about_header_partleft": "About",
     "about_header_partright": "Repatriation",
+    "about_moredetails": "Show details",
+    "about_lessdetails": "Hide details",
     "about_description": "All Jews, no matter where they were born, are Israeli citizens by right. If you've ever considered making the move to Israel, let us light the way.",
     "about_step": "Step",
     "about_showmore": "Show more",
@@ -167,6 +179,14 @@
     "about_usefularticles_title": "Useful articles for you",
 
     "blog_header": "Blog",
+    "blog_frontarticles": {
+      "0": "Medicine of full-quality",
+      "1": "Required for benefits",
+      "2": "Temporary housing",
+      "3": "Responsible for Darkon",
+      "4": "World-class diploma",
+      "5": "Will make you feel at home"
+    },
     "blog_teudatzeut_title": "How to get Teudat zeut?",
     "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card.",
     "blog_teudatzeut_blockquote": "You can also write down your question in a comment below.",
@@ -294,6 +314,8 @@
 
     "about_header_partleft": "À propos",
     "about_header_partright": "du rapatriement",
+    "about_moredetails": "Afficher les détails",
+    "about_lessdetails": "Masquer les détails",
     "about_description": "Tous les Juifs, quel que soit leur lieu de naissance, sont de droit des citoyens israéliens. Si vous avez déjà envisagé de déménager en Israël, laissez-nous vous éclairer.",
     "about_step": "Étape",
     "about_showmore": "Montre plus",
@@ -302,6 +324,14 @@
 
     "blog_ministry_phones": "Téléphones:",
     "blog_ministry_prompt": "Choisissez un ministère:",
+    "blog_frontarticles": {
+      "0": "Médecine de qualité",
+      "1": "Requis pour les avantages",
+      "2": "Logement temporaire",
+      "3": "Responsable de Darkon",
+      "4": "Diplôme de classe mondiale",
+      "5": "Vous vous sentirez chez vous"
+    },
     "blog_ministry_options": {
       "1": "Pour Teudat Zeuta",
       "2": "Pour ouvrir un compte bancaire",
@@ -429,6 +459,8 @@
 
     "about_header_partleft": "על ",
     "about_header_partright": "השיבה",
+    "about_moredetails": "הצג פרטים",
+    "about_lessdetails": "הסתר פרטים",
     "about_description": "כל היהודים, לא משנה היכן הם נולדו, הם אזרחי ישראל בזכותם. אם שקלתם אי פעם את המעבר לישראל, תנו לנו להאיר את הדרך.",
     "about_step": "שלב",
     "about_showmore": "להראות יותר",
@@ -436,6 +468,14 @@
     "about_usefularticles_title": "מאמרים שימושיים עבורך",
 
     "blog_header": "בלוג",
+    "blog_frontarticles": {
+      "0": "רפואה איכותית",
+      "1": "חובה להטבות",
+      "2": "דיור זמני",
+      "3": "אחראי לדרכון",
+      "4": "תעודת בגרות ברמה עולמית",
+      "5": "יגרום לך להרגיש בבית"
+    },
     "blog_teudatzeut_title": "כיצד להשיג את תאוד זהות?",
     "blog_teudatzeut_description": "צפו במדריך הווידיאו שלנו. בתוכו תוכלו למצוא מידע רב שימושי כיצד להשיג תעודת זהות. או קרא את המדריך המפורט שלב אחר שלב להלן.",
     "blog_teudatzeut_blockquote": "אתה יכול גם להשאיר את שאלתך למטה בתגובות.",
