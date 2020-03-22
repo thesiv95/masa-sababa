@@ -17,6 +17,7 @@ class FullArticle extends React.Component {
     displayLanguage = languageSet();
     allCities = [];
     optionCities = "";
+    temp = [];
 
     constructor(props) {
         super(props);
@@ -37,10 +38,8 @@ class FullArticle extends React.Component {
 
         this.allCities = Object.values(Cities[this.displayLanguage]);
         for (let i in this.allCities){
-            this.optionCities += `<option>${this.allCities[i]}</option>`;
+            this.temp.push(<option>{this.allCities[i]}</option>);
         }
-
-        console.log(this.optionCities)
 
     }
 
@@ -119,7 +118,7 @@ class FullArticle extends React.Component {
                                         ...this.state.radius
                                     });
                                 }}>
-                                    {`${this.optionCities}`}
+                                    {this.temp}
                                 </select>
                             </div>
                         </div>

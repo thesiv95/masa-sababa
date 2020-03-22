@@ -32,6 +32,14 @@
     "about_usefularticles_title": "Полезные статьи для тебя",
 
     "blog_header": "Блог",
+    "blog_frontarticles": {
+      "0": "Качественная медицина",
+      "1": "Необходим для льгот",
+      "2": "Временное жилье",
+      "3": "Отвечает за даркон",
+      "4": "Диплом мирового уровня",
+      "5": "Поможет почувствовать себя как дома"
+    },
     "blog_teudatzeut_title": "Как получить Теудат зеут?",
     "blog_teudatzeut_description": "Посмотри наше обучающее видео. Там ты узнаешь море полезной информации о том, как получить ID-карту.",
     "blog_teudatzeut_blockquote": "Ты можешь также оставить свой вопрос ниже в комментариях.",
@@ -167,6 +175,14 @@
     "about_usefularticles_title": "Useful articles for you",
 
     "blog_header": "Blog",
+    "blog_frontarticles": {
+      "0": "Medicine of full-quality",
+      "1": "Необходим для льгот",
+      "2": "Временное жилье",
+      "3": "Отвечает за даркон",
+      "4": "Диплом мирового уровня",
+      "5": "Поможет почувствовать себя как дома"
+    },
     "blog_teudatzeut_title": "How to get Teudat zeut?",
     "blog_teudatzeut_description": "Watch our video tutorial. In it you will find a lot of useful information about how to get an ID card.",
     "blog_teudatzeut_blockquote": "You can also write down your question in a comment below.",
@@ -302,6 +318,14 @@
 
     "blog_ministry_phones": "Téléphones:",
     "blog_ministry_prompt": "Choisissez un ministère:",
+    "blog_frontarticles": {
+      "0": "Качественная медицина",
+      "1": "Необходим для льгот",
+      "2": "Временное жилье",
+      "3": "Отвечает за даркон",
+      "4": "Диплом мирового уровня",
+      "5": "Поможет почувствовать себя как дома"
+    },
     "blog_ministry_options": {
       "1": "Pour Teudat Zeuta",
       "2": "Pour ouvrir un compte bancaire",
@@ -436,6 +460,14 @@
     "about_usefularticles_title": "מאמרים שימושיים עבורך",
 
     "blog_header": "בלוג",
+    "blog_frontarticles": {
+      "0": "Качественная медицина",
+      "1": "Необходим для льгот",
+      "2": "Временное жилье",
+      "3": "Отвечает за даркон",
+      "4": "Диплом мирового уровня",
+      "5": "Поможет почувствовать себя как дома"
+    },
     "blog_teudatzeut_title": "כיצד להשיג את תאוד זהות?",
     "blog_teudatzeut_description": "צפו במדריך הווידיאו שלנו. בתוכו תוכלו למצוא מידע רב שימושי כיצד להשיג תעודת זהות. או קרא את המדריך המפורט שלב אחר שלב להלן.",
     "blog_teudatzeut_blockquote": "אתה יכול גם להשאיר את שאלתך למטה בתגובות.",
