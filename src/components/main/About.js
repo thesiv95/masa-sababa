@@ -42,14 +42,14 @@ class About extends React.Component {
             for (let i = 0; i < 18; i++){
                 this.descriptionBlocks[i].style.display = 'block';
             }
-            this.toggleText.innerHTML = "Скрыть подробности";
+            this.toggleText.innerHTML = Lang[this.displayLanguage].about_lessdetails;
 
         } else {
             this.blocksAreShown = false;
             for (let i = 0; i < 18; i++){
                 this.descriptionBlocks[i].style.display = 'none';
             }
-            this.toggleText.innerHTML = "Показать подробности";
+            this.toggleText.innerHTML = Lang[this.displayLanguage].about_moredetails;
         }
     };
 
@@ -122,6 +122,10 @@ class About extends React.Component {
                 <p className="main_description main_description-about">
                     {Lang[displayLanguage].about_description}
                 </p>
+                <p className="main_description main_description_margin">
+                    <img src="img/bootstrap-icons/info.svg" alt="[pic]" width="32" height="32" />
+                    <a href="/#toggle" className="main_showmore-link showmore-margin" id="toggleText" onClick={this.toggleBlock}>{Lang[displayLanguage].about_moredetails}</a>
+                </p>
                 <div className="main_steps container">
                     <StepPicLeft number='1' title={this.state.stepsTitles[0]} description={this.state.stepsDesc[0]} need={this.state.stepsNeed[0]} img='img/steps/clip-bad-gateaway.png' />
                     <StepPicRight number='2' title={this.state.stepsTitles[1]} description={this.state.stepsDesc[1]} need={this.state.stepsNeed[1]} img='img/steps/clip-payment.png' />
@@ -140,7 +144,6 @@ class About extends React.Component {
                              alt="&#8595;" width="32" height="32" />
                         <span id="showMoreText">{Lang[displayLanguage].about_showmore}</span>
                     </a>
-                    <a href="/#toggle" className="main_showmore-link showmore-margin" id="toggleText" onClick={this.toggleBlock}>Показать подробности</a>
                 </div>
 
                 <div className="main_useful">

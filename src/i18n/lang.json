@@ -29,6 +29,8 @@
     "about_step": "Шаг",
     "about_showmore": "Показать еще",
     "about_showless": "Показать меньше",
+    "about_moredetails": "Показать подробности",
+    "about_lessdetails": "Скрыть подробности",
     "about_usefularticles_title": "Полезные статьи для тебя",
 
     "blog_header": "Блог",
@@ -168,6 +170,8 @@
 
     "about_header_partleft": "About",
     "about_header_partright": "Repatriation",
+    "about_moredetails": "Show details",
+    "about_lessdetails": "Hide details",
     "about_description": "All Jews, no matter where they were born, are Israeli citizens by right. If you've ever considered making the move to Israel, let us light the way.",
     "about_step": "Step",
     "about_showmore": "Show more",
@@ -310,6 +314,8 @@
 
     "about_header_partleft": "À propos",
     "about_header_partright": "du rapatriement",
+    "about_moredetails": "Afficher les détails",
+    "about_lessdetails": "Masquer les détails",
     "about_description": "Tous les Juifs, quel que soit leur lieu de naissance, sont de droit des citoyens israéliens. Si vous avez déjà envisagé de déménager en Israël, laissez-nous vous éclairer.",
     "about_step": "Étape",
     "about_showmore": "Montre plus",
@@ -453,6 +459,8 @@
 
     "about_header_partleft": "על ",
     "about_header_partright": "השיבה",
+    "about_moredetails": "הצג פרטים",
+    "about_lessdetails": "הסתר פרטים",
     "about_description": "כל היהודים, לא משנה היכן הם נולדו, הם אזרחי ישראל בזכותם. אם שקלתם אי פעם את המעבר לישראל, תנו לנו להאיר את הדרך.",
     "about_step": "שלב",
     "about_showmore": "להראות יותר",
