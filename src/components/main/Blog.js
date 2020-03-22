@@ -44,14 +44,14 @@ class Blog extends React.Component{
                 <h2 className="main_header">{Lang[displayLanguage].blog_header}</h2>
                 <div className="main_blogcontainer container">
                     <div className="main_articles row">
-                        <Article img='img/beit-holim.jpg' title={this.state.categories[0]} description="Качественная медицина" />
-                        <Article img='img/bank.jpg' title={this.state.categories[1]} description="Необходим для льгот"/>
-                        <Article img='img/merkaz-klita.jpg' title={this.state.categories[2]} description="Временное жилье"/>
+                        <Article img='img/beit-holim.jpg' title={this.state.categories[0]} description={Lang[displayLanguage].blog_frontarticles["0"]} />
+                        <Article img='img/bank.jpg' title={this.state.categories[1]} description={Lang[displayLanguage].blog_frontarticles["1"]}/>
+                        <Article img='img/merkaz-klita.jpg' title={this.state.categories[2]} description={Lang[displayLanguage].blog_frontarticles["2"]}/>
                     </div>
                     <div className="main_articles row">
-                        <Article img='img/ministry_affairs.jpg' title={this.state.categories[3]} description="Отвечает за даркон"/>
-                        <Article img='img/university.png' title={this.state.categories[4]} description="Диплом мирового уровня"/>
-                        <Article img='img/misrad-klita.jpg' title={this.state.categories[5]} description="Поможет почувствовать себя как дома"/>
+                        <Article img='img/ministry_affairs.jpg' title={this.state.categories[3]} description={Lang[displayLanguage].blog_frontarticles["3"]}/>
+                        <Article img='img/university.png' title={this.state.categories[4]} description={Lang[displayLanguage].blog_frontarticles["4"]}/>
+                        <Article img='img/misrad-klita.jpg' title={this.state.categories[5]} description={Lang[displayLanguage].blog_frontarticles["5"]}/>
                     </div>
                 </div>
 
