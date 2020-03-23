@@ -24,7 +24,9 @@ class Comment extends React.Component {
                         <a href="#reply" className='main_showmore-link'> {Lang[displayLanguage].comments_reply}
                             <img src="img/bootstrap-icons/reply-fill.svg" alt="reply" width="32" height="32"/>
                         </a>
-                        <a href="#delete" className='main_showmore-link showmore-margin' onClick={this.deleteComment}>Delete comment</a>
+                        <a href="#delete" className='main_showmore-link showmore-margin' onClick={this.deleteComment}>
+                            {Lang[displayLanguage].comments_delete}
+                        </a>
                         <p>{this.props.date}</p>
                     </div>
                 </div>
