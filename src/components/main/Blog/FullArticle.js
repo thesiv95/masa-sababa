@@ -16,7 +16,6 @@ class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
     allCities = [];
-    optionCities = "";
     temp = [];
 
     constructor(props) {
@@ -59,7 +58,6 @@ class FullArticle extends React.Component {
 
     render() {
         let displayLanguage = this.displayLanguage;
-        console.log(this.optionCities, 'render')
         return (
             <div>
                 <div className="main_fetcherror">

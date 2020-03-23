@@ -47,11 +47,11 @@ class Search extends React.Component {
         }
         // key => React's specific attribute
         return (
-            <ul>
+            <ul className="header_search-list">
                 {
                     itemSplitted.map((item) =>
-                    <li key={item[0]} onClick={() => this.suggestionsSelected(item[0])}>
-                            {<Link to={`/${item[1]}`}>{item[0]}</Link>}
+                    <li className="header_search-list_item" key={item[0]} onClick={() => this.suggestionsSelected(item[0])}>
+                            {<Link className="header_search-list_link" to={`/${item[1]}`}>{item[0]}</Link>}
                     </li>)
 
                 }
@@ -60,12 +60,12 @@ class Search extends React.Component {
     };
 
     render() {
-        const { text } = this.state;
         let displayLanguage = languageSet();
         return (
             <div className="header_search col-md-4">
-                <input className="header_search-input" type="text" placeholder={Lang[displayLanguage].header_search_placeholder}
-                       name="searchbar" id="searchbar" onChange={this.onTextChanged} />
+                <div>
+                    <input className="header_search-input" type="text" placeholder={Lang[displayLanguage].header_search_placeholder} name="searchbar" id="searchbar" onChange={this.onTextChanged} />
+                </div>
                 <div>{this.renderSuggestions()}</div>
             </div>
 
