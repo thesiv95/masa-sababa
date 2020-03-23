@@ -1,0 +1,23 @@
+{
+  "1": {
+    "imgSrc": "img/covid.jpg",
+    "imgAlt": "covid",
+    "title": "COVID-19",
+    "description": "Measures to protect",
+    "url": "https://mfa.gov.il/MFA/PressRoom/2020/Pages/Ministry-of-Health-implements-additional-measures-to-prevent-the-spread-of-COVID19-epidemic-in-Israel-10-March-2020.aspx"
+  },
+  "2": {
+    "imgSrc": "img/elections.jpg",
+    "imgAlt": "elections",
+    "title": "Elections",
+    "description": "Elections results",
+    "url": "https://www.haaretz.com/israel-news/elections/EXT-INTERACTIVE-latest-polls-israel-election-2020-1.7695785"
+  },
+  "3": {
+    "imgSrc": "img/purim.jpg",
+    "imgAlt": "purim",
+    "title": "Purim-2020",
+    "description": "This year's best costumes",
+    "url": "https://forward.com/life/441309/some-of-our-favorite-2020-purim-costumes/"
+  }
+}

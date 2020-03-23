@@ -1,0 +1,23 @@
+@import "../_constants/_mixins.sass"
+@import "../_constants/_vars.sass"
+    
+.footer
+    font-size: $footer-font-size
+    &_title
+        color: $footer-title
+    &_link
+        @include link()
+    &_text
+        color: $footer-text
+    &_block
+        &-socialbuttons
+            display: inline-flex
+        &-socialbutton
+            margin-left: 20px
+            width: 40px
+            height: 40px
+            background-color: $main-accent-color
+            border-radius: 50%
+        &-socialimage
+            margin-left: 13px
+            margin-top: 8px

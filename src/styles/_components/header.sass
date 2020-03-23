@@ -1,0 +1,58 @@
+@import "../_constants/_mixins.sass"
+@import "../_constants/_vars.sass"
+
+.header
+    display: inline-flex
+    margin-bottom: 15px
+    &_nav
+        display: inline-flex
+        margin-right: 150px
+        &-item:hover
+            font-size: 110%
+            color: $main-accent-color
+    &_search
+        display: inline-block
+        width: 300px
+        &-list
+            list-style: none
+            margin-top: 0
+            &_link
+                @include link(darken($main-accent-color, 15%))
+            &_item
+                margin-left: -40px
+                padding-left: 17px
+                border: 1px solid $main-accent-color
+                border-bottom: none
+                &:last-child
+                    border-bottom: 1px solid $main-accent-color
+        &-input
+            width: 270px
+            height: 42px
+            margin-top: 10px
+            padding-left: 17px
+            font-size: 14px
+            border: 1px solid $main-accent-color
+            border-radius: 4px
+            background-color: transparent
+            color: #999999
+    &_signup
+        float: right
+    &_select
+        border-color: $main-accent-color
+        border-radius: 5px
+        padding: 0 5px
+    &_link
+        color: $main-description
+    &_link:hover, &_link:active, &_link:focus
+        text-decoration: none
+
+    &_nav-list
+        display: inline-flex
+        list-style: none
+
+    &_nav-item
+        margin-left: 20px
+        width: 90px
+
+    .nav-active
+        color: $main-accent-color
