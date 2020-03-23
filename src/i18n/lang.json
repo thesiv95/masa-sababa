@@ -119,6 +119,7 @@
 
     "comments_title": "Комментарии",
     "comments_reply": "Ответить",
+    "comments_delete": "Удалить комментарий",
 
     "reply_title": "Оставь комментарий",
     "reply_placeholder_yourtext": "Твой ответ",
@@ -263,8 +264,9 @@
 
     "comments_title": "Comments",
     "comments_reply": "Reply",
-    "reply_title": "Leave a reply",
+    "comments_delete": "Delete comment",
 
+    "reply_title": "Leave a reply",
     "reply_placeholder_yourtext": "Your Reply",
     "reply_placeholder_yourname": "Your Name",
     "reply_placeholder_youremail": "Your Email",
@@ -407,6 +409,7 @@
 
     "comments_title": "Commentaires",
     "comments_reply": "Répondre",
+    "comments_delete": "Supprimer le commentaire",
 
     "reply_title": "Laisser une réponse",
     "reply_placeholder_yourtext": "Votre réponse",
@@ -552,6 +555,7 @@
 
     "comments_title": "הערות",
     "comments_reply": "תשובה",
+    "comments_delete": "מחק תגובה",
 
     "reply_title": "השאירו תשובה",
     "reply_placeholder_yourtext": "תגובתך",
