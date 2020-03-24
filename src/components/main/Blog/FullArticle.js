@@ -17,6 +17,7 @@ class FullArticle extends React.Component {
     displayLanguage = languageSet();
     allCities = [];
     temp = [];
+    targetMinistry = 1; // we load 1st option of ministries 'select' tag by default
 
     constructor(props) {
         super(props);
@@ -40,7 +41,13 @@ class FullArticle extends React.Component {
             this.temp.push(<option>{this.allCities[i]}</option>);
         }
 
+      /*  if (localStorage.getItem('targetMinistry') !== null){
+            this.targetMinistry = parseInt(localStorage.getItem('targetMinistry'));
+        }*/
+
     }
+
+   // todo: почему то не работает локал сторадж (не перезаписывается значение targetMinistry)
 
     loadMinistriesComponent = () => {
         if (this.state.placeIndex > 0) {
@@ -58,6 +65,9 @@ class FullArticle extends React.Component {
 
     render() {
         let displayLanguage = this.displayLanguage;
+        if (localStorage.getItem('targetMinistry') !== null){
+            this.targetMinistry = parseInt(localStorage.getItem('targetMinistry'));
+        }
         return (
             <div>
                 <div className="main_fetcherror">
@@ -89,23 +99,22 @@ class FullArticle extends React.Component {
                                     });
                                 }
                                 }>
-                                    <option value="1">{Lang[displayLanguage].blog_ministry_options["1"]}</option>
-                                    <option value="2">{Lang[displayLanguage].blog_ministry_options["2"]}</option>
-                                    <option value="3">{Lang[displayLanguage].blog_ministry_options["3"]}</option>
-                                    <option value="4">{Lang[displayLanguage].blog_ministry_options["4"]}
+                                    <option value="1" selected={this.targetMinistry === 1 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["1"]}</option>
+                                    <option value="2" selected={this.targetMinistry === 2 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["2"]}</option>
+                                    <option value="3" selected={this.targetMinistry === 3 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["3"]}</option>
+                                    <option value="4" selected={this.targetMinistry === 4 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["4"]}
                                     </option>
-                                    <option value="5">{Lang[displayLanguage].blog_ministry_options["5"]}</option>
-                                    <option value="6">{Lang[displayLanguage].blog_ministry_options["6"]}</option>
-                                    <option value="7">{Lang[displayLanguage].blog_ministry_options["7"]}
+                                    <option value="5" selected={this.targetMinistry === 5 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["5"]}</option>
+                                    <option value="6" selected={this.targetMinistry === 6 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["6"]}</option>
+                                    <option value="7" selected={this.targetMinistry === 7 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["7"]}
                                     </option>
-                                    <option value="8">{Lang[displayLanguage].blog_ministry_options["8"]}
+                                    <option value="8" selected={this.targetMinistry === 8 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["8"]}
                                     </option>
-                                    <option value="9">{Lang[displayLanguage].blog_ministry_options["9"]}</option>
+                                    <option value="9" selected={this.targetMinistry === 9 ? 'selected' : ''}>{Lang[displayLanguage].blog_ministry_options["9"]}</option>
                                 </select>
                             </div>
                             <div className="main_ministrieschange_item col-sm-6">
                                 {Lang[displayLanguage].blog_city_prompt}
-
                                 <select className="main_ministrieschange-select" onChange={event => {
                                     let newState = event.target.value;
                                     this.setState({

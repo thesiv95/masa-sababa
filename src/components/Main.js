@@ -11,6 +11,7 @@ import NotFound404 from "./main/NotFound404";
 class Main extends React.Component {
     render() {
         let d = new Date();
+
         return (
             <main className='main'>
                 <div className="main_fetcherror">

@@ -73,6 +73,7 @@ class About extends React.Component {
     };
 
     componentDidMount() {
+        localStorage.removeItem('targetMinistry'); // reset number which we pass to fullArticle
         this.descriptionBlocks = document.querySelectorAll('.main_step-description');
         this.blocksAreShown = false;
         this.showMoreImg = document.querySelector('#showMoreImg');

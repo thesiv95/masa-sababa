@@ -10,7 +10,7 @@ class SignUp extends React.Component {
         let displayLanguage = languageSet();
         return (
 
-            <div className="header_signup col-md-1">
+            <div className="header_signup col-md-3">
                 <button className="button button-header">
                     <Link to={'/profile'}>{Lang[displayLanguage].header_btn_signup}</Link>
                 </button>
