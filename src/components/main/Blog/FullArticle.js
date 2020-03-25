@@ -35,7 +35,7 @@ class FullArticle extends React.Component {
 
     dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
 
         this.allCities = Object.values(Cities[this.displayLanguage]);
         for (let i in this.allCities){
@@ -48,10 +48,15 @@ class FullArticle extends React.Component {
 
     }
 
+
     componentDidMount() {
+        this._getComments();
+    }
+
+    _getComments(){
         fetch(`http://localhost:4000/comments`)
             .then(response => response.json())
-            .then(json => console.log(json))
+            .then(response => this.setState({comments: response.data}))
             .catch(e => console.error(e, 'fetch db'))
     }
 
