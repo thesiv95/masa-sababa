@@ -6,17 +6,16 @@ import Comment from "./Comments/Comment";
 
 class Comments extends React.Component {
 
-    /*
+    componentDidMount() {
+        this.getAllComments()
+    }
 
-    name:text:date,name:text:date
-
-     */
 
     getAllComments = () => {
-        if (sessionStorage.getItem('token') !== null){
-            if (localStorage.getItem('comments') !== null){
-                return localStorage.getItem('comments');
-            }
+        if (sessionStorage.getItem('token') !== null) {
+            fetch('http://localhost:4000/comments')
+                .then(res => res.json())
+                .then(json => console.log(json))
         }
     };
 
