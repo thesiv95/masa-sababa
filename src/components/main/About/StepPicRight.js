@@ -5,12 +5,7 @@ import {Link} from "react-router-dom";
 
 class StepPicRight extends React.Component {
 
-    componentDidMount() {
-        localStorage.removeItem('targetMinistry'); // reset
-    }
-
     rememberMinistry(number){
-        localStorage.removeItem('targetMinistry');
         localStorage.setItem('targetMinistry', number.toString());
     }
 

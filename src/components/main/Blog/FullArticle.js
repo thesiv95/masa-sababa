@@ -17,7 +17,7 @@ class FullArticle extends React.Component {
     displayLanguage = languageSet();
     allCities = [];
     temp = [];
-    targetMinistry = 1; // we load 1st option of ministries 'select' tag by default
+    placeIndex = localStorage.getItem('targetNumber') !== null ? localStorage.getItem('targetNumber') : '1';
 
     constructor(props) {
         super(props);
@@ -101,7 +101,8 @@ class FullArticle extends React.Component {
                         <div className="row">
                             <div className="main_ministrieschange_item col-sm-6">
                                 {Lang[displayLanguage].blog_ministry_prompt}
-                                <select className="main_ministrieschange-select" defaultValue={this.targetMinistry} onChange={event => {
+                                <select className="main_ministrieschange-select" defaultValue={this.placeIndex} onChange={event => {
+                                    localStorage.setItem('targetMinistry', event.target.value);
                                     let newState = event.target.value;
                                     this.setState({
                                         placeIndex: newState,
