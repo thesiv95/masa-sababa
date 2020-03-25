@@ -13,3 +13,26 @@
   .footer_block-socialbuttons
     display: inline
     margin-bottom: 2px
+
+@include maxWidthResponsive(475px)
+  .main_subheader
+    font-size: 90%
+    text-align: center
+    margin-left: 90px
+  .main_description
+    margin-top: 20px
+  .main_step-pic
+    display: none
+  .main_useful-title
+    font-size: 32px
+    margin: 0
+  .footer_text
+    font-size: 15px
+
+@include maxWidthResponsive(370px)
+  .main_useful-title
+    font-size: 32px
+    margin-top: 15px
+    line-height: 30px
+  .footer_title, .footer_link
+    font-size: 15px
