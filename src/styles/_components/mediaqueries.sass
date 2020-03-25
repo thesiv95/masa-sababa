@@ -6,6 +6,8 @@
     display: inline
 
 @include maxWidthResponsive(700px)
+  .header_nav
+    margin-right: 0
   .main_pic
     display: none
   .main_header, .main_subheader
@@ -13,8 +15,14 @@
   .footer_block-socialbuttons
     display: inline
     margin-bottom: 2px
+  .footer_title, .footer_link
+    font-size: 15px
 
 @include maxWidthResponsive(475px)
+  .header_nav
+    margin-right: 0
+  .main_articles-article
+    width: 445px
   .main_subheader
     font-size: 90%
     text-align: center
@@ -25,11 +33,17 @@
     display: none
   .main_useful-title
     font-size: 32px
-    margin: 0
-  .footer_text
+    margin-top: 15px
+  .footer_title, .footer_link, .footer_text
     font-size: 15px
 
 @include maxWidthResponsive(370px)
+  .header_nav
+    margin-right: 0
+  .header_search_wrapper
+    width: 430px
+  .header_search-input
+    width: 390px
   .main_useful-title
     font-size: 32px
     margin-top: 15px
