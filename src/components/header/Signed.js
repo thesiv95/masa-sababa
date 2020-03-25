@@ -13,7 +13,7 @@ class Signed extends React.Component {
     render() {
         let displayLanguage = languageSet();
         return (
-            <div className="header_signup col-md-3">
+            <div className="header_signup col-md-3 col-sm-12">
                 <ul className="header_nav-list">
                     <li className="header_nav-item">
                         <NavLink to='/profile' className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_profile}</NavLink>

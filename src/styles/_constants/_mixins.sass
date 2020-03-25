@@ -18,3 +18,8 @@
   padding: 10px
   border: 1px solid $main-accent-color
   border-radius: 5px
+
+// media queries mixin idea from https://dev.to/paul_duvall/sass-and-media-queries-hb2
+@mixin maxWidthResponsive($value)
+  @media (max-width: $value)
+    @content

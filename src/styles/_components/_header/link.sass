@@ -1,0 +1,18 @@
+@import "../../_constants/_mixins.sass"
+@import "../../_constants/_vars.sass"
+
+&_link
+  color: $main-description
+  &_link:hover, &_link:active, &_link:focus
+    text-decoration: none
+
+  &_nav-list
+    display: inline-flex
+    list-style: none
+
+  &_nav-item
+    margin-left: 20px
+    width: 90px
+
+  .nav-active
+    color: $main-accent-color

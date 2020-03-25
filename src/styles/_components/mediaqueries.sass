@@ -1,0 +1,15 @@
+@import "../_constants/_mixins.sass"
+
+@include maxWidthResponsive(765px)
+  .main_subheader
+    line-height: 45px
+    display: inline
+
+@include maxWidthResponsive(700px)
+  .main_pic
+    display: none
+  .main_header, .main_subheader
+    line-height: 45px
+  .footer_block-socialbuttons
+    display: inline
+    margin-bottom: 2px
