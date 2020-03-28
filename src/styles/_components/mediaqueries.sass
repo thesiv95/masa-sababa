@@ -1,32 +1,45 @@
 @import "../_constants/_mixins.sass"
 
-@include maxWidthResponsive(765px)
-  .main_subheader
-    line-height: 45px
-    display: inline
+// bootstrap override
 
-@include maxWidthResponsive(700px)
+@include minWidthResponsive(768px)
+  .container
+    width: auto
+
+// max-width
+
+@include maxWidthResponsive(867px)
+  .main_step-pic
+    width: 400px
+  .footer_block-socialbuttons
+    display: inline
+    margin-bottom: 2px
+
+@include maxWidthResponsive(780px)
   .header_nav
     margin-right: 0
   .main_pic
     display: none
   .main_header, .main_subheader
     line-height: 45px
+
   .footer_block-socialbuttons
     display: inline
     margin-bottom: 2px
-  .footer_title, .footer_link
+  .footer_title, .footer_link, .footer_text
     font-size: 15px
+
 
 @include maxWidthResponsive(475px)
   .header_nav
     margin-right: 0
   .main_articles-article
     width: 445px
+  .main_header
+    font-size: 30px
   .main_subheader
     font-size: 90%
     text-align: center
-    margin-left: 90px
   .main_description
     margin-top: 20px
   .main_step-pic
