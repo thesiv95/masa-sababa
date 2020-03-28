@@ -54,13 +54,19 @@
   .footer_title, .footer_link, .footer_text
     font-size: 15px
 
-@include maxWidthResponsive(412px)
+@include maxWidthResponsive(412px) // phone
+  .row // bootstrap override
+    margin: 0
+  .header_nav
+    display: block
   .main_fetcherror
     width: 400px
   .main_articles-article
     width: 400px
   .main_passwordsecure
     margin-left: 5px
+  .footer_title, .footer_link, .footer_text
+    font-size: 12px
 
 @include maxWidthResponsive(370px)
   .header_nav
