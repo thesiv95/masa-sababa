@@ -18,6 +18,7 @@ class FullArticle extends React.Component {
     allCities = [];
     temp = [];
     placeIndex = localStorage.getItem('targetNumber') !== null ? localStorage.getItem('targetNumber') : '1';
+    datae = new Date();
 
     constructor(props) {
         super(props);
@@ -34,7 +35,11 @@ class FullArticle extends React.Component {
         console.log(this.props, "KKK")
     }
 
-    dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
+    dateFormattedString = dateAndAuthorFormatted(
+        this.datae.getDate(),
+        this.datae.getMonth(),
+        this.datae.getFullYear(),
+        'Moshe Dayan');
 
     UNSAFE_componentWillMount() {
 
