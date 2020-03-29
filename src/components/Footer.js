@@ -7,12 +7,12 @@ import FollowMe from "./footer/FollowMe";
 class Footer extends React.Component {
     render() {
         return (
-            <div className="row">
+            <footer className="footer row hidden-print">
                 <ContactUs/>
                 <OurCompany/>
                 <SocialContacts/>
                 <FollowMe/>
-            </div>
+            </footer>
         )
     }
 }

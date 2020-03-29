@@ -13,7 +13,7 @@ class Home extends React.Component {
                 <h2 className="main_header">{Lang[displayLang].main_header}</h2>
                 <p className="main_subheader">{Lang[displayLang].main_subheader}</p>
                 <p className="main_description">{Lang[displayLang].main_description}</p>
-                <div className="main_buttons">
+                <div className="main_buttons hidden-print">
                     <button className="button button-accent button-margin">
                         <Link to={'/profile'}>
                             {Lang[displayLang].main_btn_signup}
@@ -25,7 +25,7 @@ class Home extends React.Component {
                         </Link>
                     </button>
                 </div>
-                <div className="main_pic">
+                <div className="main_pic hidden-print">
                     <img src="img/clip-2.png" alt="main pic" className="main_pic-image img-fluid"/>
                 </div>
             </div>

@@ -15,7 +15,7 @@ class StepPicLeft extends React.Component {
         return (
             <div className="row">
                 <div className="main_step col-sm-6">
-                    <img src={this.props.img} alt={`step-${this.props.number}`} className="main_step-pic"/>
+                    <img src={this.props.img} alt={`step-${this.props.number}`} className="main_step-pic hidden-print"/>
                     <br/>
                     <p className="main_step-description need-description">{this.props.need !== "" ? this.props.need : ''}</p>
 

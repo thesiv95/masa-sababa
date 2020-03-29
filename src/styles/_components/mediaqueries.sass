@@ -6,6 +6,14 @@
   .container
     width: auto
 
+@include maxWidthResponsive(1920px)
+  .row
+    margin: 0
+
+@include minWidthResponsive(1921px)
+  .row
+    margin: 0
+
 // max-width
 
 @include maxWidthResponsive(867px)

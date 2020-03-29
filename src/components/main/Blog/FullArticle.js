@@ -80,7 +80,7 @@ class FullArticle extends React.Component {
         console.log(Lang[this.displayLanguage].blog_ministry_options['1'], "choto")
         let arr = [];
         for (let i = 1; i < 10; i++){
-            if(i == this.state.placeIndex){
+            if(i === this.state.placeIndex){
                 arr.push( <option selected={true} value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
             } else {
                 arr.push( <option value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
