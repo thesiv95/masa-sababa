@@ -24,13 +24,14 @@ class FullArticle extends React.Component {
         this.state = {
             cities: [],
             placeIds: [],
-            placeIndex: 1,
+            placeIndex: this.props.location.state === null ? 1 : this.props.location.state.number,
             city: 'Tel Aviv',
             latitude: 32.7895852,
             longitude: 34.9864697,
             radius: 50,
             comments: []
         };
+        console.log(this.props, "KKK")
     }
 
     dateFormattedString = dateAndAuthorFormatted(this.props.day, this.props.month, this.props.year, 'Moshe Dayan');
@@ -75,9 +76,23 @@ class FullArticle extends React.Component {
         }
     };
 
+    makeOption = () => {
+        console.log(Lang[this.displayLanguage].blog_ministry_options['1'], "choto")
+        let arr = [];
+        for (let i = 1; i < 10; i++){
+            if(i == this.state.placeIndex){
+                arr.push( <option selected={true} value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
+            } else {
+                arr.push( <option value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
+            }
+            
+        }
+        return arr;
+    }
+
 
     render() {
-        let displayLanguage = this.displayLanguage;
+        
         if (localStorage.getItem('targetMinistry') !== null){
             this.targetMinistry = parseInt(localStorage.getItem('targetMinistry'));
         }
@@ -85,50 +100,29 @@ class FullArticle extends React.Component {
             <div>
                 <div className="main_fetcherror">
                 </div>
-                <h2 className="main_header article-header">{Lang[displayLanguage].blog_teudatzeut_title}</h2>
+                <h2 className="main_header article-header">{Lang[this.displayLanguage].blog_teudatzeut_title}</h2>
                 <p className="main_articlesubheader text-center">
                     {this.dateFormattedString}
                 </p>
                 <div className="main_articlecontent">
                     <Video youtubeCode="wPwZnpqZIk0"/>
-                    <p className="text-center">{Lang[displayLanguage].blog_teudatzeut_description}</p>
+                    <p className="text-center">{Lang[this.displayLanguage].blog_teudatzeut_description}</p>
                     <blockquote>
-                        {Lang[displayLanguage].blog_teudatzeut_blockquote}
+                        {Lang[this.displayLanguage].blog_teudatzeut_blockquote}
                     </blockquote>
                     <Map/>
 
                     <div className="main_ministrieschange container">
                         <div className="row">
                             <div className="main_ministrieschange_item col-sm-6">
-                                {Lang[displayLanguage].blog_ministry_prompt}
-                                <select className="main_ministrieschange-select" defaultValue={this.placeIndex} onChange={event => {
-                                    localStorage.setItem('targetMinistry', event.target.value);
-                                    let newState = event.target.value;
-                                    this.setState({
-                                        placeIndex: newState,
-                                        ...this.state.city,
-                                        ...this.state.latitude,
-                                        ...this.state.longitude,
-                                        ...this.state.radius
-                                    });
-                                }
-                                }>
-                                    <option value="1">{Lang[displayLanguage].blog_ministry_options["1"]}</option>
-                                    <option value="2">{Lang[displayLanguage].blog_ministry_options["2"]}</option>
-                                    <option value="3">{Lang[displayLanguage].blog_ministry_options["3"]}</option>
-                                    <option value="4">{Lang[displayLanguage].blog_ministry_options["4"]}
-                                    </option>
-                                    <option value="5">{Lang[displayLanguage].blog_ministry_options["5"]}</option>
-                                    <option value="6">{Lang[displayLanguage].blog_ministry_options["6"]}</option>
-                                    <option value="7">{Lang[displayLanguage].blog_ministry_options["7"]}
-                                    </option>
-                                    <option value="8">{Lang[displayLanguage].blog_ministry_options["8"]}
-                                    </option>
-                                    <option value="9">{Lang[displayLanguage].blog_ministry_options["9"]}</option>
+                                {Lang[this.displayLanguage].blog_ministry_prompt}
+                                <select className="main_ministrieschange-select" >
+
+                                   {this.makeOption()}
                                 </select>
                             </div>
                             <div className="main_ministrieschange_item col-sm-6">
-                                {Lang[displayLanguage].blog_city_prompt}
+                                {Lang[this.displayLanguage].blog_city_prompt}
                                 <select className="main_ministrieschange-select" onChange={event => {
                                     let newState = event.target.value;
                                     this.setState({

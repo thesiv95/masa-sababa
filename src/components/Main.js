@@ -21,9 +21,8 @@ class Main extends React.Component {
                     <Route path='/about' component={About}/>
                     <Route path='/blog' component={Blog}/>
                     <Route path='/profile' component={Profile}/>
-                    <Route path='/fullarticle' render={() =>
-                        <FullArticle author={'Moshe Dayan'} day={d.getDate()} month={d.getMonth()} year={d.getFullYear()} />
-                    }/>
+                    <Route path='/fullarticle' component={FullArticle} />
+                    
                     <Route component={NotFound404}/>
                 </Switch>
             </main>

@@ -22,7 +22,14 @@ class StepPicLeft extends React.Component {
                 </div>
                 <div className="main_step col-sm-6" onClick={this.rememberMinistry(this.props.number)}>
                     <h3 className="main_step-number" >
-                        <Link to='/fullarticle'>
+                    <Link 
+                        to={{
+                            pathname: `/fullarticle`,
+                            state: {
+                                number:  this.props.number
+                            }
+                        }}
+                        >
                             {Lang[displayLanguage].about_step} {this.props.number}
                         </Link>
 
