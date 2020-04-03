@@ -5,11 +5,9 @@ import {Link} from "react-router-dom";
 
 class SignUp extends React.Component {
 
-
     render() {
         let displayLanguage = languageSet();
         return (
-
             <div className="header_signup col-md-3 col-sm-12">
                 <button className="button button-header">
                     <Link to={'/profile'}>{Lang[displayLanguage].header_btn_signup}</Link>

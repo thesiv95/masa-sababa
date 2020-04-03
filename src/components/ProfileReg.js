@@ -1,12 +1,23 @@
 import React from "react";
 import Lang from "./../i18n/lang";
-import generateToken from "../utilites/generateToken";
 import languageSet from "../utilites/languageSet";
 import showAlert from "../utilites/showAlert";
-
-class Profile extends React.Component {
+import fire from "../database/fire";
+import authErrorMessage from "../utilites/authErrorMessage";
+/* This is an registration page */
+class ProfileReg extends React.Component {
 
     displayLanguage = languageSet();
+    targetClass = 'main_profilevalidmsg'; // div with this class
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        }
+    }
+
 
     checkPasswordStrength = (password) => {
         // not less than 8 symbols
@@ -24,7 +35,6 @@ class Profile extends React.Component {
     saveUser = (event) => {
         event.preventDefault();
         const doc = document;
-        let token = null, currentUser = null;
 
         let pFirstName = doc.querySelector('#pFirstName').value,
             pLastName = doc.querySelector('#pLastName').value,
@@ -32,26 +42,28 @@ class Profile extends React.Component {
             pPassword = doc.querySelector('#pPassword').value,
             pPasswordConfirmation = doc.querySelector('#pPasswordConfirmation').value;
 
-        let targetClass = 'main_profilevalidmsg'; // div with this class
 
-        if (pFirstName === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName, targetClass); return;}
-        if (!pFirstName.match(/^([A-Za-z]+)$/)) { showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName_match, targetClass); return;}
-        if (pLastName === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName, targetClass); return;}
-        if (!pLastName.match(/^([A-Za-z]+)$/)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName_match, targetClass); return;}
-        if (pEmail === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail, targetClass); return;}
-        if (!pEmail.match(/^.+@.+\..+$/)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail, targetClass); return;}
-        if (pPassword === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword, targetClass); return;}
-        if (pPasswordConfirmation === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pPasswordConfirmation, targetClass); return;}
-        if (pPassword !== pPasswordConfirmation) {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_match, targetClass); return;}
-        if (!this.checkPasswordStrength(pPassword)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_strength, targetClass); return;}
+        if (pFirstName === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName, this.targetClass); return;}
+        if (!pFirstName.match(/^([A-Za-z]+)$/)) { showAlert(Lang[this.displayLanguage].profile_validmsg.pFirstName_match, this.targetClass); return;}
+        if (pLastName === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName, this.targetClass); return;}
+        if (!pLastName.match(/^([A-Za-z]+)$/)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pLastName_match, this.targetClass); return;}
+        if (pEmail === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail, this.targetClass); return;}
+        if (!pEmail.match(/^.+@.+\..+$/)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pEmail, this.targetClass); return;}
+        if (pPassword === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword, this.targetClass); return;}
+        if (pPasswordConfirmation === '') {showAlert(Lang[this.displayLanguage].profile_validmsg.pPasswordConfirmation, this.targetClass); return;}
+        if (pPassword !== pPasswordConfirmation) {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_match, this.targetClass); return;}
+        if (!this.checkPasswordStrength(pPassword)) {showAlert(Lang[this.displayLanguage].profile_validmsg.pPassword_strength, this.targetClass); return;}
 
 
         // if it is all ok
-        showAlert(Lang[this.displayLanguage].profile_validmsg.success, targetClass, false);
-        token = generateToken(pEmail, pPassword);
-        localStorage.setItem('token', token);
-        currentUser = `${pFirstName},${pLastName},${pEmail}`;
-        localStorage.setItem('currentUser', currentUser);
+
+        fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password)
+            .then(()=>{
+                showAlert(Lang[this.displayLanguage].profile_validmsg.success, this.targetClass, false);
+            })
+            .catch((error) => {
+                authErrorMessage(error.code, this.targetClass);
+            });
 
     };
 
@@ -71,16 +83,17 @@ class Profile extends React.Component {
         }
     };
 
-    // componentWillUnmount() {
-    //
-    // }
+
+    handleChange = (e) => {
+        this.setState({ [e.target.name]: e.target.value });
+    };
 
     render() {
         let displayLanguage = this.displayLanguage;
         return (
             <form onSubmit={this.saveUser}>
                 <div>
-                    <h2 className="main_header">{Lang[displayLanguage].profile_header}</h2>
+                    <h2 className="main_header">{Lang[displayLanguage].header_menu_profile}</h2>
                     <div className="main_profilevalidmsg">
                     </div>
                     <div className="main_passwordsecure">
@@ -95,20 +108,19 @@ class Profile extends React.Component {
                     <div className="main_profile">
                         <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_firstname}</h5>
-                            <input type="text" id="pFirstName" className="main_profileitem-input" placeholder="Elena"/>
+                            <input type="text" id="pFirstName" name="first_name" className="main_profileitem-input" placeholder="Elena"/>
                         </div>
                         <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_lastname}</h5>
-                            <input type="text" id="pLastName" className="main_profileitem-input" placeholder="Johnes"/>
+                            <input type="text" id="pLastName" name="last_name" className="main_profileitem-input" placeholder="Johnes"/>
                         </div>
                         <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_email}</h5>
-                            <input type="text" id="pEmail" className="main_profileitem-input"
-                                   placeholder="e.johnes@gmail.com"/>
+                            <input type="text" id="pEmail" name="email" onChange={this.handleChange} className="main_profileitem-input" placeholder="e.johnes@gmail.com"/>
                         </div>
                         <div className="main_profileitem">
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_password}</h5>
-                            <input type="password" id="pPassword" className="main_profileitem-input"
+                            <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main_profileitem-input"
                                    placeholder="******************"/>
                         </div>
                         <div className="main_profileitem last-profile-item">
@@ -126,4 +138,4 @@ class Profile extends React.Component {
     }
 }
 
-export default Profile;
+export default ProfileReg;

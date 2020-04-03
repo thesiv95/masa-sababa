@@ -15,7 +15,7 @@ class Home extends React.Component {
                 <p className="main_description">{Lang[displayLang].main_description}</p>
                 <div className="main_buttons hidden-print">
                     <button className="button button-accent button-margin">
-                        <Link to={'/profile'}>
+                        <Link to={'/login'}>
                             {Lang[displayLang].main_btn_signup}
                         </Link>
                     </button>

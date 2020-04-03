@@ -4,13 +4,13 @@ import Home from "./main/Home";
 import About from "./main/About";
 import Blog from "./main/Blog";
 import FullArticle from "./main/Blog/FullArticle";
-import Profile from "./Profile";
+import ProfileReg from "./ProfileReg";
+import LogIn from "./main/LogIn";
 import NotFound404 from "./main/NotFound404";
 
 
 class Main extends React.Component {
     render() {
-        let d = new Date();
 
         return (
             <main className='main'>
@@ -20,7 +20,8 @@ class Main extends React.Component {
                     <Route path='/' exact component={Home}/>
                     <Route path='/about' component={About}/>
                     <Route path='/blog' component={Blog}/>
-                    <Route path='/profile' component={Profile}/>
+                    <Route path='/profile' component={ProfileReg}/>
+                    <Route path='/login' component={LogIn}/>
                     <Route path='/fullarticle' component={FullArticle} />
                     
                     <Route component={NotFound404}/>

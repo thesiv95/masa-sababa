@@ -7,10 +7,11 @@
     "header_menu_home": "Главная",
     "header_menu_about": "Инфа",
     "header_menu_blog": "Блог",
-    "header_menu_profile": "Профиль",
+    "header_menu_profile": "Регистрация нового профиля",
     "header_menu_logout": "Выйти",
     "header_search_placeholder": "Поиск",
     "header_btn_signup": "Войти",
+    "header_login": "Вход в систему",
 
     "main_header": "Добро пожаловать в Израиль",
     "main_subheader": "Первые шаги нового репатрианта",
@@ -106,6 +107,15 @@
 
       "success": "Изменения сохранены!"
     },
+    "profile_backend_error": {
+      "account_exists": "Такой пользователь уже существует",
+      "email_already_in_use": "Такой email уже используется",
+      "email_badly_formatted": "Сервер не понял этот email",
+      "email_invalid": "Неправильно указан email",
+      "password_invalid": "Неправильно указан пароль",
+      "session": "Ты ничего не делал(а) на сайте долгое время. Нужно войти снова!",
+      "default": "Неизвестная ошибка сервера. Может, стоит попробовать позже?"
+    },
     "profile_passwordsecure": {
       "title": "Пароль должен удовлетворять следующим условиям:",
       "minlength": "Минимальная длина - 8 символов",
@@ -153,10 +163,11 @@
     "header_menu_home": "Home",
     "header_menu_about": "About",
     "header_menu_blog": "Blog",
-    "header_menu_profile": "Profile",
+    "header_menu_profile": "New profile registration",
     "header_menu_logout": "Logout",
     "header_search_placeholder": "Search here",
     "header_btn_signup": "Sign Up",
+    "header_login": "Log in to the system",
 
     "main_header": "Welcome to Israel",
     "main_subheader": "First steps of the new repatriate",
@@ -251,6 +262,15 @@
       "pPassword_strength": "Password does not match security conditions",
       "success": "Changes are saved!"
     },
+    "profile_backend_error": {
+      "account_exists": "Account already exists",
+      "email_already_in_use": "Email already in use",
+      "email_badly_formatted": "Server could not read this email",
+      "email_invalid": "Invalid email",
+      "password_invalid": "Invalid password",
+      "session": "You did nothing on the site for a long time. You need to log in again!",
+      "default": "Unknown server error. Maybe you should try again later?"
+    },
     "profile_passwordsecure": {
       "title": "The password must match the following conditions:",
       "minlength": "Minimal length is 8 symbol",
@@ -298,10 +318,11 @@
     "header_menu_home": "Accueil",
     "header_menu_about": "Sur",
     "header_menu_blog": "Blog",
-    "header_menu_profile": "Profil",
+    "header_menu_profile": "Enregistrement d'un nouveau profil",
     "header_menu_logout": "Décon.",
     "header_search_placeholder": "Cherche ici",
     "header_btn_signup": "S'inscrire",
+    "header_login": "Connectez-vous au système",
 
     "main_header": "Bienvenue en Israël",
     "main_subheader": "Premiers pas du nouveau rapatrié",
@@ -396,6 +417,15 @@
       "pPassword_strength": "Le mot de passe ne répond pas aux exigences de sécurité",
       "success": "Modifications enregistrées!"
     },
+    "profile_backend_error": {
+      "account_exists": "L'utilisateur existe déjà",
+      "email_already_in_use": "Email déjà utilisé",
+      "email_badly_formatted": "Le serveur n'a pas pu lire cet e-mail",
+      "email_invalid": "Email invalide",
+      "password_invalid": "Mot de passe incorrect",
+      "session": "Vous n'avez rien fait sur le site pendant longtemps. Vous devez vous reconnecter!",
+      "default": "Erreur de serveur inconnue. Vous devriez peut-être réessayer plus tard?"
+    },
     "profile_passwordsecure": {
       "title": "Le mot de passe doit remplir les conditions suivantes:",
       "minlength": "La longueur minimale est de 8 caractères",
@@ -444,10 +474,11 @@
     "header_menu_home": "דף הבית",
     "header_menu_about": "על אודות",
     "header_menu_blog": "בלוג",
-    "header_menu_profile": "פרופיל",
+    "header_menu_profile": "רישום פרופיל חדש",
     "header_menu_logout": "להתנתק",
     "header_search_placeholder": "חפש כאן",
     "header_btn_signup": "הירשם",
+    "header_login": "התחבר למערכת",
 
     "main_header": "ברוך הבא לישראל",
     "main_subheader": "צעדים ראשונים של העולה החדשה",
@@ -541,6 +572,15 @@
       "pPassword_match": "סיסמאות אינן תואמות",
       "pPassword_strength": "הסיסמה אינה עומדת בדרישות האבטחה",
       "success": "שינויים נשמרו!"
+    },
+    "profile_backend_error": {
+      "account_exists": "משתמש כבר קיים",
+      "email_already_in_use": "דוא\"ל כבר בשימוש",
+      "email_badly_formatted": "השרת לא יכול לקרוא דוא\"ל זה",
+      "email_invalid": "אימייל שגוי",
+      "password_invalid": "סיסמה שגויה",
+      "session": "הרבה זמן לא עשית באתר. אתה צריך להתחבר שוב!",
+      "default": "שגיאת שרת לא ידועה. אולי כדאי לנסות שוב אחר כך?"
     },
     "profile_passwordsecure": {
       "title": "על הסיסמא לעמוד בתנאים הבאים:",
