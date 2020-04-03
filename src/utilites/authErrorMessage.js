@@ -18,14 +18,14 @@ const authErrorMessage = (errorCode, targetClass) => {
             messageText = Lang[displayLanguage].profile_backend_error.email_badly_formatted;
             break;
         case 'auth/invalid-email':
-            messageText = 'Wrong email!';
+            messageText = Lang[displayLanguage].profile_backend_error.email_invalid;
             break;
         case 'auth/invalid-password':
-            messageText = 'Wrong password!';
+            messageText = Lang[displayLanguage].profile_backend_error.password_invalid;
             break;
         case 'auth/session-cookie-expired':
         case 'auth/session-cookie-revoked':
-            messageText = 'You did nothing on the website for a long time, log in again';
+            messageText = Lang[displayLanguage].profile_backend_error.session;
             break;
         default:
             messageText = Lang[displayLanguage].profile_backend_error.default;
