@@ -37,7 +37,7 @@
 * React Router 5.1.2
 * Bootstrap 3.4.1 (подключен как внешний CSS-файл, так как используется только адаптивная сетка)
 * Bootstrap Icons 1.0.0-alpha2
-* Google Firebase **(требуется задать свою конфигурацию в файле `./database/fire.js`!)**
+* Google Firebase **(требуется задать свою конфигурацию в файле `src/database/fire.js`!)**
 * node-sass 4.13.1
 
 ## Автор
