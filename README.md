@@ -36,7 +36,7 @@ Web application called "Sababa Life" gives the necessary information for Israeli
 * React Router 5.1.2
 * Bootstrap 3.4.1 (included like outer CSS file because only adaptive grid is used)
 * Bootstrap Icons 1.0.0-alpha2
-* Google Firebase **(consider setting your configuration at `src/database/fire.js` file!)**
+* Google Firebase
 * node-sass 4.13.1
 
 ## Author

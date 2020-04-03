@@ -13,7 +13,7 @@
 /build
 
 # backend
-/src/database/config.json
+#/src/database/config.json
 
 # misc
 .DS_Store
