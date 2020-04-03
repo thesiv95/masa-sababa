@@ -53,7 +53,9 @@ class LogIn extends React.Component {
                             <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_password}</h5>
                             <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main_profileitem-input" placeholder="******************"/>
                         </div>
-                        <button type={'submit'} className="button button-accent">Log in</button>
+                        <button type={'submit'} className="button button-accent">
+                            {Lang[this.displayLanguage].main_btn_signup}
+                        </button>
                     </div>
                 </div>
             </form>
