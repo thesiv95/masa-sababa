@@ -4,12 +4,6 @@ import languageSet from "../../../../../utilites/languageSet";
 
 class Comment extends React.Component {
 
-    constructor(props) {
-        super(props);
-        console.log(this.props, '1 comment')
-    }
-
-
     deleteComment = (event) => {
         event.preventDefault();
         let parent = event.target.parentElement.parentElement;
