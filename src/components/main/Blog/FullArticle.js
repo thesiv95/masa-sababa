@@ -12,8 +12,6 @@ import dateAndAuthorFormatted from "../../../utilites/dateAndAuthorFormatted";
 import fire from "../../../database/fire";
 import showAlert from "../../../utilites/showAlert";
 
-
-
 class FullArticle extends React.Component {
 
     displayLanguage = languageSet();
@@ -23,7 +21,6 @@ class FullArticle extends React.Component {
     datae = new Date();
 
     targetClass = 'main_fetcherror';
-
 
     constructor(props) {
         super(props);
@@ -38,9 +35,7 @@ class FullArticle extends React.Component {
             comments: null,
             isLoading: false
         };
-
     }
-
 
 
     dateFormattedString = dateAndAuthorFormatted(
@@ -75,11 +70,11 @@ class FullArticle extends React.Component {
             data => this.setState({
                 comments: data
             })
-        ).catch(() => showAlert('Getting comments error', this.targetClass));
+        ).catch(() => showAlert(Lang[this.displayLanguage].comments_error, this.targetClass));
         this.setState({
             comments: data
         })
-    }
+    };
 
 
     loadMinistriesComponent = () => {
@@ -113,7 +108,6 @@ class FullArticle extends React.Component {
         if (localStorage.getItem('targetMinistry') !== null){
             this.targetMinistry = parseInt(localStorage.getItem('targetMinistry'));
         }
-        console.log(this.state.comments, 'parent comments')
         return (
             <div>
                 <h2 className="main_header article-header">{Lang[this.displayLanguage].blog_teudatzeut_title}</h2>

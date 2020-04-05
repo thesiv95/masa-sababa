@@ -130,6 +130,8 @@
     "comments_title": "Комментарии",
     "comments_reply": "Ответить",
     "comments_delete": "Удалить комментарий",
+    "comments_loading": "Загрузка комментариев...",
+    "comments_error": "Не получилось загрузить комментарии",
 
     "reply_title": "Оставь комментарий",
     "reply_placeholder_yourtext": "Твой ответ",
@@ -285,6 +287,8 @@
     "comments_title": "Comments",
     "comments_reply": "Reply",
     "comments_delete": "Delete comment",
+    "comments_loading": "Loading comments...",
+    "comments_error": "Comments could not loaded",
 
     "reply_title": "Leave a reply",
     "reply_placeholder_yourtext": "Your Reply",
@@ -440,6 +444,8 @@
     "comments_title": "Commentaires",
     "comments_reply": "Répondre",
     "comments_delete": "Supprimer le commentaire",
+    "comments_loading": "Chargement des commentaires ...",
+    "comments_error": "Impossible de charger les commentaires",
 
     "reply_title": "Laisser une réponse",
     "reply_placeholder_yourtext": "Votre réponse",
@@ -596,6 +602,8 @@
     "comments_title": "הערות",
     "comments_reply": "תשובה",
     "comments_delete": "מחק תגובה",
+    "comments_loading": "טוען תגובות ...",
+    "comments_error": "לא ניתן היה לטעון הערות",
 
     "reply_title": "השאירו תשובה",
     "reply_placeholder_yourtext": "תגובתך",

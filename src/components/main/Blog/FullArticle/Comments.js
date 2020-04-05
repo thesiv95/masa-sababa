@@ -36,18 +36,14 @@ class Comments extends React.Component {
     render() {
         // condition because props will come a bit later after page loaded (because data from db is fetching)
         if (this.props.data) {
-            console.log(this.props.data, 'comments componrnt')
-
             return (
                 <div className="main_comments">
                     <h3>{Lang[this.displayLanguage].comments_title}</h3>
                     {this.getComments()}
-
-
                 </div>
-            )
+            );
         } else {
-            return "Loading comments..."
+            return Lang[this.displayLanguage].comments_loading;
         }
 
     }
