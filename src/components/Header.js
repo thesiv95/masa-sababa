@@ -25,7 +25,6 @@ class Header extends React.Component {
 
     authListener(){
         fire.auth().onAuthStateChanged((user) => {
-            console.log(user, "USER authlistener");
             if (user){
                 this.setState({ user });
                 localStorage.setItem('SABABALIFE_user', user.uid);

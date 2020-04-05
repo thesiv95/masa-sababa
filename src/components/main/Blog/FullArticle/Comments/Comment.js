@@ -4,6 +4,12 @@ import languageSet from "../../../../../utilites/languageSet";
 
 class Comment extends React.Component {
 
+    constructor(props) {
+        super(props);
+        console.log(this.props, '1 comment')
+    }
+
+
     deleteComment = (event) => {
         event.preventDefault();
         let parent = event.target.parentElement.parentElement;
@@ -16,7 +22,7 @@ class Comment extends React.Component {
             <div className="main_comments-comment">
                 <div className="row">
                     <div className="col-sm-2 main_comments-comment-leftpart">
-                        <img src="https://www.gravatar.com/avatar/mp?s=100" alt="comment" className="main_comments-comment-image"/>
+                        <img src={this.props.avatarUrl} alt="comment" className="main_comments-comment-image"/>
                     </div>
                     <div className="col-sm-10 main_comments-comment-rightpart">
                         <h5>{this.props.name}</h5>

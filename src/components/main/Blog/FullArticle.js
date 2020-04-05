@@ -9,6 +9,8 @@ import Lang from "./../../../i18n/lang";
 import Cities from "./allCities.json"; // cities list
 import languageSet from "../../../utilites/languageSet";
 import dateAndAuthorFormatted from "../../../utilites/dateAndAuthorFormatted";
+import fire from "../../../database/fire";
+import showAlert from "../../../utilites/showAlert";
 
 
 
@@ -20,6 +22,9 @@ class FullArticle extends React.Component {
     placeIndex = localStorage.getItem('targetNumber') !== null ? localStorage.getItem('targetNumber') : '1';
     datae = new Date();
 
+    targetClass = 'main_fetcherror';
+
+
     constructor(props) {
         super(props);
         this.state = {
@@ -30,10 +35,13 @@ class FullArticle extends React.Component {
             latitude: 32.7895852,
             longitude: 34.9864697,
             radius: 50,
-            comments: []
+            comments: null,
+            isLoading: false
         };
-        console.log(this.props, "KKK")
+
     }
+
+
 
     dateFormattedString = dateAndAuthorFormatted(
         this.datae.getDate(),
@@ -48,25 +56,31 @@ class FullArticle extends React.Component {
             this.temp.push(<option>{this.allCities[i]}</option>);
         }
 
-      /*  if (localStorage.getItem('targetMinistry') !== null){
-            this.targetMinistry = parseInt(localStorage.getItem('targetMinistry'));
-        }*/
-
     }
 
 
     componentDidMount() {
-        this._getComments();
+        this.loadData();
     }
 
-    _getComments(){
-        fetch(`http://localhost:4000/comments`)
-            .then(response => response.json())
-            .then(response => this.setState({comments: response.data}))
-            .catch(e => console.error(e, 'fetch db'))
+    loadData = () => {
+
+        let data = [];
+        fire.database().ref('/comments').once('value').then(function(snapshot) {
+
+            data.push(Object.values(snapshot.val()));
+            return data;
+
+        }).then(
+            data => this.setState({
+                comments: data
+            })
+        ).catch(() => showAlert('Getting comments error', this.targetClass));
+        this.setState({
+            comments: data
+        })
     }
 
-    // todo: почему то не работает локал сторадж (не перезаписывается значение targetMinistry)
 
     loadMinistriesComponent = () => {
         if (this.state.placeIndex > 0) {
@@ -82,29 +96,26 @@ class FullArticle extends React.Component {
     };
 
     makeOption = () => {
-        console.log(Lang[this.displayLanguage].blog_ministry_options['1'], "choto")
         let arr = [];
         for (let i = 1; i < 10; i++){
             if(i === this.state.placeIndex){
-                arr.push( <option selected={true} value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
+                arr.push( <option key={i} selected={true} value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
             } else {
-                arr.push( <option value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
+                arr.push( <option key={i} value={i}>{Lang[this.displayLanguage].blog_ministry_options[`${i}`]}</option>)
             }
             
         }
         return arr;
-    }
+    };
 
 
     render() {
-        
         if (localStorage.getItem('targetMinistry') !== null){
             this.targetMinistry = parseInt(localStorage.getItem('targetMinistry'));
         }
+        console.log(this.state.comments, 'parent comments')
         return (
             <div>
-                <div className="main_fetcherror">
-                </div>
                 <h2 className="main_header article-header">{Lang[this.displayLanguage].blog_teudatzeut_title}</h2>
                 <p className="main_articlesubheader text-center">
                     {this.dateFormattedString}
@@ -148,7 +159,7 @@ class FullArticle extends React.Component {
                     <React.Fragment>{this.loadMinistriesComponent()}</React.Fragment>
 
                 </div>
-                <Comments/>
+                <Comments data={this.state.comments} />
                 <LeaveReply/>
 
             </div>

@@ -1,85 +1,55 @@
 import React from "react";
 import Lang from "./../../../../i18n/lang";
 import languageSet from "../../../../utilites/languageSet";
-import commentsJSON from "./commentsJSON";
+// import commentsJSON from "./commentsJSON";
 import Comment from "./Comments/Comment";
 
 class Comments extends React.Component {
 
-    componentDidMount() {
-        this.getAllComments()
-    }
-
-
-    getAllComments = () => {
-        if (sessionStorage.getItem('token') !== null) {
-            fetch('http://localhost:4000/comments')
-                .then(res => res.json())
-                .then(json => console.log(json))
-        }
-    };
-
+    displayLanguage = languageSet();
 
     getCurrentFormattedDate = () => {
-        let displayLanguage = languageSet();
         const d = new Date();
         let day = d.getDate();
-        let month = 0;
-        switch (d.getMonth()) {
-            case 0:
-                month = Lang[displayLanguage].blog_comments_month['0'];
-                break;
-            case 1:
-                month = Lang[displayLanguage].blog_comments_month['1'];
-                break;
-            case 2:
-                month = Lang[displayLanguage].blog_comments_month['2'];
-                break;
-            case 3:
-                month = Lang[displayLanguage].blog_comments_month['3'];
-                break;
-            case 4:
-                month = Lang[displayLanguage].blog_comments_month['4'];
-                break;
-            case 5:
-                month = Lang[displayLanguage].blog_comments_month['5'];
-                break;
-            case 6:
-                month = Lang[displayLanguage].blog_comments_month['6'];
-                break;
-            case 7:
-                month = Lang[displayLanguage].blog_comments_month['7'];
-                break;
-            case 8:
-                month = Lang[displayLanguage].blog_comments_month['8'];
-                break;
-            case 9:
-                month = Lang[displayLanguage].blog_comments_month['9'];
-                break;
-            case 10:
-                month = Lang[displayLanguage].blog_comments_month['10'];
-                break;
-            case 11:
-                month = Lang[displayLanguage].blog_comments_month['11'];
-                break;
-            default:
-                month = Lang[displayLanguage].blog_comments_month['0'];
-        }
+        // Get month string from i18n/lang.json
+        let month = Lang[this.displayLanguage].blog_comments_month[d.getMonth().toString()];
         let year = d.getFullYear();
         return `${day} ${month} ${year}`;
-    }
+    };
+
+    getComments = () => {
+       let comms = [];
+        this.props.data.map((comment, index) =>
+            comment.forEach(elem =>
+                comms.push(
+                    <Comment key={index}
+                             name={elem.name}
+                             text={elem.text}
+                             date={this.getCurrentFormattedDate()}
+                             avatarUrl={elem.avatarUrl}
+                    />
+                )
+            ));
+        return comms;
+    };
 
     render() {
-        let displayLanguage = languageSet();
-        //let allComments = this.getAllComments();
-        return (
-            <div className="main_comments">
-                <h3>{Lang[displayLanguage].comments_title}</h3>
-                <Comment name={commentsJSON["0"].name} text={commentsJSON["0"].text} date={this.getCurrentFormattedDate()}/>
-                <Comment name={commentsJSON["1"].name} text={commentsJSON["1"].text} date={this.getCurrentFormattedDate()}/>
-                <Comment name={commentsJSON["2"].name} text={commentsJSON["2"].text} date={this.getCurrentFormattedDate()}/>
-            </div>
-        )
+        // condition because props will come a bit later after page loaded (because data from db is fetching)
+        if (this.props.data) {
+            console.log(this.props.data, 'comments componrnt')
+
+            return (
+                <div className="main_comments">
+                    <h3>{Lang[this.displayLanguage].comments_title}</h3>
+                    {this.getComments()}
+
+
+                </div>
+            )
+        } else {
+            return "Loading comments..."
+        }
+
     }
 }
 
