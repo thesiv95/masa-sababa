@@ -3,32 +3,51 @@ import Lang from "./../../../../i18n/lang";
 import languageSet from "../../../../utilites/languageSet";
 import generateToken from "../../../../utilites/generateToken";
 import showAlert from "../../../../utilites/showAlert";
-import dateAndAuthorFormatted from "../../../../utilites/dateAndAuthorFormatted";
-
+import fire from "../../../../database/fire";
 
 class LeaveReply extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            addingReply: false
+            addingReply: false,
+            reply: null
         }
     }
 
     displayLanguage = languageSet();
+    targetClass = 'main_leavereply_message';
+    startCommentsIndex = 2; // We pass this value to DB. New value means new comment
 
-    addToStorage = (text, name) => {
-        let d = new Date(); // get current date
-        let date = dateAndAuthorFormatted(d.getDay(), d.getMonth(), d.getFullYear(), name, 'reply');
-        let comment = `${text}:${name}:${date}`;
+    changeStateOfTextarea = (event) => {
+        this.setState({
+            reply: event.target.value
+        })
+    };
 
-        if (localStorage.getItem('comments') === null || localStorage.getItem('comments') === ''){
-            localStorage.setItem('comments', comment); // this is the 1st comment
-        } else { // if there already were comments
-            let allComments = localStorage.getItem('comments');
-            allComments += `,${comment}`;
-            localStorage.setItem('comments', allComments);
-        }
+    writeDataToDataBase = (text, name) => {
+        // Image link will be hardcoded at this point
+        let imgUrl = 'https://via.placeholder.com/32';
+
+        // Define logged user name. If no one is logged at Firebase DB, we will write 'Anonymous'
+        let loggedUser = fire.auth().currentUser ? fire.auth().currentUser : 'Anonymous';
+
+        let startCommentsIndex = this.startCommentsIndex;
+
+        fire.database().ref('/comments/' + startCommentsIndex).set({
+            avatarUrl: imgUrl,
+            name: loggedUser,
+            text: this.state.reply
+        })
+        .then(result => {
+            console.log(result);
+            showAlert(Lang[this.displayLanguage].reply_validmsg.success, this.targetClass, false);
+        })
+        .catch(error => {
+            showAlert(error.message, this.targetClass);
+        });
+
+        this.startCommentsIndex++;
     };
 
 
@@ -38,19 +57,17 @@ class LeaveReply extends React.Component {
             replyEmail = document.querySelector('#replyEmail'),
             replyCheck = document.querySelector('#replyCheck');
 
-        if (replyText.value === '') { showAlert(Lang[this.displayLanguage].reply_validmsg.text, 'main_leavereply_message'); return; }
-        if (replyName.value === '') { showAlert(Lang[this.displayLanguage].reply_validmsg.name, 'main_leavereply_message'); return; }
-        if (replyEmail.value === '') { showAlert(Lang[this.displayLanguage].reply_validmsg.email, 'main_leavereply_message'); return; }
-        if (!replyEmail.value.match(/^.+@.+\..+$/)) { showAlert(Lang[this.displayLanguage].reply_validmsg.email_match, 'main_leavereply_message'); return; }
-
-        if (sessionStorage.getItem('tokenComment') === null){
-            if (replyCheck.checked) sessionStorage.setItem('tokenComment', generateToken(replyEmail));
-            this.addToStorage(replyText.value, replyName.value);
-        } else {
-            this.addToStorage(replyText.value, replyName.value);
+        if (replyText.value === '') { showAlert(Lang[this.displayLanguage].reply_validmsg.text, this.targetClass); return; }
+        if (replyName.value === '') { showAlert(Lang[this.displayLanguage].reply_validmsg.name, this.targetClass); return; }
+        if (replyEmail.value === '') { showAlert(Lang[this.displayLanguage].reply_validmsg.email, this.targetClass); return; }
+        if (!replyEmail.value.match(/^.+@.+\..+$/)) { showAlert(Lang[this.displayLanguage].reply_validmsg.email_match, this.targetClass); return; }
+        // If all fields are filled and correct:
+        if (replyCheck.checked) {
+            // if nothing from firebase has come, we will generate token on a client
+            if (fire.auth().currentUser === null) localStorage.setItem('SABABA_usertoken', generateToken(replyEmail));
         }
 
-        showAlert(Lang[this.displayLanguage].reply_validmsg.success, 'main_leavereply_message', false);
+        this.writeDataToDataBase(replyText.value, replyName.value);
 
     };
 
@@ -62,7 +79,7 @@ class LeaveReply extends React.Component {
                     </div>
 
                     <h3>{Lang[displayLanguage].reply_title}</h3>
-                    <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main_leavereply-textarea' />
+                    <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main_leavereply-textarea' onChange={this.changeStateOfTextarea} />
                     <div className="main_leavereply-inputs">
                         <input id="replyName" type="text" placeholder={Lang[displayLanguage].reply_placeholder_yourname} className="main_leavereply-input" />
                         <input id="replyEmail" type="text" placeholder={Lang[displayLanguage].reply_placeholder_youremail} className="main_leavereply-input" />

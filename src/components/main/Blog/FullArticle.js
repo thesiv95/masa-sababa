@@ -48,7 +48,7 @@ class FullArticle extends React.Component {
 
         this.allCities = Object.values(Cities[this.displayLanguage]);
         for (let i in this.allCities){
-            this.temp.push(<option>{this.allCities[i]}</option>);
+            this.temp.push(<option key={i}>{this.allCities[i]}</option>);
         }
 
     }

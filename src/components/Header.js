@@ -3,7 +3,6 @@ import Logo from "./header/Logo"
 import Nav from "./header/Nav";
 import Search from "./header/Search";
 import Signed from "./header/Signed";
-// import SignUp from "./header/SignUp";
 import data from "./header/dataSearch"; // all search queries for all languages
 import languageSet from "../utilites/languageSet";
 import fire from '../database/fire';
@@ -47,8 +46,6 @@ class Header extends React.Component {
                         <Nav/>
                         <Search items={data[this.displayLanguage]}/>
                         <Signed/>
-                        
-                        {/*{this.state.user ? <Signed/> : <SignUp/>}*/}
                     </div>
                 </header>
         )
