@@ -1,11 +1,17 @@
 import React from "react";
 import Lang from "../../../../../i18n/lang";
 import languageSet from "../../../../../utilites/languageSet";
+import fire from "../../../../../database/fire";
 
 class Comment extends React.Component {
 
     deleteComment = (event) => {
         event.preventDefault();
+        // We will hardcode id 2 at this point
+        fire.database().ref('/comments/2')
+            .remove()
+            .then(result => console.log(result))
+            .catch(error => console.log(error));
         let parent = event.target.parentElement.parentElement;
         parent.style.display = 'none';
     };
