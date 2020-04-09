@@ -5,7 +5,7 @@ import Follow from "./FollowMe/Follow";
 class FollowMe extends React.Component{
     render() {
         return (
-            <div className="footer_block col-xs-3">
+            <div className="footer__block col-xs-3">
                 <Address/>
                 <Follow/>
             </div>
@@ -13,4 +13,4 @@ class FollowMe extends React.Component{
     }
 }
 
-export default FollowMe
+export default FollowMe;

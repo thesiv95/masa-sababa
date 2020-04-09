@@ -8,15 +8,15 @@ class NavList extends React.Component {
     render() {
         let displayLanguage = languageSet();
         return(
-                <ul className="header_nav-list">
-                    <li className="header_nav-item">
-                        <NavLink to='/' exact className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_home}</NavLink>
+                <ul className="header__nav-list">
+                    <li className="header__nav-item">
+                        <NavLink to='/' exact className='header__link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_home}</NavLink>
                     </li>
-                    <li className="header_nav-item">
-                        <NavLink to='/about' className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_about}</NavLink>
+                    <li className="header__nav-item">
+                        <NavLink to='/about' className='header__link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_about}</NavLink>
                     </li>
-                    <li className="header_nav-item">
-                        <NavLink to='/blog' className='header_link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_blog}
+                    <li className="header__nav-item">
+                        <NavLink to='/blog' className='header__link' activeClassName='nav-active'>{Lang[displayLanguage].header_menu_blog}
                         </NavLink>
                     </li>
                 </ul>

@@ -18,16 +18,12 @@ class NavLang extends React.Component {
         localStorage.setItem('lang', event.target.value);
         window.location.reload()
 
-    }
+    };
 
-    componentDidUpdate(){
-        // reload
-    }
 
     render() {
-
         return(
-            <select className='header_select' onChange={this.handleChange} defaultValue={languageSet()}>
+            <select className='header__select' onChange={this.handleChange} defaultValue={languageSet()}>
 
                 <option value='en'>en</option>
                 <option value='ru'>ru</option>

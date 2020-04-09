@@ -9,7 +9,7 @@ import authErrorMessage from "../../utilites/authErrorMessage";
 class LogIn extends React.Component {
 
     displayLanguage = languageSet();
-    targetClass = 'main_profilevalidmsg'; // div with this class
+    targetClass = 'main__profilevalidmsg'; // div with this class
 
     constructor(props) {
         super(props);
@@ -40,18 +40,18 @@ class LogIn extends React.Component {
         return (
             <form onSubmit={this.submitHandler}>
                 <div>
-                    <h2 className="main_header">{Lang[this.displayLanguage].header_login}</h2>
-                    <div className="main_profilevalidmsg">
+                    <h2 className="main__header">{Lang[this.displayLanguage].header_login}</h2>
+                    <div className="main__profilevalidmsg">
                     </div>
 
-                    <div className="main_profile">
-                        <div className="main_profileitem">
-                            <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_email}</h5>
-                            <input type="text" id="pEmail" name="email" onChange={this.handleChange} className="main_profileitem-input" placeholder="e.johnes@gmail.com"/>
+                    <div className="main__profile">
+                        <div className="main__profileitem">
+                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_email}</h5>
+                            <input type="text" id="pEmail" name="email" onChange={this.handleChange} className="main__profileitem-input" placeholder="e.johnes@gmail.com"/>
                         </div>
-                        <div className="main_profileitem">
-                            <h5 className="main_profileitem-title">{Lang[displayLanguage].profile_password}</h5>
-                            <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main_profileitem-input" placeholder="******************"/>
+                        <div className="main__profileitem">
+                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_password}</h5>
+                            <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main__profileitem-input" placeholder="******************"/>
                         </div>
                         <button type={'submit'} className="button button-accent">
                             {Lang[this.displayLanguage].main_btn_signup}

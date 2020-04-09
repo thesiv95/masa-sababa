@@ -18,13 +18,13 @@ class Signed extends React.Component {
 
     render() {
         return (
-            <div className="header_signup col-md-3 col-sm-12">
-                <ul className="header_nav-list">
-                    <li className="header_nav-item">
-                        <NavLink to='/profile' className='header_link' activeClassName='nav-active'>{Lang[this.displayLanguage].profile_header}</NavLink>
+            <div className="header__signup col-md-3 col-sm-12">
+                <ul className="header__nav-list">
+                    <li className="header__nav-item">
+                        <NavLink to='/profile' className='header__link' activeClassName='nav-active'>{Lang[this.displayLanguage].profile_header}</NavLink>
                     </li>
-                    <li className="header_nav-item" onClick={this.logout()}>
-                        <NavLink to='/' className='header_link'>{Lang[this.displayLanguage].header_menu_logout}</NavLink>
+                    <li className="header__nav-item" onClick={this.logout()}>
+                        <NavLink to='/' className='header__link'>{Lang[this.displayLanguage].header_menu_logout}</NavLink>
                     </li>
                 </ul>
             </div>

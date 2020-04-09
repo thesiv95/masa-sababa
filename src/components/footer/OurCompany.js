@@ -8,13 +8,13 @@ class OurCompany extends React.Component {
         let displayLanguage = languageSet()
         return(
 
-            <div className="footer_block col-xs-3">
-                <h4 className="footer_title">{Lang[displayLanguage].footer_ourcompany_title}</h4>
+            <div className="footer__block col-xs-3">
+                <h4 className="footer__title">{Lang[displayLanguage].footer_ourcompany_title}</h4>
                 <p>
-                    <NavLink to="/about" className="footer_link">{Lang[displayLanguage].footer_ourcompany_about}</NavLink>
+                    <NavLink to="/about" className="footer__link">{Lang[displayLanguage].footer_ourcompany_about}</NavLink>
                 </p>
                 <p>
-                    <NavLink to="/blog" className="footer_link">{Lang[displayLanguage].footer_ourcompany_blog}</NavLink>
+                    <NavLink to="/blog" className="footer__link">{Lang[displayLanguage].footer_ourcompany_blog}</NavLink>
                 </p>
             </div>
         )

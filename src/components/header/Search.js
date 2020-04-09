@@ -60,11 +60,11 @@ class Search extends React.Component {
         }
         // key => React's specific attribute
         return (
-            <ul className="header_search-list">
+            <ul className="header__search-list">
                 {
                     itemSplitted.map((item) =>
-                    <li className="header_search-list_item" key={item[0]} onClick={() => this.suggestionsSelected(item[0])}>
-                            {<Link className="header_search-list_link" to={`/${item[1]}`}>{item[0]}</Link>}
+                    <li className="header__search-list_item" key={item[0]} onClick={() => this.suggestionsSelected(item[0])}>
+                            {<Link className="header__search-list_link" to={`/${item[1]}`}>{item[0]}</Link>}
                     </li>)
 
                 }
@@ -75,10 +75,10 @@ class Search extends React.Component {
     render() {
         let displayLanguage = languageSet();
         return (
-            <div className="header_search col-md-3 col-sm-12">
-                <div className="header_search_wrapper">
-                    <input className="header_search-input" type="text" placeholder={Lang[displayLanguage].header_search_placeholder} name="searchbar" id="searchbar" onChange={this.onTextChanged} />
-                    <img src="img/search.svg" alt="search_icon" className="header_search-img" onClick={this.toggleSuggestions} />
+            <div className="header__search col-md-3 col-sm-12">
+                <div className="header__search_wrapper">
+                    <input className="header__search-input" type="text" placeholder={Lang[displayLanguage].header_search_placeholder} name="searchbar" id="searchbar" onChange={this.onTextChanged} />
+                    <img src="img/search.svg" alt="search_icon" className="header__search-img" onClick={this.toggleSuggestions} />
                 </div>
                 <div id="renderedSuggestions">{this.renderSuggestions()}</div>
             </div>

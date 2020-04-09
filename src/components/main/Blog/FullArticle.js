@@ -20,7 +20,7 @@ class FullArticle extends React.Component {
     placeIndex = localStorage.getItem('targetNumber') !== null ? localStorage.getItem('targetNumber') : '1';
     datae = new Date();
 
-    targetClass = 'main_fetcherror';
+    targetClass = 'main__fetcherror';
 
     constructor(props) {
         super(props);
@@ -110,11 +110,11 @@ class FullArticle extends React.Component {
         }
         return (
             <div>
-                <h2 className="main_header article-header">{Lang[this.displayLanguage].blog_teudatzeut_title}</h2>
-                <p className="main_articlesubheader text-center">
+                <h2 className="main__header article-header">{Lang[this.displayLanguage].blog_teudatzeut_title}</h2>
+                <p className="main__articlesubheader text-center">
                     {this.dateFormattedString}
                 </p>
-                <div className="main_articlecontent">
+                <div className="main__articlecontent">
                     <Video youtubeCode="wPwZnpqZIk0"/>
                     <p className="text-center">{Lang[this.displayLanguage].blog_teudatzeut_description}</p>
                     <blockquote>
@@ -122,18 +122,18 @@ class FullArticle extends React.Component {
                     </blockquote>
                     <Map/>
 
-                    <div className="main_ministrieschange container">
+                    <div className="main__ministrieschange container">
                         <div className="row">
-                            <div className="main_ministrieschange_item col-sm-6">
+                            <div className="main__ministrieschange_item col-sm-6">
                                 {Lang[this.displayLanguage].blog_ministry_prompt}
-                                <select className="main_ministrieschange-select" >
+                                <select className="main__ministrieschange-select" >
 
                                    {this.makeOption()}
                                 </select>
                             </div>
-                            <div className="main_ministrieschange_item col-sm-6">
+                            <div className="main__ministrieschange_item col-sm-6">
                                 {Lang[this.displayLanguage].blog_city_prompt}
-                                <select className="main_ministrieschange-select" onChange={event => {
+                                <select className="main__ministrieschange-select" onChange={event => {
                                     let newState = event.target.value;
                                     this.setState({
                                         ...this.state.placeIndex,

@@ -16,7 +16,7 @@ class LeaveReply extends React.Component {
     }
 
     displayLanguage = languageSet();
-    targetClass = 'main_leavereply_message';
+    targetClass = 'main__leavereply_message';
     startCommentsIndex = 2; // We pass this value to DB. New value means new comment
 
     changeStateOfTextarea = (event) => {
@@ -74,18 +74,18 @@ class LeaveReply extends React.Component {
     render() {
         let displayLanguage = this.displayLanguage;
         return (
-            <div className='main_leavereply'>
-                    <div className='main_leavereply_message'>
+            <div className='main__leavereply'>
+                    <div className='main__leavereply_message'>
                     </div>
 
                     <h3>{Lang[displayLanguage].reply_title}</h3>
-                    <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main_leavereply-textarea' onChange={this.changeStateOfTextarea} />
-                    <div className="main_leavereply-inputs">
-                        <input id="replyName" type="text" placeholder={Lang[displayLanguage].reply_placeholder_yourname} className="main_leavereply-input" />
-                        <input id="replyEmail" type="text" placeholder={Lang[displayLanguage].reply_placeholder_youremail} className="main_leavereply-input" />
+                    <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main__leavereply-textarea' onChange={this.changeStateOfTextarea} />
+                    <div className="main__leavereply-inputs">
+                        <input id="replyName" type="text" placeholder={Lang[displayLanguage].reply_placeholder_yourname} className="main__leavereply-input" />
+                        <input id="replyEmail" type="text" placeholder={Lang[displayLanguage].reply_placeholder_youremail} className="main__leavereply-input" />
                     </div>
-                    <div className="main_leavereply-send">
-                        <input id="replyCheck" type="checkbox" className="main_leavereply-checkbox"/>
+                    <div className="main__leavereply-send">
+                        <input id="replyCheck" type="checkbox" className="main__leavereply-checkbox"/>
                         {Lang[displayLanguage].reply_checkbox}<br/>
                         <button className="button button-accent" onClick={this.addComment}>{Lang[displayLanguage].reply_btn}</button>
                     </div>

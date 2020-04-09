@@ -37,7 +37,7 @@ class Comments extends React.Component {
         // condition because props will come a bit later after page loaded (because data from db is fetching)
         if (this.props.data) {
             return (
-                <div className="main_comments">
+                <div className="main__comments">
                     <h3>{Lang[this.displayLanguage].comments_title}</h3>
                     {this.getComments()}
                 </div>

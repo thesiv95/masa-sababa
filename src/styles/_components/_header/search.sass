@@ -1,7 +1,7 @@
 @import "../../_constants/_mixins.sass"
 @import "../../_constants/_vars.sass"
 
-&_search
+&__search
   display: inline-block
   width: 300px
   &-input
@@ -24,9 +24,9 @@
   &-list
     list-style: none
     margin-top: 0
-    &_link
+    &__link
       @include link(darken($main-accent-color, 15%))
-    &_item
+    &__item
       margin-left: -40px
       padding-left: 17px
       border: 1px solid $main-accent-color

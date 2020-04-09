@@ -7,10 +7,10 @@ class Address extends React.Component {
         let displayLanguage = languageSet();
         return(
             <div>
-                <h4 className="footer_title">{Lang[displayLanguage].footer_address_title}</h4>
-                <div className="footer_block-address">
-                    <p className="footer_text">SababaLife LLC</p>
-                    <p className="footer_text">{Lang[displayLanguage].footer_address_street}</p>
+                <h4 className="footer__title">{Lang[displayLanguage].footer_address_title}</h4>
+                <div className="footer__block-address">
+                    <p className="footer__text">SababaLife LLC</p>
+                    <p className="footer__text">{Lang[displayLanguage].footer_address_street}</p>
                 </div>
             </div>
         )

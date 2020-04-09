@@ -8,7 +8,7 @@ class Ministry extends React.Component {
     constructor(props) {
 
         super(props);
-        this.workingHours = this.props['workingHours']
+        this.workingHours = this.props['workingHours'];
 
         this.state = {
             isLoading: true,
@@ -36,12 +36,12 @@ class Ministry extends React.Component {
         if(this.state.data !== null) {
             return (
                 <div className='col-sm-6'>
-                    <div className="main_ministry">
-                        <h5 className="main_ministry-title">{this.props.title}</h5>
-                        <p className="main_ministry-street">
+                    <div className="main__ministry">
+                        <h5 className="main__ministry-title">{this.props.title}</h5>
+                        <p className="main__ministry-street">
                             <a href={this.props.street} target="_blank" rel="noopener noreferrer">Google Maps</a>
                         </p>
-                        <div className="main_ministry-work">
+                        <div className="main__ministry-work">
                             <p>{Lang[displayLanguage].blog_ministry_weekday['0']}: {this.workingHours[0] !== 'close' ? this.workingHours[0] : Lang[displayLanguage].blog_ministry_isclosed}</p>
                             <p>{Lang[displayLanguage].blog_ministry_weekday['1']}:  {this.workingHours[1] !== 'close' ? this.workingHours[1] : Lang[displayLanguage].blog_ministry_isclosed}</p>
                             <p>{Lang[displayLanguage].blog_ministry_weekday['2']}: {this.workingHours[2] !== 'close' ? this.workingHours[2] : Lang[displayLanguage].blog_ministry_isclosed}</p>
@@ -50,10 +50,10 @@ class Ministry extends React.Component {
                             <p>{Lang[displayLanguage].blog_ministry_weekday['5']}: {this.workingHours[5] !== 'close' ? this.workingHours[5] : Lang[displayLanguage].blog_ministry_isclosed}</p>
                             <p>{Lang[displayLanguage].blog_ministry_weekday['6']}: {this.workingHours[6] !== 'close' ? this.workingHours[6] : Lang[displayLanguage].blog_ministry_isclosed}</p>
                         </div>
-                        <p className="main_ministry-phone">
+                        <p className="main__ministry-phone">
                             <em>{Lang[displayLanguage].blog_ministry_phones} {this.props.phone}</em>
                         </p>
-                        <p className="main_ministry-website">
+                        <p className="main__ministry-website">
                             <a href={`http://${this.props.website}`} target='_blank' rel='noopener noreferrer'>{this.props.website}</a>
                         </p>
                     </div>

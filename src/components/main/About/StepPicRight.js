@@ -13,8 +13,8 @@ class StepPicRight extends React.Component {
         let displayLanguage = languageSet();
         return (
             <div className="row">
-                <div className="main_step col-sm-6" onClick={this.rememberMinistry(this.props.number)}>
-                    <h3 className="main_step-number" >
+                <div className="main__step col-sm-6" onClick={this.rememberMinistry(this.props.number)}>
+                    <h3 className="main__step-number" >
                         <Link 
                         to={{
                             pathname: `/fullarticle`,
@@ -27,12 +27,12 @@ class StepPicRight extends React.Component {
                         </Link>
 
                     </h3>
-                    <h4 className="main_step-title">{this.props.title}</h4>
-                    <p className="main_step-description">{this.props.description}</p>
+                    <h4 className="main__step-title">{this.props.title}</h4>
+                    <p className="main__step-description">{this.props.description}</p>
                 </div>
-                <div className="main_step col-sm-6">
-                    <img src={this.props.img} alt={`step-${this.props.number}`} className="main_step-pic hidden-print"/>
-                    <p className="main_step-description need-description">{this.props.need !== "" ? this.props.need : ''}</p>
+                <div className="main__step col-sm-6">
+                    <img src={this.props.img} alt={`step-${this.props.number}`} className="main__step-pic hidden-print"/>
+                    <p className="main__step-description need-description">{this.props.need !== "" ? this.props.need : ''}</p>
 
                 </div>
             </div>

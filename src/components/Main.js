@@ -14,7 +14,7 @@ class Main extends React.Component {
 
         return (
             <main className='main'>
-                <div className="main_fetcherror">
+                <div className="main__fetcherror">
                 </div>
                 <Switch>
                     <Route path='/' exact component={Home}/>

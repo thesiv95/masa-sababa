@@ -8,8 +8,8 @@ class NotFound404 extends React.Component {
         let displayLanguage = languageSet();
         return (
             <div>
-                <h2 className='main_header'>{Lang[displayLanguage].main_404_header}</h2>
-                <div className="main_steps container">
+                <h2 className='main__header'>{Lang[displayLanguage].main_404_header}</h2>
+                <div className="main__steps container">
                     <div className="row">
                         <div className="col-sm-offset-5">
                             <button className="button button-accent">

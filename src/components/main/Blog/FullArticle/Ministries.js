@@ -62,7 +62,7 @@ class Ministries extends React.Component{
             return (
                 <div className="container">
                     <div className="row">
-                        <div className="main_fetcherror">
+                        <div className="main__fetcherror">
                         </div>
                     </div>
                     <div className="row">
@@ -76,7 +76,7 @@ class Ministries extends React.Component{
             return (
                 <div className="container">
                     <div className="row">
-                        <div className="main_fetcherror">
+                        <div className="main__fetcherror">
                         </div>
                     </div>
                     <div className="row">

@@ -74,14 +74,14 @@ class About extends React.Component {
 
     componentDidMount() {
         localStorage.removeItem('targetMinistry'); // reset number which we pass to fullArticle
-        this.descriptionBlocks = document.querySelectorAll('.main_step-description');
+        this.descriptionBlocks = document.querySelectorAll('.main__step-description');
         this.blocksAreShown = false;
         this.showMoreImg = document.querySelector('#showMoreImg');
         this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
         this.showMoreOpened = false;
         this.showMoreText = document.querySelector('#showMoreText');
         this.toggleText = document.querySelector('#toggleText');
-        this.articles = document.querySelectorAll('.main_steps .row');
+        this.articles = document.querySelectorAll('.main__steps .row');
         for (let i = 3; i <= 8; i++){
             this.articles[i].style.display = 'none';
         }
@@ -115,19 +115,19 @@ class About extends React.Component {
         let displayLanguage = this.displayLanguage;
         return (
             <div>
-                <div className="main_fetcherror">
+                <div className="main__fetcherror">
                 </div>
-                <h2 className="main_header">{Lang[displayLanguage].about_header_partleft}
-                    &nbsp;<span className="main_header-about-subheader">{Lang[displayLanguage].about_header_partright}</span>
+                <h2 className="main__header">{Lang[displayLanguage].about_header_partleft}
+                    &nbsp;<span className="main__header-about-subheader">{Lang[displayLanguage].about_header_partright}</span>
                 </h2>
-                <p className="main_description main_description-about">
+                <p className="main__description main__description-about">
                     {Lang[displayLanguage].about_description}
                 </p>
-                <p className="main_description main_description_margin">
+                <p className="main__description main__description_margin">
                     <img src="img/bootstrap-icons/info.svg" alt="[pic]" width="32" height="32" />
-                    <a href="/#toggle" className="main_showmore-link showmore-margin" id="toggleText" onClick={this.toggleBlock}>{Lang[displayLanguage].about_moredetails}</a>
+                    <a href="/#toggle" className="main__showmore-link showmore-margin" id="toggleText" onClick={this.toggleBlock}>{Lang[displayLanguage].about_moredetails}</a>
                 </p>
-                <div className="main_steps container">
+                <div className="main__steps container">
                     <StepPicLeft number='1' title={this.state.stepsTitles[0]} description={this.state.stepsDesc[0]} need={this.state.stepsNeed[0]} img='img/steps/clip-bad-gateaway.png' />
                     <StepPicRight number='2' title={this.state.stepsTitles[1]} description={this.state.stepsDesc[1]} need={this.state.stepsNeed[1]} img='img/steps/clip-payment.png' />
                     <StepPicLeft number='3' title={this.state.stepsTitles[2]} description={this.state.stepsDesc[2]} need={this.state.stepsDesc[2]} img='img/steps/clip-welcome.png'/>
@@ -139,24 +139,24 @@ class About extends React.Component {
                     <StepPicLeft number='9' title={this.state.stepsTitles[8]} description={this.state.stepsDesc[8]} need={this.state.stepsDesc[8]} img='img/steps/clip-waiting.png'/>
                 </div>
 
-                <div className="main_showmore">
-                    <a href="/#more" onClick={this.toggleShowMore} className="main_showmore-link">
-                        <img className="main_showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
+                <div className="main__showmore">
+                    <a href="/#more" onClick={this.toggleShowMore} className="main__showmore-link">
+                        <img className="main__showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
                              alt="&#8595;" width="32" height="32" />
                         <span id="showMoreText">{Lang[displayLanguage].about_showmore}</span>
                     </a>
                 </div>
 
-                <div className="main_useful">
-                    <h4 className="main_useful-title">{Lang[displayLanguage].about_usefularticles_title}</h4>
-                    <div className="main_articles container">
+                <div className="main__useful">
+                    <h4 className="main__useful-title">{Lang[displayLanguage].about_usefularticles_title}</h4>
+                    <div className="main__articles container">
                         <div className="row">
                             <Useful imgSrc={usefulArticles["1"].imgSrc} imgAlt={usefulArticles["1"].imgAlt} title={usefulArticles["1"].title} description={usefulArticles["1"].description} url={usefulArticles["1"].url} />
                             <Useful imgSrc={usefulArticles["2"].imgSrc} imgAlt={usefulArticles["2"].imgAlt} title={usefulArticles["2"].title} description={usefulArticles["2"].description} url={usefulArticles["2"].url} />
                             <Useful imgSrc={usefulArticles["3"].imgSrc} imgAlt={usefulArticles["3"].imgAlt} title={usefulArticles["3"].title} description={usefulArticles["3"].description} url={usefulArticles["3"].url} />
                         </div>
                     </div>
-                    <div className="main_useful-navigation">
+                    <div className="main__useful-navigation">
                         <button className="button button-nav">&#8592;</button>
                         <button className="button button-nav">&#8594;</button>
                     </div>
