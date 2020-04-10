@@ -25,7 +25,7 @@ class LeaveReply extends React.Component {
         })
     };
 
-    writeDataToDataBase = (text, name) => {
+    writeDataToDataBase = () => {
         // Image link will be hardcoded at this point
         let imgUrl = 'https://via.placeholder.com/32';
 
@@ -79,13 +79,13 @@ class LeaveReply extends React.Component {
                     </div>
 
                     <h3>{Lang[displayLanguage].reply_title}</h3>
-                    <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main__leavereply-textarea' onChange={this.changeStateOfTextarea} />
-                    <div className="main__leavereply-inputs">
-                        <input id="replyName" type="text" placeholder={Lang[displayLanguage].reply_placeholder_yourname} className="main__leavereply-input" />
-                        <input id="replyEmail" type="text" placeholder={Lang[displayLanguage].reply_placeholder_youremail} className="main__leavereply-input" />
+                    <textarea id="replyText" placeholder={Lang[displayLanguage].reply_placeholder_yourtext} className='main__leavereply_textarea' onChange={this.changeStateOfTextarea} />
+                    <div className="main__leavereply_inputs">
+                        <input id="replyName" type="text" placeholder={Lang[displayLanguage].reply_placeholder_yourname} className="main__leavereply_input" />
+                        <input id="replyEmail" type="text" placeholder={Lang[displayLanguage].reply_placeholder_youremail} className="main__leavereply_input" />
                     </div>
-                    <div className="main__leavereply-send">
-                        <input id="replyCheck" type="checkbox" className="main__leavereply-checkbox"/>
+                    <div className="main__leavereply_send">
+                        <input id="replyCheck" type="checkbox" className="main__leavereply_checkbox"/>
                         {Lang[displayLanguage].reply_checkbox}<br/>
                         <button className="button button-accent" onClick={this.addComment}>{Lang[displayLanguage].reply_btn}</button>
                     </div>

@@ -8,7 +8,7 @@ class Address extends React.Component {
         return(
             <div>
                 <h4 className="footer__title">{Lang[displayLanguage].footer_address_title}</h4>
-                <div className="footer__block-address">
+                <div className="footer__block_address">
                     <p className="footer__text">SababaLife LLC</p>
                     <p className="footer__text">{Lang[displayLanguage].footer_address_street}</p>
                 </div>

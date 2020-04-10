@@ -19,18 +19,18 @@ class Comment extends React.Component {
     render() {
         let displayLanguage = languageSet();
         return (
-            <div className="main__comments-comment">
+            <div className="main__comments_comment">
                 <div className="row">
-                    <div className="col-sm-2 main__comments-comment-leftpart">
-                        <img src={this.props.avatarUrl} alt="comment" className="main__comments-comment-image"/>
+                    <div className="col-sm-2 main__comments_comment-leftpart">
+                        <img src={this.props.avatarUrl} alt="comment" className="main__comments_comment-image"/>
                     </div>
-                    <div className="col-sm-10 main__comments-comment-rightpart">
+                    <div className="col-sm-10 main__comments_comment-rightpart">
                         <h5>{this.props.name}</h5>
                         <p>{this.props.text}</p>
-                        <a href="#reply" className='main__showmore-link'> {Lang[displayLanguage].comments_reply}
+                        <a href="#reply" className='main__showmore_link'> {Lang[displayLanguage].comments_reply}
                             <img src="img/bootstrap-icons/reply-fill.svg" alt="reply" width="32" height="32"/>
                         </a>
-                        <a href="#delete" className='main__showmore-link showmore-margin' onClick={this.deleteComment}>
+                        <a href="#delete" className='main__showmore_link showmore-margin' onClick={this.deleteComment}>
                             {Lang[displayLanguage].comments_delete}
                         </a>
                         <p>{this.props.date}</p>

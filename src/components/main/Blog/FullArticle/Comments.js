@@ -1,7 +1,6 @@
 import React from "react";
 import Lang from "./../../../../i18n/lang";
 import languageSet from "../../../../utilites/languageSet";
-// import commentsJSON from "./commentsJSON";
 import Comment from "./Comments/Comment";
 
 class Comments extends React.Component {

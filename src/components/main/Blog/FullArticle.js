@@ -126,14 +126,14 @@ class FullArticle extends React.Component {
                         <div className="row">
                             <div className="main__ministrieschange_item col-sm-6">
                                 {Lang[this.displayLanguage].blog_ministry_prompt}
-                                <select className="main__ministrieschange-select" >
+                                <select className="main__ministrieschange_select" >
 
                                    {this.makeOption()}
                                 </select>
                             </div>
                             <div className="main__ministrieschange_item col-sm-6">
                                 {Lang[this.displayLanguage].blog_city_prompt}
-                                <select className="main__ministrieschange-select" onChange={event => {
+                                <select className="main__ministrieschange_select" onChange={event => {
                                     let newState = event.target.value;
                                     this.setState({
                                         ...this.state.placeIndex,

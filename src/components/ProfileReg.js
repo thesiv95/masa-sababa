@@ -107,26 +107,26 @@ class ProfileReg extends React.Component {
                     </div>
                     <div className="main__profile">
                         <div className="main__profileitem">
-                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_firstname}</h5>
-                            <input type="text" id="pFirstName" name="first_name" className="main__profileitem-input" placeholder="Elena"/>
+                            <h5 className="main__profileitem_title">{Lang[displayLanguage].profile_firstname}</h5>
+                            <input type="text" id="pFirstName" name="first_name" className="main__profileitem_input" placeholder="Elena"/>
                         </div>
                         <div className="main__profileitem">
-                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_lastname}</h5>
-                            <input type="text" id="pLastName" name="last_name" className="main__profileitem-input" placeholder="Johnes"/>
+                            <h5 className="main__profileitem_title">{Lang[displayLanguage].profile_lastname}</h5>
+                            <input type="text" id="pLastName" name="last_name" className="main__profileitem_input" placeholder="Johnes"/>
                         </div>
                         <div className="main__profileitem">
-                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_email}</h5>
+                            <h5 className="main__profileitem_title">{Lang[displayLanguage].profile_email}</h5>
                             <input type="text" id="pEmail" name="email" onChange={this.handleChange} className="main__profileitem-input" placeholder="e.johnes@gmail.com"/>
                         </div>
                         <div className="main__profileitem">
-                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_password}</h5>
+                            <h5 className="main__profileitem_title">{Lang[displayLanguage].profile_password}</h5>
                             <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main__profileitem-input"
                                    placeholder="******************"/>
                         </div>
                         <div className="main__profileitem last-profile-item">
-                            <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_confirm_password}</h5>
+                            <h5 className="main__profileitem_title">{Lang[displayLanguage].profile_confirm_password}</h5>
                             <input type="password" id="pPasswordConfirmation"
-                                   className="main__profileitem-input"
+                                   className="main__profileitem_input"
                                    placeholder="*****************"/>
                         </div>
                         <button type={'submit'}

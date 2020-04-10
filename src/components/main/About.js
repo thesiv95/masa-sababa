@@ -74,7 +74,7 @@ class About extends React.Component {
 
     componentDidMount() {
         localStorage.removeItem('targetMinistry'); // reset number which we pass to fullArticle
-        this.descriptionBlocks = document.querySelectorAll('.main__step-description');
+        this.descriptionBlocks = document.querySelectorAll('.main__step_description');
         this.blocksAreShown = false;
         this.showMoreImg = document.querySelector('#showMoreImg');
         this.showMoreImg.src = "img/bootstrap-icons/chevron-compact-down.svg";
@@ -96,8 +96,8 @@ class About extends React.Component {
 
                 for (let i = 0; i < stepsNumbers; i++) {
                     tempTitles.push(json.steps[i].title);
-                    tempDesc.push(json.steps[i].description)
-                    tempNeed.push(json.steps[i].need)
+                    tempDesc.push(json.steps[i].description);
+                    tempNeed.push(json.steps[i].need);
                 }
                 this.setState({
                     stepsTitles: tempTitles,
@@ -118,14 +118,14 @@ class About extends React.Component {
                 <div className="main__fetcherror">
                 </div>
                 <h2 className="main__header">{Lang[displayLanguage].about_header_partleft}
-                    &nbsp;<span className="main__header-about-subheader">{Lang[displayLanguage].about_header_partright}</span>
+                    &nbsp;<span className="main__header_about-subheader">{Lang[displayLanguage].about_header_partright}</span>
                 </h2>
-                <p className="main__description main__description-about">
+                <p className="main__description main__description_about">
                     {Lang[displayLanguage].about_description}
                 </p>
                 <p className="main__description main__description_margin">
                     <img src="img/bootstrap-icons/info.svg" alt="[pic]" width="32" height="32" />
-                    <a href="/#toggle" className="main__showmore-link showmore-margin" id="toggleText" onClick={this.toggleBlock}>{Lang[displayLanguage].about_moredetails}</a>
+                    <a href="/#toggle" className="main__showmore_link showmore-margin" id="toggleText" onClick={this.toggleBlock}>{Lang[displayLanguage].about_moredetails}</a>
                 </p>
                 <div className="main__steps container">
                     <StepPicLeft number='1' title={this.state.stepsTitles[0]} description={this.state.stepsDesc[0]} need={this.state.stepsNeed[0]} img='img/steps/clip-bad-gateaway.png' />
@@ -140,15 +140,15 @@ class About extends React.Component {
                 </div>
 
                 <div className="main__showmore">
-                    <a href="/#more" onClick={this.toggleShowMore} className="main__showmore-link">
-                        <img className="main__showmore-image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
+                    <a href="/#more" onClick={this.toggleShowMore} className="main__showmore_link">
+                        <img className="main__showmore_image" id="showMoreImg" src="img/bootstrap-icons/chevron-compact-down.svg"
                              alt="&#8595;" width="32" height="32" />
                         <span id="showMoreText">{Lang[displayLanguage].about_showmore}</span>
                     </a>
                 </div>
 
                 <div className="main__useful">
-                    <h4 className="main__useful-title">{Lang[displayLanguage].about_usefularticles_title}</h4>
+                    <h4 className="main__useful_title">{Lang[displayLanguage].about_usefularticles_title}</h4>
                     <div className="main__articles container">
                         <div className="row">
                             <Useful imgSrc={usefulArticles["1"].imgSrc} imgAlt={usefulArticles["1"].imgAlt} title={usefulArticles["1"].title} description={usefulArticles["1"].description} url={usefulArticles["1"].url} />
@@ -156,7 +156,7 @@ class About extends React.Component {
                             <Useful imgSrc={usefulArticles["3"].imgSrc} imgAlt={usefulArticles["3"].imgAlt} title={usefulArticles["3"].title} description={usefulArticles["3"].description} url={usefulArticles["3"].url} />
                         </div>
                     </div>
-                    <div className="main__useful-navigation">
+                    <div className="main__useful_navigation">
                         <button className="button button-nav">&#8592;</button>
                         <button className="button button-nav">&#8594;</button>
                     </div>
