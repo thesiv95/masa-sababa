@@ -47,11 +47,11 @@ class LogIn extends React.Component {
                     <div className="main__profile">
                         <div className="main__profileitem">
                             <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_email}</h5>
-                            <input type="text" id="pEmail" name="email" onChange={this.handleChange} className="main__profileitem-input" placeholder="e.johnes@gmail.com"/>
+                            <input type="text" id="pEmail" name="email" onChange={this.handleChange} className="main__profileitem_input" placeholder="e.johnes@gmail.com"/>
                         </div>
                         <div className="main__profileitem">
                             <h5 className="main__profileitem-title">{Lang[displayLanguage].profile_password}</h5>
-                            <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main__profileitem-input" placeholder="******************"/>
+                            <input type="password" id="pPassword" name="password" onChange={this.handleChange} className="main__profileitem_input" placeholder="******************"/>
                         </div>
                         <button type={'submit'} className="button button-accent">
                             {Lang[this.displayLanguage].main_btn_signup}
